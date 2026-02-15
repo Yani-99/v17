@@ -1,0 +1,230 @@
+
+=====================================================================================================================================
+Model Name                                                   | Method   | Orig(MB)   | Comp%      | C-Speed(MB/s)   | D-Speed(MB/s)  
+-------------------------------------------------------------------------------------------------------------------------------------
+meta-llama/Llama-3.1-8B-Instruct                             | zlib     |  15316.5 |    78.94% |         15.26 |        254.64
+meta-llama/Llama-3.1-8B-Instruct                             | gzip     |  15316.5 |    78.94% |         15.23 |        209.29
+meta-llama/Llama-3.1-8B-Instruct                             | zstd     |  15316.5 |    77.54% |        658.59 |       1068.68
+NousResearch/Hermes-3-Llama-3.1-8B                           | zlib     |  15316.5 |    79.19% |         16.46 |        267.52
+NousResearch/Hermes-3-Llama-3.1-8B                           | gzip     |  15316.5 |    79.19% |         16.42 |        219.68
+NousResearch/Hermes-3-Llama-3.1-8B                           | zstd     |  15316.5 |    77.89% |        758.46 |       1001.58
+meta-llama/Llama-Guard-3-8B                                  | zlib     |  15316.5 |    79.19% |         16.46 |        267.09
+meta-llama/Llama-Guard-3-8B                                  | gzip     |  15316.5 |    79.19% |         16.43 |        217.49
+meta-llama/Llama-Guard-3-8B                                  | zstd     |  15316.5 |    77.89% |        747.44 |        990.97
+dphn/Dolphin3.0-Llama3.1-8B                                  | zlib     |  15316.6 |    79.18% |         16.48 |        267.05
+dphn/Dolphin3.0-Llama3.1-8B                                  | gzip     |  15316.6 |    79.18% |         16.45 |        217.92
+dphn/Dolphin3.0-Llama3.1-8B                                  | zstd     |  15316.6 |    77.88% |        755.42 |        998.46
+mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated              | zlib     |  15316.5 |    79.19% |         16.68 |        266.26
+mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated              | gzip     |  15316.5 |    79.19% |         16.64 |        218.59
+mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated              | zstd     |  15316.5 |    77.98% |        750.76 |        985.98
+OpenSciLM/Llama-3.1_OpenScholar-8B                           | zlib     |  15316.6 |    78.87% |         15.29 |        255.02
+OpenSciLM/Llama-3.1_OpenScholar-8B                           | gzip     |  15316.6 |    78.87% |         15.27 |        207.30
+OpenSciLM/Llama-3.1_OpenScholar-8B                           | zstd     |  15316.6 |    77.48% |        645.20 |       1049.14
+Sao10K/Llama-3.1-8B-Stheno-v3.4                              | zlib     |  15316.5 |    79.06% |         15.91 |        258.19
+Sao10K/Llama-3.1-8B-Stheno-v3.4                              | gzip     |  15316.5 |    79.06% |         15.88 |        211.53
+Sao10K/Llama-3.1-8B-Stheno-v3.4                              | zstd     |  15316.5 |    77.66% |        710.99 |       1037.33
+cognitivecomputations/dolphin-2.9.4-llama3.1-8b              | zlib     |  15316.6 |    79.18% |         16.50 |        267.37
+cognitivecomputations/dolphin-2.9.4-llama3.1-8b              | gzip     |  15316.6 |    79.18% |         16.46 |        217.96
+cognitivecomputations/dolphin-2.9.4-llama3.1-8b              | zstd     |  15316.6 |    77.89% |        750.65 |        994.51
+akjindal53244/Llama-3.1-Storm-8B                             | zlib     |  15316.5 |    79.05% |         16.02 |        261.50
+akjindal53244/Llama-3.1-Storm-8B                             | gzip     |  15316.5 |    79.05% |         15.99 |        213.06
+akjindal53244/Llama-3.1-Storm-8B                             | zstd     |  15316.5 |    77.71% |        703.54 |       1020.05
+Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2              | zlib     |  15316.5 |    79.13% |         16.48 |        265.12
+Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2              | gzip     |  15316.5 |    79.13% |         16.44 |        216.15
+Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2              | zstd     |  15316.5 |    77.82% |        746.94 |       1000.24
+
+==============================
+AGGREGATED RESULTS BY METHOD
+==============================
+
+Method: zstd
+{
+    "meta-llama/Llama-3.1-8B-Instruct": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.54,
+        "CompSpeed": 658.59,
+        "DecompSpeed": 1068.68
+    },
+    "NousResearch/Hermes-3-Llama-3.1-8B": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.89,
+        "CompSpeed": 758.46,
+        "DecompSpeed": 1001.58
+    },
+    "meta-llama/Llama-Guard-3-8B": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.89,
+        "CompSpeed": 747.44,
+        "DecompSpeed": 990.97
+    },
+    "dphn/Dolphin3.0-Llama3.1-8B": {
+        "OrigMB": 15316.57,
+        "CompRatio": 77.88,
+        "CompSpeed": 755.42,
+        "DecompSpeed": 998.46
+    },
+    "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.98,
+        "CompSpeed": 750.76,
+        "DecompSpeed": 985.98
+    },
+    "OpenSciLM/Llama-3.1_OpenScholar-8B": {
+        "OrigMB": 15316.6,
+        "CompRatio": 77.48,
+        "CompSpeed": 645.2,
+        "DecompSpeed": 1049.14
+    },
+    "Sao10K/Llama-3.1-8B-Stheno-v3.4": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.66,
+        "CompSpeed": 710.99,
+        "DecompSpeed": 1037.33
+    },
+    "cognitivecomputations/dolphin-2.9.4-llama3.1-8b": {
+        "OrigMB": 15316.57,
+        "CompRatio": 77.89,
+        "CompSpeed": 750.65,
+        "DecompSpeed": 994.51
+    },
+    "akjindal53244/Llama-3.1-Storm-8B": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.71,
+        "CompSpeed": 703.54,
+        "DecompSpeed": 1020.05
+    },
+    "Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.82,
+        "CompSpeed": 746.94,
+        "DecompSpeed": 1000.24
+    }
+}
+
+Method: zlib
+{
+    "meta-llama/Llama-3.1-8B-Instruct": {
+        "OrigMB": 15316.54,
+        "CompRatio": 78.94,
+        "CompSpeed": 15.26,
+        "DecompSpeed": 254.64
+    },
+    "NousResearch/Hermes-3-Llama-3.1-8B": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.19,
+        "CompSpeed": 16.46,
+        "DecompSpeed": 267.52
+    },
+    "meta-llama/Llama-Guard-3-8B": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.19,
+        "CompSpeed": 16.46,
+        "DecompSpeed": 267.09
+    },
+    "dphn/Dolphin3.0-Llama3.1-8B": {
+        "OrigMB": 15316.57,
+        "CompRatio": 79.18,
+        "CompSpeed": 16.48,
+        "DecompSpeed": 267.05
+    },
+    "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.19,
+        "CompSpeed": 16.68,
+        "DecompSpeed": 266.26
+    },
+    "OpenSciLM/Llama-3.1_OpenScholar-8B": {
+        "OrigMB": 15316.6,
+        "CompRatio": 78.87,
+        "CompSpeed": 15.29,
+        "DecompSpeed": 255.02
+    },
+    "Sao10K/Llama-3.1-8B-Stheno-v3.4": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.06,
+        "CompSpeed": 15.91,
+        "DecompSpeed": 258.19
+    },
+    "cognitivecomputations/dolphin-2.9.4-llama3.1-8b": {
+        "OrigMB": 15316.57,
+        "CompRatio": 79.18,
+        "CompSpeed": 16.5,
+        "DecompSpeed": 267.37
+    },
+    "akjindal53244/Llama-3.1-Storm-8B": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.05,
+        "CompSpeed": 16.02,
+        "DecompSpeed": 261.5
+    },
+    "Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.13,
+        "CompSpeed": 16.48,
+        "DecompSpeed": 265.12
+    }
+}
+
+Method: gzip
+{
+    "meta-llama/Llama-3.1-8B-Instruct": {
+        "OrigMB": 15316.54,
+        "CompRatio": 78.94,
+        "CompSpeed": 15.23,
+        "DecompSpeed": 209.29
+    },
+    "NousResearch/Hermes-3-Llama-3.1-8B": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.19,
+        "CompSpeed": 16.42,
+        "DecompSpeed": 219.68
+    },
+    "meta-llama/Llama-Guard-3-8B": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.19,
+        "CompSpeed": 16.43,
+        "DecompSpeed": 217.49
+    },
+    "dphn/Dolphin3.0-Llama3.1-8B": {
+        "OrigMB": 15316.57,
+        "CompRatio": 79.18,
+        "CompSpeed": 16.45,
+        "DecompSpeed": 217.92
+    },
+    "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.19,
+        "CompSpeed": 16.64,
+        "DecompSpeed": 218.59
+    },
+    "OpenSciLM/Llama-3.1_OpenScholar-8B": {
+        "OrigMB": 15316.6,
+        "CompRatio": 78.87,
+        "CompSpeed": 15.27,
+        "DecompSpeed": 207.3
+    },
+    "Sao10K/Llama-3.1-8B-Stheno-v3.4": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.06,
+        "CompSpeed": 15.88,
+        "DecompSpeed": 211.53
+    },
+    "cognitivecomputations/dolphin-2.9.4-llama3.1-8b": {
+        "OrigMB": 15316.57,
+        "CompRatio": 79.18,
+        "CompSpeed": 16.46,
+        "DecompSpeed": 217.96
+    },
+    "akjindal53244/Llama-3.1-Storm-8B": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.05,
+        "CompSpeed": 15.99,
+        "DecompSpeed": 213.06
+    },
+    "Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2": {
+        "OrigMB": 15316.54,
+        "CompRatio": 79.13,
+        "CompSpeed": 16.44,
+        "DecompSpeed": 216.15
+    }
+}

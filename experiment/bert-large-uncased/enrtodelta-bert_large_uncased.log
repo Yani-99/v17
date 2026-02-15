@@ -1,0 +1,67 @@
+-- Found pybind11: /home/liu4441/.conda/envs/liana/lib/python3.9/site-packages/pybind11/include (found version "3.0.1")
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/newdrive/liu4441/liana/pfor/standard/v17/build
+[100%] Built target pforex_cpp
+[RUN] Running benchmarks...
+[CONFIG] 手动设定: 启动 1 个并行线程
+
+>>> Running Config: bert_ner1 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: bert_ner1==========]
+  -> Size: 63.48% | Comp: 799.1 MB/s | Decomp: 774.1 MB/s | Metrics: {}
+
+>>> Running Config: bert_ner2 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: bert_ner2==========]
+  -> Size: 64.04% | Comp: 760.0 MB/s | Decomp: 669.1 MB/s | Metrics: {}
+
+>>> Running Config: bert_ner3 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: bert_ner3==========]
+  -> Size: 68.65% | Comp: 709.2 MB/s | Decomp: 762.5 MB/s | Metrics: {}
+
+>>> Running Config: bert_ner4 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: bert_ner4==========]
+  -> Size: 63.86% | Comp: 571.0 MB/s | Decomp: 701.3 MB/s | Metrics: {}
+
+>>> Running Config: bert_ner5 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: bert_ner5==========]
+  -> Size: 65.74% | Comp: 679.8 MB/s | Decomp: 693.6 MB/s | Metrics: {}
+
+>>> Running Config: bert_ner6 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: bert_ner6==========]
+  -> Size: 66.22% | Comp: 607.9 MB/s | Decomp: 678.8 MB/s | Metrics: {}
+
+>>> Running Config: bert_ner7 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: bert_ner7==========]
+  -> Size: 60.60% | Comp: 335.8 MB/s | Decomp: 793.5 MB/s | Metrics: {}
+
+>>> Running Config: bert_ner8 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: bert_ner8==========]
+  -> Size: 67.43% | Comp: 720.4 MB/s | Decomp: 746.6 MB/s | Metrics: {}
+
+>>> Running Config: bert_ner9 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: bert_ner9==========]
+  -> Size: 69.11% | Comp: 746.9 MB/s | Decomp: 766.9 MB/s | Metrics: {}
+
+>>> Running Config: bert_ner10 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: bert_ner10==========]
+  -> Size: 69.14% | Comp: 608.9 MB/s | Decomp: 819.2 MB/s | Metrics: {}

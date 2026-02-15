@@ -42,7 +42,7 @@ from huggingface_hub import snapshot_download
 # ]
 
 MODELS_TO_TEST = [
-    "meta-llama/Llama-2-7b-chat-hf",
+    "meta-llama/Llama-2-7b-chat-hf"
     "lmsys/vicuna-7b-v1.5",
     "NousResearch/Nous-Hermes-llama-2-7b",
     "garage-bAInd/Platypus2-7B",
@@ -54,11 +54,14 @@ MODELS_TO_TEST = [
     "stabilityai/StableBeluga-7B"
 ]
 
+
+
 # 用于存放最终聚合结果
 aggregated_results = {
-    "zstd": {},
-    "zlib": {},
-    "gzip": {}
+    "zstd": {}
+    # ,
+    # "zlib": {},
+    # "gzip": {}
 }
 
 def get_and_load_model(model_id):
@@ -121,8 +124,8 @@ def run_benchmark():
 
         # 定义算法及其对应的 (压缩函数, 解压函数)
         methods = [
-            ("zlib", lambda d: zlib.compress(d, level=6), zlib.decompress),
-            ("gzip", lambda d: gzip.compress(d, compresslevel=6), gzip.decompress),
+            # ("zlib", lambda d: zlib.compress(d, level=6), zlib.decompress),
+            # ("gzip", lambda d: gzip.compress(d, compresslevel=6), gzip.decompress),
             ("zstd", lambda d: zstd.ZstdCompressor(level=3).compress(d), zstd.ZstdDecompressor().decompress)
         ]
         
@@ -184,6 +187,4 @@ def run_benchmark():
 
 if __name__ == "__main__":
     run_benchmark()
-
-
 

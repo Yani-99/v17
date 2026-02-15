@@ -1,0 +1,124 @@
+开始模型压缩批处理任务...
+------------------------------------------------
+[1/10] 正在处理: --base-model meta-llama/Llama-2-7b-hf --finetuned-model meta-llama/Llama-2-7b-chat-hf --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-7b-hf', finetuned_model='meta-llama/Llama-2-7b-chat-hf', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 12852.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Llama-2-7b-chat-hf": {
+        "comp%": "63.96%",
+        "CompThroughput": "60.16 MB/s",
+        "DecompThroughput": "62.86 MB/s"
+    }
+}
+------------------------------------------------
+[2/10] 正在处理: --base-model meta-llama/Llama-2-7b-hf --finetuned-model lmsys/vicuna-7b-v1.5 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-7b-hf', finetuned_model='lmsys/vicuna-7b-v1.5', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 12852.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "vicuna-7b-v1.5": {
+        "comp%": "62.92%",
+        "CompThroughput": "61.17 MB/s",
+        "DecompThroughput": "63.39 MB/s"
+    }
+}
+------------------------------------------------
+[3/10] 正在处理: --base-model meta-llama/Llama-2-7b-hf --finetuned-model NousResearch/Nous-Hermes-llama-2-7b --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-7b-hf', finetuned_model='NousResearch/Nous-Hermes-llama-2-7b', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 12852.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Nous-Hermes-llama-2-7b": {
+        "comp%": "27.15%",
+        "CompThroughput": "95.51 MB/s",
+        "DecompThroughput": "83.20 MB/s"
+    }
+}
+------------------------------------------------
+[4/10] 正在处理: --base-model meta-llama/Llama-2-7b-hf --finetuned-model garage-bAInd/Platypus2-7B --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-7b-hf', finetuned_model='garage-bAInd/Platypus2-7B', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 12852.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Platypus2-7B": {
+        "comp%": "38.28%",
+        "CompThroughput": "77.96 MB/s",
+        "DecompThroughput": "79.76 MB/s"
+    }
+}
+------------------------------------------------
+[5/10] 正在处理: --base-model meta-llama/Llama-2-7b-hf --finetuned-model WizardLM/WizardMath-7B-V1.0 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-7b-hf', finetuned_model='WizardLM/WizardMath-7B-V1.0', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 12852.67 MB
+Shape mismatch!
+Shape mismatch!
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "WizardMath-7B-V1.0": {
+        "comp%": "58.29%",
+        "CompThroughput": "65.19 MB/s",
+        "DecompThroughput": "67.72 MB/s"
+    }
+}
+------------------------------------------------
+[6/10] 正在处理: --base-model meta-llama/Llama-2-7b-hf --finetuned-model georgesung/llama2_7b_chat_uncensored --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-7b-hf', finetuned_model='georgesung/llama2_7b_chat_uncensored', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 12852.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "llama2_7b_chat_uncensored": {
+        "comp%": "16.41%",
+        "CompThroughput": "114.08 MB/s",
+        "DecompThroughput": "110.18 MB/s"
+    }
+}
+------------------------------------------------
+[7/10] 正在处理: --base-model meta-llama/Llama-2-7b-hf --finetuned-model allenai/tulu-2-7b --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-7b-hf', finetuned_model='allenai/tulu-2-7b', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 12852.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "tulu-2-7b": {
+        "comp%": "60.33%",
+        "CompThroughput": "61.38 MB/s",
+        "DecompThroughput": "63.85 MB/s"
+    }
+}
+------------------------------------------------
+[8/10] 正在处理: --base-model meta-llama/Llama-2-7b-hf --finetuned-model PygmalionAI/pygmalion-2-7b --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-7b-hf', finetuned_model='PygmalionAI/pygmalion-2-7b', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 12852.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "pygmalion-2-7b": {
+        "comp%": "25.78%",
+        "CompThroughput": "92.86 MB/s",
+        "DecompThroughput": "82.77 MB/s"
+    }
+}
+------------------------------------------------
+[9/10] 正在处理: --base-model meta-llama/Llama-2-7b-hf --finetuned-model h2oai/h2ogpt-4096-llama2-7b-chat --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-7b-hf', finetuned_model='h2oai/h2ogpt-4096-llama2-7b-chat', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 12852.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "h2ogpt-4096-llama2-7b-chat": {
+        "comp%": "63.96%",
+        "CompThroughput": "59.83 MB/s",
+        "DecompThroughput": "63.05 MB/s"
+    }
+}
+------------------------------------------------
+[10/10] 正在处理: --base-model meta-llama/Llama-2-7b-hf --finetuned-model stabilityai/StableBeluga-7B --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-7b-hf', finetuned_model='stabilityai/StableBeluga-7B', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 12852.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "StableBeluga-7B": {
+        "comp%": "26.29%",
+        "CompThroughput": "95.26 MB/s",
+        "DecompThroughput": "79.79 MB/s"
+    }
+}
+------------------------------------------------

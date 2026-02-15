@@ -146,5 +146,106 @@ TEST_CONFIGS = {
         "task_type":"",
         "base_model": "bert-large-uncased",
         "ft_model": "Jorgeutd/bert-large-uncased-finetuned-ner"
+    },
+    "llama2-7b-1": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-2-7b-hf",
+        "ft_model": "meta-llama/Llama-2-7b-chat-hf"
+    },
+    "llama2-7b-2": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-2-7b-hf",
+        "ft_model": "lmsys/vicuna-7b-v1.5"
+    },
+    "llama2-7b-3": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-2-7b-hf",
+        "ft_model": "NousResearch/Nous-Hermes-llama-2-7b"
+    },
+    "llama2-7b-4": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-2-7b-hf",
+        "ft_model": "garage-bAInd/Platypus2-7B"
+    },
+    "llama2-7b-5": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-2-7b-hf",
+        "ft_model": "WizardLM/WizardMath-7B-V1.0"
+    },
+    "llama2-7b-6": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-2-7b-hf",
+        "ft_model": "georgesung/llama2_7b_chat_uncensored"
+    },
+    "llama2-7b-7": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-2-7b-hf",
+        "ft_model": "allenai/tulu-2-7b"
+    },
+    "llama2-7b-8": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-2-7b-hf",
+        "ft_model": "PygmalionAI/pygmalion-2-7b"
+    },
+    "llama2-7b-9": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-2-7b-hf",
+        "ft_model": "h2oai/h2ogpt-4096-llama2-7b-chat"
+    },
+    "llama2-7b-10": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-2-7b-hf",
+        "ft_model": "stabilityai/StableBeluga-7B"
+    },
+    "llama3.1-8b-1": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-3.1-8B",
+        "ft_model": "meta-llama/Llama-3.1-8B-Instruct"
+    },
+    "llama3.1-8b-2": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-3.1-8B",
+        "ft_model": "NousResearch/Hermes-3-Llama-3.1-8B"
+    },
+    "llama3.1-8b-3": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-3.1-8B",
+        "ft_model": "meta-llama/Llama-Guard-3-8B"
+    },
+    "llama3.1-8b-4": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-3.1-8B",
+        "ft_model": "dphn/Dolphin3.0-Llama3.1-8B"
+    },
+    "llama3.1-8b-5": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-3.1-8B",
+        "ft_model": "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated"
+    },
+    "llama3.1-8b-6": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-3.1-8B",
+        "ft_model": "OpenSciLM/Llama-3.1_OpenScholar-8B"
+    },
+    "llama3.1-8b-7": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-3.1-8B",
+        "ft_model": "Sao10K/Llama-3.1-8B-Stheno-v3.4"
+    },
+    "llama3.1-8b-8": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-3.1-8B",
+        "ft_model": "cognitivecomputations/dolphin-2.9.4-llama3.1-8b"
+    },
+    "llama3.1-8b-9": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-3.1-8B",
+        "ft_model": "akjindal53244/Llama-3.1-Storm-8B"
+    },
+    "llama3.1-8b-10": {
+        "task_type": "LLM_HARNESS",
+        "base_model": "meta-llama/Llama-3.1-8B",
+        "ft_model": "Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2"
     }
 }
+

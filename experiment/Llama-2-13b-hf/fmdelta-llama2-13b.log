@@ -1,0 +1,123 @@
+开始模型压缩批处理任务...
+------------------------------------------------
+[1/10] 正在处理: --base-model meta-llama/Llama-2-13b-hf --finetuned-model meta-llama/Llama-2-13b-chat-hf --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-13b-hf', finetuned_model='meta-llama/Llama-2-13b-chat-hf', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 24825.97 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Llama-2-13b-chat-hf": {
+        "comp%": "63.93%",
+        "CompThroughput": "61.78 MB/s",
+        "DecompThroughput": "63.21 MB/s"
+    }
+}
+------------------------------------------------
+[2/10] 正在处理: --base-model meta-llama/Llama-2-13b-hf --finetuned-model lmsys/vicuna-13b-v1.5 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-13b-hf', finetuned_model='lmsys/vicuna-13b-v1.5', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 24825.97 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "vicuna-13b-v1.5": {
+        "comp%": "63.19%",
+        "CompThroughput": "59.64 MB/s",
+        "DecompThroughput": "63.46 MB/s"
+    }
+}
+------------------------------------------------
+[3/10] 正在处理: --base-model meta-llama/Llama-2-13b-hf --finetuned-model NousResearch/Nous-Hermes-Llama2-13b --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-13b-hf', finetuned_model='NousResearch/Nous-Hermes-Llama2-13b', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 24826.60 MB
+Shape mismatch!
+Shape mismatch!
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Nous-Hermes-Llama2-13b": {
+        "comp%": "57.61%",
+        "CompThroughput": "64.31 MB/s",
+        "DecompThroughput": "65.89 MB/s"
+    }
+}
+------------------------------------------------
+[4/10] 正在处理: --base-model meta-llama/Llama-2-13b-hf --finetuned-model WizardLM/WizardLM-13B-V1.2 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-13b-hf', finetuned_model='WizardLM/WizardLM-13B-V1.2', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 24825.97 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "WizardLM-13B-V1.2": {
+        "comp%": "64.92%",
+        "CompThroughput": "61.33 MB/s",
+        "DecompThroughput": "63.35 MB/s"
+    }
+}
+
+[6/10] 正在处理: --base-model meta-llama/Llama-2-13b-hf --finetuned-model garage-bAInd/Platypus2-13B --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-13b-hf', finetuned_model='garage-bAInd/Platypus2-13B', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 24825.97 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Platypus2-13B": {
+        "comp%": "36.08%",
+        "CompThroughput": "80.58 MB/s",
+        "DecompThroughput": "79.91 MB/s"
+    }
+}
+------------------------------------------------
+[7/10] 正在处理: --base-model meta-llama/Llama-2-13b-hf --finetuned-model stabilityai/StableBeluga-13B --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-13b-hf', finetuned_model='stabilityai/StableBeluga-13B', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 24825.97 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "StableBeluga-13B": {
+        "comp%": "26.13%",
+        "CompThroughput": "97.00 MB/s",
+        "DecompThroughput": "85.75 MB/s"
+    }
+}
+[1/10] 正在处理: --base-model meta-llama/Llama-2-13b-hf --finetuned-model allenai/tulu-2-dpo-13b --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-13b-hf', finetuned_model='allenai/tulu-2-dpo-13b', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 24825.97 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "tulu-2-dpo-13b": {
+        "comp%": "60.32%",
+        "CompThroughput": "59.86 MB/s",
+        "DecompThroughput": "62.18 MB/s"
+    }
+}
+------------------------------------------------
+[2/10] 正在处理: --base-model meta-llama/Llama-2-13b-hf --finetuned-model Open-Orca/OpenOrca-Platypus2-13B --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-13b-hf', finetuned_model='Open-Orca/OpenOrca-Platypus2-13B', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 24826.01 MB
+Shape mismatch!
+Shape mismatch!
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "OpenOrca-Platypus2-13B": {
+        "comp%": "54.08%",
+        "CompThroughput": "66.45 MB/s",
+        "DecompThroughput": "61.52 MB/s"
+    }
+}
+------------------------------------------------
+[3/10] 正在处理: --base-model meta-llama/Llama-2-13b-hf --finetuned-model Riiid/sheep-duck-llama-2-13b --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-13b-hf', finetuned_model='Riiid/sheep-duck-llama-2-13b', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 24825.97 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "sheep-duck-llama-2-13b": {
+        "comp%": "57.90%",
+        "CompThroughput": "63.61 MB/s",
+        "DecompThroughput": "60.92 MB/s"
+    }
+}
+[1/10] 正在处理: --base-model meta-llama/Llama-2-13b-hf --finetuned-model Xwin-LM/Xwin-LM-13B-V0.1 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-2-13b-hf', finetuned_model='Xwin-LM/Xwin-LM-13B-V0.1', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 24825.97 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Xwin-LM-13B-V0.1": {
+        "comp%": "49.62%",
+        "CompThroughput": "64.27 MB/s",
+        "DecompThroughput": "61.43 MB/s"
+    }
+}

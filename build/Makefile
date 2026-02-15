@@ -57,10 +57,10 @@ RM = /home/liu4441/.local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/newdrive/liu4441/liana/pfor/standard/v16-from15-archi-shan
+CMAKE_SOURCE_DIR = /home/newdrive/liu4441/liana/pfor/standard/v17
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/newdrive/liu4441/liana/pfor/standard/v16-from15-archi-shan/build
+CMAKE_BINARY_DIR = /home/newdrive/liu4441/liana/pfor/standard/v17/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/newdrive/liu4441/liana/pfor/standard/v16-from15-archi-shan/build/CMakeFiles /home/newdrive/liu4441/liana/pfor/standard/v16-from15-archi-shan/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/newdrive/liu4441/liana/pfor/standard/v17/build/CMakeFiles /home/newdrive/liu4441/liana/pfor/standard/v17/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/newdrive/liu4441/liana/pfor/standard/v16-from15-archi-shan/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/newdrive/liu4441/liana/pfor/standard/v17/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

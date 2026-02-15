@@ -1,0 +1,141 @@
+models_to_check = [
+    "meta-llama/Llama-3.1-8B-Instruct",
+    "NousResearch/Hermes-3-Llama-3.1-8B",
+    "meta-llama/Llama-Guard-3-8B",
+    "dphn/Dolphin3.0-Llama3.1-8B",
+    "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated",
+    # "Arcee-AI/Llama-3.1-SuperNova-8B",
+    # "Sao10K/Llama-3.1-8B-Stheno-v3.4",
+    "OpenSciLM/Llama-3.1_OpenScholar-8B",
+    # "mradermacher/Llama-3.1-8B-Instruct-Abliterated",
+    #"cognitivecomputations/dolphin-2.9.4-llama-3.1-8b"
+]
+
+try:
+"Sao10K/Llama-3.1-8B-Stheno-v3.4",
+"cognitivecomputations/dolphin-2.9.4-llama3.1-8b",
+"akjindal53244/Llama-3.1-Storm-8B",
+"Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2",
+
+开始模型压缩批处理任务...
+------------------------------------------------
+[1/10] 正在处理: --base-model bert-large-uncased --finetuned-model assemblyai/bert-large-uncased-sst2 --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='bert-large-uncased', finetuned_model='assemblyai/bert-large-uncased-sst2', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1278.64 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "bert-large-uncased-sst2": {
+        "comp%": "63.16%",
+        "CompThroughput": "106.34 MB/s",
+        "DecompThroughput": "109.31 MB/s"
+    }
+}
+------------------------------------------------
+[2/10] 正在处理: --base-model bert-large-uncased --finetuned-model samrawal/bert-large-uncased_med-ner --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='bert-large-uncased', finetuned_model='samrawal/bert-large-uncased_med-ner', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1278.64 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "bert-large-uncased_med-ner": {
+        "comp%": "63.53%",
+        "CompThroughput": "117.32 MB/s",
+        "DecompThroughput": "109.60 MB/s"
+    }
+}
+------------------------------------------------
+[3/10] 正在处理: --base-model bert-large-uncased --finetuned-model yoshitomo-matsubara/bert-large-uncased-mnli --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='bert-large-uncased', finetuned_model='yoshitomo-matsubara/bert-large-uncased-mnli', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1278.64 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "bert-large-uncased-mnli": {
+        "comp%": "67.95%",
+        "CompThroughput": "96.57 MB/s",
+        "DecompThroughput": "104.74 MB/s"
+    }
+}
+------------------------------------------------
+[4/10] 正在处理: --base-model bert-large-uncased --finetuned-model princeton-nlp/sup-simcse-bert-large-uncased --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='bert-large-uncased', finetuned_model='princeton-nlp/sup-simcse-bert-large-uncased', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1278.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "sup-simcse-bert-large-uncased": {
+        "comp%": "62.79%",
+        "CompThroughput": "113.71 MB/s",
+        "DecompThroughput": "111.17 MB/s"
+    }
+}
+------------------------------------------------
+[5/10] 正在处理: --base-model bert-large-uncased --finetuned-model SarielSinLuo/bert-large-uncased-finetuned-cola --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='bert-large-uncased', finetuned_model='SarielSinLuo/bert-large-uncased-finetuned-cola', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1278.64 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "bert-large-uncased-finetuned-cola": {
+        "comp%": "64.95%",
+        "CompThroughput": "102.93 MB/s",
+        "DecompThroughput": "106.08 MB/s"
+    }
+}
+------------------------------------------------
+[6/10] 正在处理: --base-model bert-large-uncased --finetuned-model princeton-nlp/unsup-simcse-bert-large-uncased --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='bert-large-uncased', finetuned_model='princeton-nlp/unsup-simcse-bert-large-uncased', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1278.64 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "unsup-simcse-bert-large-uncased": {
+        "comp%": "65.13%",
+        "CompThroughput": "106.68 MB/s",
+        "DecompThroughput": "106.97 MB/s"
+    }
+}
+------------------------------------------------
+[7/10] 正在处理: --base-model bert-large-uncased --finetuned-model yoshitomo-matsubara/bert-large-uncased-mrpc --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='bert-large-uncased', finetuned_model='yoshitomo-matsubara/bert-large-uncased-mrpc', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1278.64 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "bert-large-uncased-mrpc": {
+        "comp%": "57.80%",
+        "CompThroughput": "122.14 MB/s",
+        "DecompThroughput": "117.97 MB/s"
+    }
+}
+------------------------------------------------
+[8/10] 正在处理: --base-model bert-large-uncased --finetuned-model yoshitomo-matsubara/bert-large-uncased-qnli --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='bert-large-uncased', finetuned_model='yoshitomo-matsubara/bert-large-uncased-qnli', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1278.64 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "bert-large-uncased-qnli": {
+        "comp%": "66.78%",
+        "CompThroughput": "100.41 MB/s",
+        "DecompThroughput": "105.79 MB/s"
+    }
+}
+------------------------------------------------
+[9/10] 正在处理: --base-model bert-large-uncased --finetuned-model StevenLimcorn/bert-large-uncased-semeval2016-restaurants --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='bert-large-uncased', finetuned_model='StevenLimcorn/bert-large-uncased-semeval2016-restaurants', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1278.64 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "bert-large-uncased-semeval2016-restaurants": {
+        "comp%": "68.45%",
+        "CompThroughput": "113.74 MB/s",
+        "DecompThroughput": "104.14 MB/s"
+    }
+}
+------------------------------------------------
+[10/10] 正在处理: --base-model bert-large-uncased --finetuned-model Jorgeutd/bert-large-uncased-finetuned-ner --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='bert-large-uncased', finetuned_model='Jorgeutd/bert-large-uncased-finetuned-ner', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1278.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "bert-large-uncased-finetuned-ner": {
+        "comp%": "68.23%",
+        "CompThroughput": "98.12 MB/s",
+        "DecompThroughput": "105.00 MB/s"
+    }
+}
+------------------------------------------------

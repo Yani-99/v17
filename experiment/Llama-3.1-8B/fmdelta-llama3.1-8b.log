@@ -1,0 +1,140 @@
+开始模型压缩批处理任务...
+------------------------------------------------
+[1/10] 正在处理: --base-model meta-llama/Llama-3.1-8B --finetuned-model meta-llama/Llama-3.1-8B-Instruct  --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-3.1-8B', finetuned_model='meta-llama/Llama-3.1-8B-Instruct', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 15316.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Llama-3.1-8B-Instruct": {
+        "comp%": "60.74%",
+        "CompThroughput": "63.06 MB/s",
+        "DecompThroughput": "64.39 MB/s"
+    }
+}
+------------------------------------------------
+[2/10] 正在处理: --base-model meta-llama/Llama-3.1-8B --finetuned-model NousResearch/Hermes-3-Llama-3.1-8B --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-3.1-8B', finetuned_model='NousResearch/Hermes-3-Llama-3.1-8B', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 15316.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Hermes-3-Llama-3.1-8B": {
+        "comp%": "55.07%",
+        "CompThroughput": "64.83 MB/s",
+        "DecompThroughput": "65.73 MB/s"
+    }
+}
+------------------------------------------------
+[3/10] 正在处理: --base-model meta-llama/Llama-3.1-8B --finetuned-model meta-llama/Llama-Guard-3-8B --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-3.1-8B', finetuned_model='meta-llama/Llama-Guard-3-8B', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 15316.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Llama-Guard-3-8B": {
+        "comp%": "30.47%",
+        "CompThroughput": "81.70 MB/s",
+        "DecompThroughput": "76.33 MB/s"
+    }
+}
+------------------------------------------------
+[4/10] 正在处理: --base-model meta-llama/Llama-3.1-8B --finetuned-model dphn/Dolphin3.0-Llama3.1-8B --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-3.1-8B', finetuned_model='dphn/Dolphin3.0-Llama3.1-8B', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 15316.68 MB
+Shape mismatch!
+Shape mismatch!
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Dolphin3.0-Llama3.1-8B": {
+        "comp%": "71.47%",
+        "CompThroughput": "70.74 MB/s",
+        "DecompThroughput": "73.06 MB/s"
+    }
+}
+------------------------------------------------
+[5/10] 正在处理: --base-model meta-llama/Llama-3.1-8B --finetuned-model mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-3.1-8B', finetuned_model='mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 15316.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Meta-Llama-3.1-8B-Instruct-abliterated": {
+        "comp%": "74.68%",
+        "CompThroughput": "59.86 MB/s",
+        "DecompThroughput": "64.38 MB/s"
+    }
+}
+
+------------------------------------------------
+[8/10] 正在处理: --base-model meta-llama/Llama-3.1-8B --finetuned-model OpenSciLM/Llama-3.1_OpenScholar-8B --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-3.1-8B', finetuned_model='OpenSciLM/Llama-3.1_OpenScholar-8B', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 15316.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Llama-3.1_OpenScholar-8B": {
+        "comp%": "60.90%",
+        "CompThroughput": "61.35 MB/s",
+        "DecompThroughput": "64.31 MB/s"
+    }
+}
+
+
+[1/10] 正在处理: --base-model meta-llama/Llama-3.1-8B --finetuned-model Sao10K/Llama-3.1-8B-Stheno-v3.4 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-3.1-8B', finetuned_model='Sao10K/Llama-3.1-8B-Stheno-v3.4', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 15316.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Llama-3.1-8B-Stheno-v3.4": {
+        "comp%": "73.56%",
+        "CompThroughput": "57.45 MB/s",
+        "DecompThroughput": "62.14 MB/s"
+    }
+}
+------------------------------------------------
+[2/10] 正在处理: --base-model meta-llama/Llama-3.1-8B --finetuned-model cognitivecomputations/dolphin-2.9.4-llama3.1-8b --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-3.1-8B', finetuned_model='cognitivecomputations/dolphin-2.9.4-llama3.1-8b', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 15316.68 MB
+Shape mismatch!
+Shape mismatch!
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "dolphin-2.9.4-llama3.1-8b": {
+        "comp%": "36.27%",
+        "CompThroughput": "101.68 MB/s",
+        "DecompThroughput": "102.33 MB/s"
+    }
+}
+------------------------------------------------
+[3/10] 正在处理: --base-model meta-llama/Llama-3.1-8B --finetuned-model akjindal53244/Llama-3.1-Storm-8B --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-3.1-8B', finetuned_model='akjindal53244/Llama-3.1-Storm-8B', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 15316.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Llama-3.1-Storm-8B": {
+        "comp%": "61.27%",
+        "CompThroughput": "60.39 MB/s",
+        "DecompThroughput": "63.13 MB/s"
+    }
+}
+------------------------------------------------
+[4/10] 正在处理: --base-model meta-llama/Llama-3.1-8B --finetuned-model Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='meta-llama/Llama-3.1-8B', finetuned_model='Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 15316.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Llama-3.1-8B-Magpie-Align-SFT-v0.2": {
+        "comp%": "28.46%",
+        "CompThroughput": "92.03 MB/s",
+        "DecompThroughput": "81.64 MB/s"
+    }
+}
+
+models_to_check = [
+    "meta-llama/Llama-3.1-8B-Instruct",
+    "NousResearch/Hermes-3-Llama-3.1-8B",
+    "meta-llama/Llama-Guard-3-8B",
+    "dphn/Dolphin3.0-Llama3.1-8B",
+    "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated",
+    "OpenSciLM/Llama-3.1_OpenScholar-8B",
+    "Sao10K/Llama-3.1-8B-Stheno-v3.4",
+    "cognitivecomputations/dolphin-2.9.4-llama3.1-8b",
+    "akjindal53244/Llama-3.1-Storm-8B",
+    "Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2"
+    ]

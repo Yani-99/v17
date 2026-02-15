@@ -1,0 +1,25 @@
+
+=====================================================================================================================================
+Model Name                                                   | Method   | Orig(MB)   | Comp%      | C-Speed(MB/s)   | D-Speed(MB/s)  
+-------------------------------------------------------------------------------------------------------------------------------------
+assemblyai/bert-large-uncased-sst2                           | zlib     |   1278.6 |    92.84% |         35.47 |        303.03
+assemblyai/bert-large-uncased-sst2                           | gzip     |   1278.6 |    92.84% |         35.24 |        259.41
+assemblyai/bert-large-uncased-sst2                           | zstd     |   1278.6 |    92.76% |        612.71 |       1005.25
+assemblyai/bert-large-uncased-sst2                           | lz4      |   1278.6 |   100.00% |       1486.13 |       2000.21
+samrawal/bert-large-uncased_med-ner                          | zlib     |   1274.7 |    92.84% |         35.43 |        303.32
+samrawal/bert-large-uncased_med-ner                          | gzip     |   1274.7 |    92.84% |         35.18 |        258.83
+samrawal/bert-large-uncased_med-ner                          | zstd     |   1274.7 |    92.76% |        609.88 |       1006.10
+samrawal/bert-large-uncased_med-ner                          | lz4      |   1274.7 |   100.00% |       1579.92 |       1965.08
+yoshitomo-matsubara/bert-large-uncased-mnli                  | zlib     |   1278.5 |    92.84% |         35.48 |        303.03
+yoshitomo-matsubara/bert-large-uncased-mnli                  | gzip     |   1278.5 |    92.84% |         35.19 |        259.96
+yoshitomo-matsubara/bert-large-uncased-mnli                  | zstd     |   1278.5 |    92.76% |        614.88 |       1009.54
+yoshitomo-matsubara/bert-large-uncased-mnli                  | lz4      |   1278.5 |   100.00% |       1587.19 |       2007.91
+princeton-nlp/sup-simcse-bert-large-uncased                  | zlib     |   1278.6 |    92.84% |         35.39 |        303.16
+princeton-nlp/sup-simcse-bert-large-uncased                  | gzip     |   1278.6 |    92.84% |         35.20 |        260.26
+princeton-nlp/sup-simcse-bert-large-uncased                  | zstd     |   1278.6 |    92.76% |        611.26 |       1011.43
+princeton-nlp/sup-simcse-bert-large-uncased                  | lz4      |   1278.6 |   100.00% |       1598.41 |       2020.74
+SarielSinLuo/bert-large-uncased-finetuned-cola               | zlib     |   1278.6 |    92.84% |         35.41 |        303.51
+SarielSinLuo/bert-large-uncased-finetuned-cola               | gzip     |   1278.6 |    92.84% |         35.24 |        260.37
+SarielSinLuo/bert-large-uncased-finetuned-cola               | zstd     |   1278.6 |    92.76% |        611.82 |       1011.67
+SarielSinLuo/bert-large-uncased-finetuned-cola               | lz4      |   1278.6 |   100.00% |       1592.86 |       2007.77
+princeton-nlp/unsup-simcse-bert-large-uncased                | zlib     |   1278.6 |    92.84% |         35.37 |        303.34

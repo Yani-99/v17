@@ -1,0 +1,87 @@
+-- Found pybind11: /home/liu4441/.conda/envs/liana/lib/python3.9/site-packages/pybind11/include (found version "3.0.1")
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/newdrive/liu4441/liana/pfor/standard/v17/build
+[100%] Built target pforex_cpp
+[RUN] Running benchmarks...
+[CONFIG] 手动设定: 启动 1 个并行线程
+
+>>> Running Config: llama3.1-8b-1 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+[CONFIG] Skipping LM-Harness tasks (List is empty).
+  -> Size: 45.24% | Comp: 368.9 MB/s | Decomp: 419.1 MB/s | Metrics: {}
+
+>>> Running Config: llama3.1-8b-2 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: llama3.1-8b-2==========]
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+[CONFIG] Skipping LM-Harness tasks (List is empty).
+  -> Size: 39.36% | Comp: 404.0 MB/s | Decomp: 444.5 MB/s | Metrics: {}
+
+>>> Running Config: llama3.1-8b-3 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: llama3.1-8b-3==========]
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+[CONFIG] Skipping LM-Harness tasks (List is empty).
+  -> Size: 22.28% | Comp: 268.0 MB/s | Decomp: 481.8 MB/s | Metrics: {}
+
+>>> Running Config: llama3.1-8b-4 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: llama3.1-8b-4==========]
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+[CONFIG] Skipping LM-Harness tasks (List is empty).
+  -> Size: 54.51% | Comp: 231.6 MB/s | Decomp: 408.7 MB/s | Metrics: {}
+
+>>> Running Config: llama3.1-8b-5 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: llama3.1-8b-5==========]
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+[CONFIG] Skipping LM-Harness tasks (List is empty).
+  -> Size: 60.60% | Comp: 319.9 MB/s | Decomp: 391.2 MB/s | Metrics: {}
+
+>>> Running Config: llama3.1-8b-6 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: llama3.1-8b-6==========]
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+[CONFIG] Skipping LM-Harness tasks (List is empty).
+  -> Size: 45.41% | Comp: 381.0 MB/s | Decomp: 434.5 MB/s | Metrics: {}
+
+>>> Running Config: llama3.1-8b-7 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: llama3.1-8b-7==========]
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+[CONFIG] Skipping LM-Harness tasks (List is empty).
+  -> Size: 60.11% | Comp: 224.5 MB/s | Decomp: 406.8 MB/s | Metrics: {}
+
+>>> Running Config: llama3.1-8b-8 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: llama3.1-8b-8==========]
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+[CONFIG] Skipping LM-Harness tasks (List is empty).
+  -> Size: 25.32% | Comp: 463.0 MB/s | Decomp: 569.1 MB/s | Metrics: {}
+
+>>> Running Config: llama3.1-8b-9 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: llama3.1-8b-9==========]
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+[CONFIG] Skipping LM-Harness tasks (List is empty).
+  -> Size: 45.81% | Comp: 382.2 MB/s | Decomp: 423.5 MB/s | Metrics: {}
+
+>>> Running Config: llama3.1-8b-10 <<<
+Detecting FT model native dtype...
+
+[========== Rate: 0.0 = Model: llama3.1-8b-10==========]
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+[CONFIG] Skipping LM-Harness tasks (List is empty).
+  -> Size: 27.09% | Comp: 297.9 MB/s | Decomp: 430.2 MB/s | Metrics: {}

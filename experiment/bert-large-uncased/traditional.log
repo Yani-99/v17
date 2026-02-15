@@ -1,0 +1,230 @@
+
+=====================================================================================================================================
+Model Name                                                   | Method   | Orig(MB)   | Comp%      | C-Speed(MB/s)   | D-Speed(MB/s)  
+-------------------------------------------------------------------------------------------------------------------------------------
+assemblyai/bert-large-uncased-sst2                           | zlib     |   1278.6 |    92.84% |         35.28 |        296.67
+assemblyai/bert-large-uncased-sst2                           | gzip     |   1278.6 |    92.84% |         35.00 |        250.35
+assemblyai/bert-large-uncased-sst2                           | zstd     |   1278.6 |    92.76% |        579.75 |        925.71
+samrawal/bert-large-uncased_med-ner                          | zlib     |   1274.7 |    92.84% |         35.31 |        296.23
+samrawal/bert-large-uncased_med-ner                          | gzip     |   1274.7 |    92.84% |         35.02 |        251.53
+samrawal/bert-large-uncased_med-ner                          | zstd     |   1274.7 |    92.76% |        584.37 |        927.32
+yoshitomo-matsubara/bert-large-uncased-mnli                  | zlib     |   1278.5 |    92.84% |         35.13 |        296.55
+yoshitomo-matsubara/bert-large-uncased-mnli                  | gzip     |   1278.5 |    92.84% |         34.88 |        252.20
+yoshitomo-matsubara/bert-large-uncased-mnli                  | zstd     |   1278.5 |    92.76% |        587.72 |        927.90
+princeton-nlp/sup-simcse-bert-large-uncased                  | zlib     |   1278.6 |    92.84% |         35.23 |        296.37
+princeton-nlp/sup-simcse-bert-large-uncased                  | gzip     |   1278.6 |    92.84% |         34.95 |        251.96
+princeton-nlp/sup-simcse-bert-large-uncased                  | zstd     |   1278.6 |    92.76% |        513.50 |        927.60
+SarielSinLuo/bert-large-uncased-finetuned-cola               | zlib     |   1278.6 |    92.84% |         35.09 |        295.49
+SarielSinLuo/bert-large-uncased-finetuned-cola               | gzip     |   1278.6 |    92.84% |         34.77 |        252.57
+SarielSinLuo/bert-large-uncased-finetuned-cola               | zstd     |   1278.6 |    92.76% |        513.50 |        931.87
+princeton-nlp/unsup-simcse-bert-large-uncased                | zlib     |   1278.6 |    92.84% |         35.34 |        296.71
+princeton-nlp/unsup-simcse-bert-large-uncased                | gzip     |   1278.6 |    92.84% |         35.05 |        253.27
+princeton-nlp/unsup-simcse-bert-large-uncased                | zstd     |   1278.6 |    92.76% |        515.35 |        928.83
+yoshitomo-matsubara/bert-large-uncased-mrpc                  | zlib     |   1278.5 |    92.85% |         35.33 |        298.02
+yoshitomo-matsubara/bert-large-uncased-mrpc                  | gzip     |   1278.5 |    92.85% |         35.04 |        251.84
+yoshitomo-matsubara/bert-large-uncased-mrpc                  | zstd     |   1278.5 |    92.77% |        511.17 |        957.30
+yoshitomo-matsubara/bert-large-uncased-qnli                  | zlib     |   1278.5 |    92.84% |         34.81 |        293.19
+yoshitomo-matsubara/bert-large-uncased-qnli                  | gzip     |   1278.5 |    92.84% |         35.07 |        254.41
+yoshitomo-matsubara/bert-large-uncased-qnli                  | zstd     |   1278.5 |    92.77% |        518.27 |        971.43
+StevenLimcorn/bert-large-uncased-semeval2016-restaurants     | zlib     |   1278.7 |    92.84% |         35.31 |        299.40
+StevenLimcorn/bert-large-uncased-semeval2016-restaurants     | gzip     |   1278.7 |    92.84% |         35.01 |        252.58
+StevenLimcorn/bert-large-uncased-semeval2016-restaurants     | zstd     |   1278.7 |    92.76% |        581.20 |        950.97
+Jorgeutd/bert-large-uncased-finetuned-ner                    | zlib     |   1274.5 |    92.84% |         35.24 |        298.41
+Jorgeutd/bert-large-uncased-finetuned-ner                    | gzip     |   1274.5 |    92.84% |         35.01 |        254.41
+Jorgeutd/bert-large-uncased-finetuned-ner                    | zstd     |   1274.5 |    92.77% |        576.00 |        947.64
+
+==============================
+AGGREGATED RESULTS BY METHOD
+==============================
+
+Method: zstd
+{
+    "assemblyai/bert-large-uncased-sst2": {
+        "OrigMB": 1278.63,
+        "CompRatio": 92.76,
+        "CompSpeed": 579.75,
+        "DecompSpeed": 925.71
+    },
+    "samrawal/bert-large-uncased_med-ner": {
+        "OrigMB": 1274.67,
+        "CompRatio": 92.76,
+        "CompSpeed": 584.37,
+        "DecompSpeed": 927.32
+    },
+    "yoshitomo-matsubara/bert-large-uncased-mnli": {
+        "OrigMB": 1278.53,
+        "CompRatio": 92.76,
+        "CompSpeed": 587.72,
+        "DecompSpeed": 927.9
+    },
+    "princeton-nlp/sup-simcse-bert-large-uncased": {
+        "OrigMB": 1278.59,
+        "CompRatio": 92.76,
+        "CompSpeed": 513.5,
+        "DecompSpeed": 927.6
+    },
+    "SarielSinLuo/bert-large-uncased-finetuned-cola": {
+        "OrigMB": 1278.61,
+        "CompRatio": 92.76,
+        "CompSpeed": 513.5,
+        "DecompSpeed": 931.87
+    },
+    "princeton-nlp/unsup-simcse-bert-large-uncased": {
+        "OrigMB": 1278.59,
+        "CompRatio": 92.76,
+        "CompSpeed": 515.35,
+        "DecompSpeed": 928.83
+    },
+    "yoshitomo-matsubara/bert-large-uncased-mrpc": {
+        "OrigMB": 1278.52,
+        "CompRatio": 92.77,
+        "CompSpeed": 511.17,
+        "DecompSpeed": 957.3
+    },
+    "yoshitomo-matsubara/bert-large-uncased-qnli": {
+        "OrigMB": 1278.52,
+        "CompRatio": 92.77,
+        "CompSpeed": 518.27,
+        "DecompSpeed": 971.43
+    },
+    "StevenLimcorn/bert-large-uncased-semeval2016-restaurants": {
+        "OrigMB": 1278.72,
+        "CompRatio": 92.76,
+        "CompSpeed": 581.2,
+        "DecompSpeed": 950.97
+    },
+    "Jorgeutd/bert-large-uncased-finetuned-ner": {
+        "OrigMB": 1274.54,
+        "CompRatio": 92.77,
+        "CompSpeed": 576.0,
+        "DecompSpeed": 947.64
+    }
+}
+
+Method: zlib
+{
+    "assemblyai/bert-large-uncased-sst2": {
+        "OrigMB": 1278.63,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.28,
+        "DecompSpeed": 296.67
+    },
+    "samrawal/bert-large-uncased_med-ner": {
+        "OrigMB": 1274.67,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.31,
+        "DecompSpeed": 296.23
+    },
+    "yoshitomo-matsubara/bert-large-uncased-mnli": {
+        "OrigMB": 1278.53,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.13,
+        "DecompSpeed": 296.55
+    },
+    "princeton-nlp/sup-simcse-bert-large-uncased": {
+        "OrigMB": 1278.59,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.23,
+        "DecompSpeed": 296.37
+    },
+    "SarielSinLuo/bert-large-uncased-finetuned-cola": {
+        "OrigMB": 1278.61,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.09,
+        "DecompSpeed": 295.49
+    },
+    "princeton-nlp/unsup-simcse-bert-large-uncased": {
+        "OrigMB": 1278.59,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.34,
+        "DecompSpeed": 296.71
+    },
+    "yoshitomo-matsubara/bert-large-uncased-mrpc": {
+        "OrigMB": 1278.52,
+        "CompRatio": 92.85,
+        "CompSpeed": 35.33,
+        "DecompSpeed": 298.02
+    },
+    "yoshitomo-matsubara/bert-large-uncased-qnli": {
+        "OrigMB": 1278.52,
+        "CompRatio": 92.84,
+        "CompSpeed": 34.81,
+        "DecompSpeed": 293.19
+    },
+    "StevenLimcorn/bert-large-uncased-semeval2016-restaurants": {
+        "OrigMB": 1278.72,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.31,
+        "DecompSpeed": 299.4
+    },
+    "Jorgeutd/bert-large-uncased-finetuned-ner": {
+        "OrigMB": 1274.54,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.24,
+        "DecompSpeed": 298.41
+    }
+}
+
+Method: gzip
+{
+    "assemblyai/bert-large-uncased-sst2": {
+        "OrigMB": 1278.63,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.0,
+        "DecompSpeed": 250.35
+    },
+    "samrawal/bert-large-uncased_med-ner": {
+        "OrigMB": 1274.67,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.02,
+        "DecompSpeed": 251.53
+    },
+    "yoshitomo-matsubara/bert-large-uncased-mnli": {
+        "OrigMB": 1278.53,
+        "CompRatio": 92.84,
+        "CompSpeed": 34.88,
+        "DecompSpeed": 252.2
+    },
+    "princeton-nlp/sup-simcse-bert-large-uncased": {
+        "OrigMB": 1278.59,
+        "CompRatio": 92.84,
+        "CompSpeed": 34.95,
+        "DecompSpeed": 251.96
+    },
+    "SarielSinLuo/bert-large-uncased-finetuned-cola": {
+        "OrigMB": 1278.61,
+        "CompRatio": 92.84,
+        "CompSpeed": 34.77,
+        "DecompSpeed": 252.57
+    },
+    "princeton-nlp/unsup-simcse-bert-large-uncased": {
+        "OrigMB": 1278.59,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.05,
+        "DecompSpeed": 253.27
+    },
+    "yoshitomo-matsubara/bert-large-uncased-mrpc": {
+        "OrigMB": 1278.52,
+        "CompRatio": 92.85,
+        "CompSpeed": 35.04,
+        "DecompSpeed": 251.84
+    },
+    "yoshitomo-matsubara/bert-large-uncased-qnli": {
+        "OrigMB": 1278.52,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.07,
+        "DecompSpeed": 254.41
+    },
+    "StevenLimcorn/bert-large-uncased-semeval2016-restaurants": {
+        "OrigMB": 1278.72,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.01,
+        "DecompSpeed": 252.58
+    },
+    "Jorgeutd/bert-large-uncased-finetuned-ner": {
+        "OrigMB": 1274.54,
+        "CompRatio": 92.84,
+        "CompSpeed": 35.01,
+        "DecompSpeed": 254.41
+    }
+}

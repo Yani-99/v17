@@ -98,22 +98,56 @@ class CompressionEngine:
         key, shape, c_bytes, base_model, is_llm_task, target_dtype = args
         
         # 1. Worker 内部触发 Base 加载
+        # p_base, n_base = get_parent_module_and_name(base_model, key)
+        # if p_base is None and "." in key:
+        #     p_base, n_base = get_parent_module_and_name(base_model, key.split(".", 1)[1])
+        
+        # if p_base is not None:
+        #     if hasattr(p_base, "_hf_hook"):
+        #         p_base._hf_hook.pre_forward(p_base)
+            
+        #     t_base = getattr(p_base, n_base)
+        #     # 优化：立即转 CPU numpy 视图
+        #     if t_base.device.type != 'cpu':
+        #         base_cpu = t_base.detach().cpu().contiguous()
+        #     else:
+        #         base_cpu = t_base.detach().contiguous()
+        #     base_np = get_np_view(base_cpu)
+        # else:
+        #     is_half = (target_dtype == torch.float16 or target_dtype == torch.bfloat16)
+        #     dtype = np.uint16 if is_half else np.uint32
+        #     base_np = np.zeros(shape, dtype=dtype)
+
+        # 1. Worker 内部触发 Base 加载
         p_base, n_base = get_parent_module_and_name(base_model, key)
         if p_base is None and "." in key:
             p_base, n_base = get_parent_module_and_name(base_model, key.split(".", 1)[1])
         
+        # 定义一个 helper 变量来标记是否使用了真实的 base
+        used_real_base = False
+
         if p_base is not None:
             if hasattr(p_base, "_hf_hook"):
                 p_base._hf_hook.pre_forward(p_base)
             
             t_base = getattr(p_base, n_base)
-            # 优化：立即转 CPU numpy 视图
-            if t_base.device.type != 'cpu':
-                base_cpu = t_base.detach().cpu().contiguous()
+            
+            # [FIX] 增加形状检查！必须与压缩时的逻辑（mismatch -> zeros）保持一致
+            if tuple(t_base.shape) == tuple(shape):
+                # 优化：立即转 CPU numpy 视图
+                if t_base.device.type != 'cpu':
+                    base_cpu = t_base.detach().cpu().contiguous()
+                else:
+                    base_cpu = t_base.detach().contiguous()
+                base_np = get_np_view(base_cpu)
+                used_real_base = True
             else:
-                base_cpu = t_base.detach().contiguous()
-            base_np = get_np_view(base_cpu)
-        else:
+                # 如果形状不匹配（如 Llama3 128256 vs 128258），这里的 Base 不能用
+                # 压缩时这种情况使用了全0，所以解压也要用全0
+                pass 
+        
+        if not used_real_base:
+            # Fallback: 如果没有找到 Base 或者形状不匹配，使用全 0
             is_half = (target_dtype == torch.float16 or target_dtype == torch.bfloat16)
             dtype = np.uint16 if is_half else np.uint32
             base_np = np.zeros(shape, dtype=dtype)

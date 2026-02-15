@@ -54,10 +54,10 @@ RM = /home/liu4441/.local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/newdrive/liu4441/liana/pfor/standard/v16-from15-archi-shan
+CMAKE_SOURCE_DIR = /home/newdrive/liu4441/liana/pfor/standard/v17
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/newdrive/liu4441/liana/pfor/standard/v16-from15-archi-shan/build
+CMAKE_BINARY_DIR = /home/newdrive/liu4441/liana/pfor/standard/v17/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/pforex_cpp.dir/clean
 CMakeFiles/pforex_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pforex_cpp.dir/build.make CMakeFiles/pforex_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pforex_cpp.dir/build.make CMakeFiles/pforex_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/newdrive/liu4441/liana/pfor/standard/v16-from15-archi-shan/build/CMakeFiles --progress-num=1,2 "Built target pforex_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/newdrive/liu4441/liana/pfor/standard/v17/build/CMakeFiles --progress-num=1,2 "Built target pforex_cpp"
 .PHONY : CMakeFiles/pforex_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pforex_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/newdrive/liu4441/liana/pfor/standard/v16-from15-archi-shan/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/newdrive/liu4441/liana/pfor/standard/v17/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pforex_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/newdrive/liu4441/liana/pfor/standard/v16-from15-archi-shan/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/newdrive/liu4441/liana/pfor/standard/v17/build/CMakeFiles 0
 .PHONY : CMakeFiles/pforex_cpp.dir/rule
 
 # Convenience name for target.

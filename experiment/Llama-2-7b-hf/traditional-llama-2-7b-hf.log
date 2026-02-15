@@ -1,0 +1,230 @@
+
+=====================================================================================================================================
+Model Name                                                   | Method   | Orig(MB)   | Comp%      | C-Speed(MB/s)   | D-Speed(MB/s)  
+-------------------------------------------------------------------------------------------------------------------------------------
+meta-llama/Llama-2-7b-chat-hf                                | zlib     |  12852.5 |    76.99% |         13.21 |        284.54
+meta-llama/Llama-2-7b-chat-hf                                | gzip     |  12852.5 |    76.99% |         13.19 |        236.27
+meta-llama/Llama-2-7b-chat-hf                                | zstd     |  12852.5 |    76.56% |       1034.28 |       1145.23
+lmsys/vicuna-7b-v1.5                                         | zlib     |  12852.6 |    92.24% |         37.23 |        295.20
+lmsys/vicuna-7b-v1.5                                         | gzip     |  12852.6 |    92.24% |         36.89 |        270.84
+lmsys/vicuna-7b-v1.5                                         | zstd     |  12852.6 |    91.96% |        683.93 |       1121.97
+NousResearch/Nous-Hermes-llama-2-7b                          | zlib     |  12852.5 |    79.34% |         16.03 |        260.49
+NousResearch/Nous-Hermes-llama-2-7b                          | gzip     |  12852.5 |    79.34% |         16.03 |        219.23
+NousResearch/Nous-Hermes-llama-2-7b                          | zstd     |  12852.5 |    77.89% |        755.76 |       1015.89
+garage-bAInd/Platypus2-7B                                    | zlib     |  12852.6 |    86.80% |         22.73 |        288.51
+garage-bAInd/Platypus2-7B                                    | gzip     |  12852.6 |    86.80% |         22.75 |        249.09
+garage-bAInd/Platypus2-7B                                    | zstd     |  12852.6 |    86.47% |        752.17 |       1131.08
+WizardLM/WizardMath-7B-V1.0                                  | zlib     |  25705.2 |    58.80% |          7.51 |        299.74
+WizardLM/WizardMath-7B-V1.0                                  | gzip     |  25705.2 |    58.80% |          7.51 |        217.20
+WizardLM/WizardMath-7B-V1.0                                  | zstd     |  25705.2 |    58.99% |        146.97 |        838.96
+georgesung/llama2_7b_chat_uncensored                         | zlib     |  25705.1 |    57.84% |          9.79 |        392.82
+georgesung/llama2_7b_chat_uncensored                         | gzip     |  25705.1 |    57.84% |          9.78 |        280.70
+georgesung/llama2_7b_chat_uncensored                         | zstd     |  25705.1 |    57.11% |        209.46 |        906.17
+allenai/tulu-2-7b                                            | zlib     |  12852.6 |    79.42% |         16.05 |        258.86
+allenai/tulu-2-7b                                            | gzip     |  12852.6 |    79.42% |         15.98 |        226.66
+allenai/tulu-2-7b                                            | zstd     |  12852.6 |    77.98% |        748.09 |        997.21
+PygmalionAI/pygmalion-2-7b                                   | zlib     |  12852.5 |    79.30% |         15.92 |        256.26
+PygmalionAI/pygmalion-2-7b                                   | gzip     |  12852.5 |    79.30% |         15.94 |        225.32
+PygmalionAI/pygmalion-2-7b                                   | zstd     |  12852.5 |    77.84% |        730.54 |        994.57
+h2oai/h2ogpt-4096-llama2-7b-chat                             | zlib     |  12852.5 |    76.99% |         13.10 |        277.01
+h2oai/h2ogpt-4096-llama2-7b-chat                             | gzip     |  12852.5 |    76.99% |         13.09 |        245.74
+h2oai/h2ogpt-4096-llama2-7b-chat                             | zstd     |  12852.5 |    76.56% |        898.28 |       1136.48
+stabilityai/StableBeluga-7B                                  | zlib     |  12852.6 |    76.86% |         13.01 |        274.98
+stabilityai/StableBeluga-7B                                  | gzip     |  12852.6 |    76.86% |         12.98 |        244.78
+stabilityai/StableBeluga-7B                                  | zstd     |  12852.6 |    76.40% |        885.56 |       1112.02
+
+==============================
+AGGREGATED RESULTS BY METHOD
+==============================
+
+Method: zstd
+{
+    "meta-llama/Llama-2-7b-chat-hf": {
+        "OrigMB": 12852.55,
+        "CompRatio": 76.56,
+        "CompSpeed": 1034.28,
+        "DecompSpeed": 1145.23
+    },
+    "lmsys/vicuna-7b-v1.5": {
+        "OrigMB": 12852.62,
+        "CompRatio": 91.96,
+        "CompSpeed": 683.93,
+        "DecompSpeed": 1121.97
+    },
+    "NousResearch/Nous-Hermes-llama-2-7b": {
+        "OrigMB": 12852.54,
+        "CompRatio": 77.89,
+        "CompSpeed": 755.76,
+        "DecompSpeed": 1015.89
+    },
+    "garage-bAInd/Platypus2-7B": {
+        "OrigMB": 12852.55,
+        "CompRatio": 86.47,
+        "CompSpeed": 752.17,
+        "DecompSpeed": 1131.08
+    },
+    "WizardLM/WizardMath-7B-V1.0": {
+        "OrigMB": 25705.16,
+        "CompRatio": 58.99,
+        "CompSpeed": 146.97,
+        "DecompSpeed": 838.96
+    },
+    "georgesung/llama2_7b_chat_uncensored": {
+        "OrigMB": 25705.06,
+        "CompRatio": 57.11,
+        "CompSpeed": 209.46,
+        "DecompSpeed": 906.17
+    },
+    "allenai/tulu-2-7b": {
+        "OrigMB": 12852.6,
+        "CompRatio": 77.98,
+        "CompSpeed": 748.09,
+        "DecompSpeed": 997.21
+    },
+    "PygmalionAI/pygmalion-2-7b": {
+        "OrigMB": 12852.54,
+        "CompRatio": 77.84,
+        "CompSpeed": 730.54,
+        "DecompSpeed": 994.57
+    },
+    "h2oai/h2ogpt-4096-llama2-7b-chat": {
+        "OrigMB": 12852.55,
+        "CompRatio": 76.56,
+        "CompSpeed": 898.28,
+        "DecompSpeed": 1136.48
+    },
+    "stabilityai/StableBeluga-7B": {
+        "OrigMB": 12852.55,
+        "CompRatio": 76.4,
+        "CompSpeed": 885.56,
+        "DecompSpeed": 1112.02
+    }
+}
+
+Method: zlib
+{
+    "meta-llama/Llama-2-7b-chat-hf": {
+        "OrigMB": 12852.55,
+        "CompRatio": 76.99,
+        "CompSpeed": 13.21,
+        "DecompSpeed": 284.54
+    },
+    "lmsys/vicuna-7b-v1.5": {
+        "OrigMB": 12852.62,
+        "CompRatio": 92.24,
+        "CompSpeed": 37.23,
+        "DecompSpeed": 295.2
+    },
+    "NousResearch/Nous-Hermes-llama-2-7b": {
+        "OrigMB": 12852.54,
+        "CompRatio": 79.34,
+        "CompSpeed": 16.03,
+        "DecompSpeed": 260.49
+    },
+    "garage-bAInd/Platypus2-7B": {
+        "OrigMB": 12852.55,
+        "CompRatio": 86.8,
+        "CompSpeed": 22.73,
+        "DecompSpeed": 288.51
+    },
+    "WizardLM/WizardMath-7B-V1.0": {
+        "OrigMB": 25705.16,
+        "CompRatio": 58.8,
+        "CompSpeed": 7.51,
+        "DecompSpeed": 299.74
+    },
+    "georgesung/llama2_7b_chat_uncensored": {
+        "OrigMB": 25705.06,
+        "CompRatio": 57.84,
+        "CompSpeed": 9.79,
+        "DecompSpeed": 392.82
+    },
+    "allenai/tulu-2-7b": {
+        "OrigMB": 12852.6,
+        "CompRatio": 79.42,
+        "CompSpeed": 16.05,
+        "DecompSpeed": 258.86
+    },
+    "PygmalionAI/pygmalion-2-7b": {
+        "OrigMB": 12852.54,
+        "CompRatio": 79.3,
+        "CompSpeed": 15.92,
+        "DecompSpeed": 256.26
+    },
+    "h2oai/h2ogpt-4096-llama2-7b-chat": {
+        "OrigMB": 12852.55,
+        "CompRatio": 76.99,
+        "CompSpeed": 13.1,
+        "DecompSpeed": 277.01
+    },
+    "stabilityai/StableBeluga-7B": {
+        "OrigMB": 12852.55,
+        "CompRatio": 76.86,
+        "CompSpeed": 13.01,
+        "DecompSpeed": 274.98
+    }
+}
+
+Method: gzip
+{
+    "meta-llama/Llama-2-7b-chat-hf": {
+        "OrigMB": 12852.55,
+        "CompRatio": 76.99,
+        "CompSpeed": 13.19,
+        "DecompSpeed": 236.27
+    },
+    "lmsys/vicuna-7b-v1.5": {
+        "OrigMB": 12852.62,
+        "CompRatio": 92.24,
+        "CompSpeed": 36.89,
+        "DecompSpeed": 270.84
+    },
+    "NousResearch/Nous-Hermes-llama-2-7b": {
+        "OrigMB": 12852.54,
+        "CompRatio": 79.34,
+        "CompSpeed": 16.03,
+        "DecompSpeed": 219.23
+    },
+    "garage-bAInd/Platypus2-7B": {
+        "OrigMB": 12852.55,
+        "CompRatio": 86.8,
+        "CompSpeed": 22.75,
+        "DecompSpeed": 249.09
+    },
+    "WizardLM/WizardMath-7B-V1.0": {
+        "OrigMB": 25705.16,
+        "CompRatio": 58.8,
+        "CompSpeed": 7.51,
+        "DecompSpeed": 217.2
+    },
+    "georgesung/llama2_7b_chat_uncensored": {
+        "OrigMB": 25705.06,
+        "CompRatio": 57.84,
+        "CompSpeed": 9.78,
+        "DecompSpeed": 280.7
+    },
+    "allenai/tulu-2-7b": {
+        "OrigMB": 12852.6,
+        "CompRatio": 79.42,
+        "CompSpeed": 15.98,
+        "DecompSpeed": 226.66
+    },
+    "PygmalionAI/pygmalion-2-7b": {
+        "OrigMB": 12852.54,
+        "CompRatio": 79.3,
+        "CompSpeed": 15.94,
+        "DecompSpeed": 225.32
+    },
+    "h2oai/h2ogpt-4096-llama2-7b-chat": {
+        "OrigMB": 12852.55,
+        "CompRatio": 76.99,
+        "CompSpeed": 13.09,
+        "DecompSpeed": 245.74
+    },
+    "stabilityai/StableBeluga-7B": {
+        "OrigMB": 12852.55,
+        "CompRatio": 76.86,
+        "CompSpeed": 12.98,
+        "DecompSpeed": 244.78
+    }
+}

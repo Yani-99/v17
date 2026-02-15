@@ -40,7 +40,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/liu4441/.local/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake"
   "/home/liu4441/.local/share/cmake-3.29/Modules/Platform/Linux.cmake"
   "/home/liu4441/.local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake"
-  "/home/newdrive/liu4441/liana/pfor/standard/v16-from15-archi-shan/CMakeLists.txt"
+  "/home/newdrive/liu4441/liana/pfor/standard/v17/CMakeLists.txt"
   "CMakeFiles/3.29.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.29.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.29.4/CMakeSystem.cmake"
