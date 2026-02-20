@@ -1,0 +1,31 @@
+
+=====================================================================================================================================
+Model Name                                                   | Method   | Orig(MB)   | Comp%      | C-Speed(MB/s)   | D-Speed(MB/s)  
+-------------------------------------------------------------------------------------------------------------------------------------
+meta-llama/Llama-2-13b-chat-hf                               | zlib     |  15350.3 |    76.95% |         12.45 |        269.35
+meta-llama/Llama-2-13b-chat-hf                               | gzip     |  15350.3 |    76.95% |         12.51 |        227.14
+meta-llama/Llama-2-13b-chat-hf                               | zstd     |  15350.3 |    76.49% |        985.57 |       1095.02
+lmsys/vicuna-13b-v1.5                                        | zlib     |  24825.9 |    92.23% |         36.05 |        290.72
+lmsys/vicuna-13b-v1.5                                        | gzip     |  24825.9 |    92.23% |         35.92 |        253.85
+lmsys/vicuna-13b-v1.5                                        | zstd     |  24825.9 |    91.95% |        641.41 |       1067.37
+NousResearch/Nous-Hermes-Llama2-13b                          | zlib     |  24826.5 |    79.41% |         15.53 |        254.77
+NousResearch/Nous-Hermes-Llama2-13b                          | gzip     |  24826.5 |    79.41% |         15.63 |        216.25
+NousResearch/Nous-Hermes-Llama2-13b                          | zstd     |  24826.5 |    77.95% |        717.45 |        975.24
+WizardLM/WizardLM-13B-V1.2                                   | zlib     |  24825.9 |    92.23% |         36.34 |        287.11
+WizardLM/WizardLM-13B-V1.2                                   | gzip     |  24825.9 |    92.23% |         36.02 |        253.81
+WizardLM/WizardLM-13B-V1.2                                   | zstd     |  24825.9 |    91.95% |        631.87 |       1058.92
+garage-bAInd/Platypus2-13B                                   | zlib     |  24825.8 |    86.95% |         22.29 |        283.73
+garage-bAInd/Platypus2-13B                                   | gzip     |  24825.8 |    86.95% |         22.20 |        246.13
+garage-bAInd/Platypus2-13B                                   | zstd     |  24825.8 |    86.61% |        716.03 |       1083.51
+stabilityai/StableBeluga-13B                                 | zlib     |  24825.8 |    76.87% |         11.15 |        224.33
+stabilityai/StableBeluga-13B                                 | gzip     |  24825.8 |    76.87% |         10.39 |        199.54
+stabilityai/StableBeluga-13B                                 | zstd     |  24825.8 |    76.41% |        630.10 |        979.56
+allenai/tulu-2-dpo-13b                                       | zlib     |  24825.8 |    79.41% |         12.90 |        210.90
+allenai/tulu-2-dpo-13b                                       | gzip     |  24825.8 |    79.41% |         12.96 |        177.44
+allenai/tulu-2-dpo-13b                                       | zstd     |  24825.8 |    77.95% |        542.77 |        738.19
+Open-Orca/OpenOrca-Platypus2-13B                             | zlib     |  24826.0 |    86.95% |         17.96 |        249.35
+Open-Orca/OpenOrca-Platypus2-13B                             | gzip     |  24826.0 |    86.95% |         18.07 |        199.47
+Open-Orca/OpenOrca-Platypus2-13B                             | zstd     |  24826.0 |    86.62% |        514.59 |        941.56
+Riiid/sheep-duck-llama-2-13b                                 | zlib     |  24825.9 |    92.27% |         28.92 |        241.27
+Riiid/sheep-duck-llama-2-13b                                 | gzip     |  24825.9 |    92.27% |         29.21 |        206.69
+Riiid/sheep-duck-llama-2-13b                                 | zstd     |  24825.9 |    91.97% |        496.58 |        861.09

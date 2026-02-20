@@ -243,9 +243,6 @@ pforex_extension_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 pforex_extension_SOURCE_DIR:STATIC=/home/newdrive/liu4441/liana/pfor/standard/v17
 
-//The directory containing a CMake configuration file for pybind11.
-pybind11_DIR:PATH=pybind11_DIR-NOTFOUND
-
 
 ########################
 # INTERNAL cache entries

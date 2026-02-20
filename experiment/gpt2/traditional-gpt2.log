@@ -1,0 +1,230 @@
+
+=====================================================================================================================================
+Model Name                                                   | Method   | Orig(MB)   | Comp%      | C-Speed(MB/s)   | D-Speed(MB/s)  
+-------------------------------------------------------------------------------------------------------------------------------------
+lvwerra/gpt2-imdb                                            | zlib     |    522.7 |    84.44% |         37.37 |        310.73
+lvwerra/gpt2-imdb                                            | gzip     |    522.7 |    84.44% |         37.69 |        264.01
+lvwerra/gpt2-imdb                                            | zstd     |    522.7 |    84.36% |        626.39 |        984.56
+Gustavosta/MagicPrompt-Stable-Diffusion                      | zlib     |    486.7 |    90.69% |         35.84 |        294.56
+Gustavosta/MagicPrompt-Stable-Diffusion                      | gzip     |    486.7 |    90.69% |         35.50 |        267.92
+Gustavosta/MagicPrompt-Stable-Diffusion                      | zstd     |    486.7 |    90.61% |        572.48 |        932.86
+mrm8488/GPT-2-finetuned-common_gen                           | zlib     |    486.8 |    90.68% |         35.86 |        293.29
+mrm8488/GPT-2-finetuned-common_gen                           | gzip     |    486.8 |    90.68% |         35.65 |        268.44
+mrm8488/GPT-2-finetuned-common_gen                           | zstd     |    486.8 |    90.59% |        584.40 |        932.36
+succinctly/text2image-prompt-generator                       | zlib     |    634.0 |    91.22% |         35.65 |        296.16
+succinctly/text2image-prompt-generator                       | gzip     |    634.0 |    91.22% |         35.27 |        263.26
+succinctly/text2image-prompt-generator                       | zstd     |    634.0 |    91.13% |        586.32 |        946.22
+shibing624/code-autocomplete-gpt2-base                       | zlib     |    486.7 |    90.69% |         35.81 |        296.87
+shibing624/code-autocomplete-gpt2-base                       | gzip     |    486.7 |    90.69% |         35.46 |        268.09
+shibing624/code-autocomplete-gpt2-base                       | zstd     |    486.7 |    90.62% |        578.30 |        936.85
+rhysjones/gpt2-124M-edu-fineweb-10B                          | zlib     |    237.4 |    77.16% |         13.09 |        273.40
+rhysjones/gpt2-124M-edu-fineweb-10B                          | gzip     |    237.4 |    77.16% |         13.12 |        240.91
+rhysjones/gpt2-124M-edu-fineweb-10B                          | zstd     |    237.4 |    76.65% |       1014.93 |       1009.18
+huggingtweets/elonmusk                                       | zlib     |    486.8 |    90.68% |         35.68 |        295.56
+huggingtweets/elonmusk                                       | gzip     |    486.8 |    90.68% |         35.39 |        267.96
+huggingtweets/elonmusk                                       | zstd     |    486.8 |    90.59% |        585.53 |        966.87
+neulab/gpt2-finetuned-wikitext103                            | zlib     |    486.8 |    90.69% |         35.64 |        295.20
+neulab/gpt2-finetuned-wikitext103                            | gzip     |    486.8 |    90.69% |         35.41 |        267.70
+neulab/gpt2-finetuned-wikitext103                            | zstd     |    486.8 |    90.61% |        582.30 |        932.56
+vicgalle/gpt2-open-instruct-v1                               | zlib     |    486.7 |    90.68% |         35.76 |        295.40
+vicgalle/gpt2-open-instruct-v1                               | gzip     |    486.7 |    90.68% |         35.58 |        270.40
+vicgalle/gpt2-open-instruct-v1                               | zstd     |    486.7 |    90.60% |        584.04 |        942.90
+Ssarion/gpt2-multi-news                                      | zlib     |    486.7 |    90.68% |         35.84 |        297.92
+Ssarion/gpt2-multi-news                                      | gzip     |    486.7 |    90.68% |         35.53 |        268.12
+Ssarion/gpt2-multi-news                                      | zstd     |    486.7 |    90.59% |        578.92 |        932.44
+
+==============================
+AGGREGATED RESULTS BY METHOD
+==============================
+
+Method: zstd
+{
+    "lvwerra/gpt2-imdb": {
+        "OrigMB": 522.73,
+        "CompRatio": 84.36,
+        "CompSpeed": 626.39,
+        "DecompSpeed": 984.56
+    },
+    "Gustavosta/MagicPrompt-Stable-Diffusion": {
+        "OrigMB": 486.72,
+        "CompRatio": 90.61,
+        "CompSpeed": 572.48,
+        "DecompSpeed": 932.86
+    },
+    "mrm8488/GPT-2-finetuned-common_gen": {
+        "OrigMB": 486.76,
+        "CompRatio": 90.59,
+        "CompSpeed": 584.4,
+        "DecompSpeed": 932.36
+    },
+    "succinctly/text2image-prompt-generator": {
+        "OrigMB": 633.99,
+        "CompRatio": 91.13,
+        "CompSpeed": 586.32,
+        "DecompSpeed": 946.22
+    },
+    "shibing624/code-autocomplete-gpt2-base": {
+        "OrigMB": 486.72,
+        "CompRatio": 90.62,
+        "CompSpeed": 578.3,
+        "DecompSpeed": 936.85
+    },
+    "rhysjones/gpt2-124M-edu-fineweb-10B": {
+        "OrigMB": 237.36,
+        "CompRatio": 76.65,
+        "CompSpeed": 1014.93,
+        "DecompSpeed": 1009.18
+    },
+    "huggingtweets/elonmusk": {
+        "OrigMB": 486.75,
+        "CompRatio": 90.59,
+        "CompSpeed": 585.53,
+        "DecompSpeed": 966.87
+    },
+    "neulab/gpt2-finetuned-wikitext103": {
+        "OrigMB": 486.76,
+        "CompRatio": 90.61,
+        "CompSpeed": 582.3,
+        "DecompSpeed": 932.56
+    },
+    "vicgalle/gpt2-open-instruct-v1": {
+        "OrigMB": 486.73,
+        "CompRatio": 90.6,
+        "CompSpeed": 584.04,
+        "DecompSpeed": 942.9
+    },
+    "Ssarion/gpt2-multi-news": {
+        "OrigMB": 486.72,
+        "CompRatio": 90.59,
+        "CompSpeed": 578.92,
+        "DecompSpeed": 932.44
+    }
+}
+
+Method: zlib
+{
+    "lvwerra/gpt2-imdb": {
+        "OrigMB": 522.73,
+        "CompRatio": 84.44,
+        "CompSpeed": 37.37,
+        "DecompSpeed": 310.73
+    },
+    "Gustavosta/MagicPrompt-Stable-Diffusion": {
+        "OrigMB": 486.72,
+        "CompRatio": 90.69,
+        "CompSpeed": 35.84,
+        "DecompSpeed": 294.56
+    },
+    "mrm8488/GPT-2-finetuned-common_gen": {
+        "OrigMB": 486.76,
+        "CompRatio": 90.68,
+        "CompSpeed": 35.86,
+        "DecompSpeed": 293.29
+    },
+    "succinctly/text2image-prompt-generator": {
+        "OrigMB": 633.99,
+        "CompRatio": 91.22,
+        "CompSpeed": 35.65,
+        "DecompSpeed": 296.16
+    },
+    "shibing624/code-autocomplete-gpt2-base": {
+        "OrigMB": 486.72,
+        "CompRatio": 90.69,
+        "CompSpeed": 35.81,
+        "DecompSpeed": 296.87
+    },
+    "rhysjones/gpt2-124M-edu-fineweb-10B": {
+        "OrigMB": 237.36,
+        "CompRatio": 77.16,
+        "CompSpeed": 13.09,
+        "DecompSpeed": 273.4
+    },
+    "huggingtweets/elonmusk": {
+        "OrigMB": 486.75,
+        "CompRatio": 90.68,
+        "CompSpeed": 35.68,
+        "DecompSpeed": 295.56
+    },
+    "neulab/gpt2-finetuned-wikitext103": {
+        "OrigMB": 486.76,
+        "CompRatio": 90.69,
+        "CompSpeed": 35.64,
+        "DecompSpeed": 295.2
+    },
+    "vicgalle/gpt2-open-instruct-v1": {
+        "OrigMB": 486.73,
+        "CompRatio": 90.68,
+        "CompSpeed": 35.76,
+        "DecompSpeed": 295.4
+    },
+    "Ssarion/gpt2-multi-news": {
+        "OrigMB": 486.72,
+        "CompRatio": 90.68,
+        "CompSpeed": 35.84,
+        "DecompSpeed": 297.92
+    }
+}
+
+Method: gzip
+{
+    "lvwerra/gpt2-imdb": {
+        "OrigMB": 522.73,
+        "CompRatio": 84.44,
+        "CompSpeed": 37.69,
+        "DecompSpeed": 264.01
+    },
+    "Gustavosta/MagicPrompt-Stable-Diffusion": {
+        "OrigMB": 486.72,
+        "CompRatio": 90.69,
+        "CompSpeed": 35.5,
+        "DecompSpeed": 267.92
+    },
+    "mrm8488/GPT-2-finetuned-common_gen": {
+        "OrigMB": 486.76,
+        "CompRatio": 90.68,
+        "CompSpeed": 35.65,
+        "DecompSpeed": 268.44
+    },
+    "succinctly/text2image-prompt-generator": {
+        "OrigMB": 633.99,
+        "CompRatio": 91.22,
+        "CompSpeed": 35.27,
+        "DecompSpeed": 263.26
+    },
+    "shibing624/code-autocomplete-gpt2-base": {
+        "OrigMB": 486.72,
+        "CompRatio": 90.69,
+        "CompSpeed": 35.46,
+        "DecompSpeed": 268.09
+    },
+    "rhysjones/gpt2-124M-edu-fineweb-10B": {
+        "OrigMB": 237.36,
+        "CompRatio": 77.16,
+        "CompSpeed": 13.12,
+        "DecompSpeed": 240.91
+    },
+    "huggingtweets/elonmusk": {
+        "OrigMB": 486.75,
+        "CompRatio": 90.68,
+        "CompSpeed": 35.39,
+        "DecompSpeed": 267.96
+    },
+    "neulab/gpt2-finetuned-wikitext103": {
+        "OrigMB": 486.76,
+        "CompRatio": 90.69,
+        "CompSpeed": 35.41,
+        "DecompSpeed": 267.7
+    },
+    "vicgalle/gpt2-open-instruct-v1": {
+        "OrigMB": 486.73,
+        "CompRatio": 90.68,
+        "CompSpeed": 35.58,
+        "DecompSpeed": 270.4
+    },
+    "Ssarion/gpt2-multi-news": {
+        "OrigMB": 486.72,
+        "CompRatio": 90.68,
+        "CompSpeed": 35.53,
+        "DecompSpeed": 268.12
+    }
+}

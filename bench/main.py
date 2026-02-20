@@ -99,7 +99,20 @@ LOSSY_RATES = [0.0]
 # llama2-7b
 # CONFIG_LIST = ["llama2-7b-1","llama2-7b-2","llama2-7b-3","llama2-7b-4","llama2-7b-5","llama2-7b-6","llama2-7b-7","llama2-7b-8","llama2-7b-9","llama2-7b-10"]
 # llama3.1-8b
-CONFIG_LIST = ["llama3.1-8b-1","llama3.1-8b-2","llama3.1-8b-3","llama3.1-8b-4","llama3.1-8b-5","llama3.1-8b-6","llama3.1-8b-7","llama3.1-8b-8","llama3.1-8b-9","llama3.1-8b-10"]
+# CONFIG_LIST = ["llama3.1-8b-1","llama3.1-8b-2","llama3.1-8b-3","llama3.1-8b-4","llama3.1-8b-5","llama3.1-8b-6","llama3.1-8b-7","llama3.1-8b-8","llama3.1-8b-9","llama3.1-8b-10"]
+# llama2-13b
+# CONFIG_LIST = ["llama2-13b-1","llama2-13b-2","llama2-13b-3","llama2-13b-4", "llama2-13b-5","llama2-13b-6","llama2-13b-7","llama2-13b-8","llama2-13b-9","llama2-13b-10"]
+# gpt2
+# CONFIG_LIST = ["gpt2-1", "gpt2-2", "gpt2-3", "gpt2-4", "gpt2-5", "gpt2-6", "gpt2-7", "gpt2-8", "gpt2-9", "gpt2-10"]
+# roberta-large
+# CONFIG_LIST = ["roberta-large-1", "roberta-large-2", "roberta-large-3", "roberta-large-4", "roberta-large-5", "roberta-large-6", "roberta-large-7", "roberta-large-8", "roberta-large-9", "roberta-large-10"]
+# roberta-base
+# CONFIG_LIST = ["roberta-base-1", "roberta-base-2", "roberta-base-3", "roberta-base-4", "roberta-base-5", "roberta-base-6", "roberta-base-7", "roberta-base-8", "roberta-base-9", "roberta-base-10"]
+# mistral-7b
+# CONFIG_LIST = ["mistral-7b-1", "mistral-7b-2", "mistral-7b-3", "mistral-7b-4", "mistral-7b-5", "mistral-7b-6", "mistral-7b-7", "mistral-7b-8", "mistral-7b-9", "mistral-7b-10"]
+# meta-llama/Llama-3.1-70B
+# CONFIG_LIST = ["llama-3.1-70b-1", "llama-3.1-70b-2", "llama-3.1-70b-3", "llama-3.1-70b-4", "llama-3.1-70b-5", "llama-3.1-70b-6", "llama-3.1-70b-7", "llama-3.1-70b-8", "llama-3.1-70b-9", "llama-3.1-70b-10"]
+CONFIG_LIST = ["llama3_70b"]
 
 
 from engine import CompressionEngine

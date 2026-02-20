@@ -1,0 +1,77 @@
+-- Found pybind11: /home/liu4441/.conda/envs/liana/lib/python3.9/site-packages/pybind11/include (found version "3.0.1")
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/newdrive/liu4441/liana/pfor/standard/v17/build
+[100%] Built target pforex_cpp
+[RUN] Running benchmarks...
+[CONFIG] 手动设定: 启动 1 个并行线程
+
+>>> Running Config: roberta-base-1 <<<
+Detecting FT model native dtype...
+-> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
+
+[========== Rate: 0.0 = Model: roberta-base-1==========]
+  -> Size: 66.75% | Comp: 518.0 MB/s | Decomp: 612.6 MB/s | Metrics: {}
+
+>>> Running Config: roberta-base-2 <<<
+Detecting FT model native dtype...
+-> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
+
+[========== Rate: 0.0 = Model: roberta-base-2==========]
+  -> Size: 73.88% | Comp: 310.9 MB/s | Decomp: 679.5 MB/s | Metrics: {}
+
+>>> Running Config: roberta-base-3 <<<
+Detecting FT model native dtype...
+-> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
+
+[========== Rate: 0.0 = Model: roberta-base-3==========]
+  -> Size: 73.67% | Comp: 322.5 MB/s | Decomp: 667.5 MB/s | Metrics: {}
+
+>>> Running Config: roberta-base-4 <<<
+Detecting FT model native dtype...
+-> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
+
+[========== Rate: 0.0 = Model: roberta-base-4==========]
+  -> Size: 50.79% | Comp: 141.4 MB/s | Decomp: 768.2 MB/s | Metrics: {}
+
+>>> Running Config: roberta-base-5 <<<
+Detecting FT model native dtype...
+-> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
+
+[========== Rate: 0.0 = Model: roberta-base-5==========]
+  -> Size: 78.25% | Comp: 495.8 MB/s | Decomp: 613.5 MB/s | Metrics: {}
+
+>>> Running Config: roberta-base-6 <<<
+Detecting FT model native dtype...
+-> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
+
+[========== Rate: 0.0 = Model: roberta-base-6==========]
+  -> Size: 65.53% | Comp: 592.3 MB/s | Decomp: 624.8 MB/s | Metrics: {}
+
+>>> Running Config: roberta-base-7 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float32
+
+[========== Rate: 0.0 = Model: roberta-base-7==========]
+  -> Size: 86.30% | Comp: 262.6 MB/s | Decomp: 611.3 MB/s | Metrics: {}
+
+>>> Running Config: roberta-base-8 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float32
+
+[========== Rate: 0.0 = Model: roberta-base-8==========]
+  -> Size: 68.53% | Comp: 550.4 MB/s | Decomp: 628.2 MB/s | Metrics: {}
+
+>>> Running Config: roberta-base-9 <<<
+Detecting FT model native dtype...
+-> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
+
+[========== Rate: 0.0 = Model: roberta-base-9==========]
+  -> Size: 74.10% | Comp: 532.6 MB/s | Decomp: 530.6 MB/s | Metrics: {}
+
+>>> Running Config: roberta-base-10 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float32
+
+[========== Rate: 0.0 = Model: roberta-base-10==========]
+  -> Size: 76.36% | Comp: 499.8 MB/s | Decomp: 613.2 MB/s | Metrics: {}

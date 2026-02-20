@@ -1,0 +1,41 @@
+开始模型压缩批处理任务...
+------------------------------------------------
+[1/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model mistralai/Mistral-7B-Instruct-v0.1 --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='mistralai/Mistral-7B-Instruct-v0.1', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 27625.16 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Mistral-7B-Instruct-v0.1": {
+        "comp%": "77.87%",
+        "CompThroughput": "95.29 MB/s",
+        "DecompThroughput": "101.72 MB/s"
+    }
+}
+------------------------------------------------
+[2/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model HuggingFaceH4/zephyr-7b-beta --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='HuggingFaceH4/zephyr-7b-beta', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 27625.16 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "zephyr-7b-beta": {
+        "comp%": "68.27%",
+        "CompThroughput": "102.25 MB/s",
+        "DecompThroughput": "105.35 MB/s"
+    }
+}
+------------------------------------------------
+[3/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model HuggingFaceH4/zephyr-7b-alpha --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='HuggingFaceH4/zephyr-7b-alpha', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 27625.16 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "zephyr-7b-alpha": {
+        "comp%": "68.33%",
+        "CompThroughput": "102.57 MB/s",
+        "DecompThroughput": "104.95 MB/s"
+    }
+}
+------------------------------------------------
+[4/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model Intel/neural-chat-7b-v3-1 --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='Intel/neural-chat-7b-v3-1', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 27625.16 MB

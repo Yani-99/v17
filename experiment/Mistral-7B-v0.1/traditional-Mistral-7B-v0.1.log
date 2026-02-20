@@ -1,0 +1,230 @@
+
+=====================================================================================================================================
+Model Name                                                   | Method   | Orig(MB)   | Comp%      | C-Speed(MB/s)   | D-Speed(MB/s)  
+-------------------------------------------------------------------------------------------------------------------------------------
+mistralai/Mistral-7B-Instruct-v0.1                           | zlib     |  13812.5 |    79.17% |         15.89 |        267.17
+mistralai/Mistral-7B-Instruct-v0.1                           | gzip     |  13812.5 |    79.17% |         15.85 |        218.37
+mistralai/Mistral-7B-Instruct-v0.1                           | zstd     |  13812.5 |    77.84% |        752.25 |       1004.00
+HuggingFaceH4/zephyr-7b-beta                                 | zlib     |  13812.5 |    79.16% |         15.21 |        265.82
+HuggingFaceH4/zephyr-7b-beta                                 | gzip     |  13812.5 |    79.16% |         13.25 |        216.84
+HuggingFaceH4/zephyr-7b-beta                                 | zstd     |  13812.5 |    77.87% |        768.82 |       1006.39
+HuggingFaceH4/zephyr-7b-alpha                                | zlib     |  13812.5 |    79.16% |         15.92 |        266.68
+HuggingFaceH4/zephyr-7b-alpha                                | gzip     |  13812.5 |    79.16% |         15.91 |        219.39
+HuggingFaceH4/zephyr-7b-alpha                                | zstd     |  13812.5 |    77.87% |        765.30 |       1007.04
+Intel/neural-chat-7b-v3-1                                    | zlib     |  13812.5 |    91.70% |         35.55 |        299.12
+Intel/neural-chat-7b-v3-1                                    | gzip     |  13812.5 |    91.70% |         35.36 |        256.92
+Intel/neural-chat-7b-v3-1                                    | zstd     |  13812.5 |    91.43% |        685.68 |       1368.14
+berkeley-nest/Starling-LM-7B-alpha                           | zlib     |  13812.6 |    79.16% |         15.90 |        264.00
+berkeley-nest/Starling-LM-7B-alpha                           | gzip     |  13812.6 |    79.16% |         15.91 |        223.25
+berkeley-nest/Starling-LM-7B-alpha                           | zstd     |  13812.6 |    77.87% |        773.13 |       1185.84
+argilla/notus-7b-v1                                          | zlib     |  13812.5 |    79.16% |         15.89 |        263.92
+argilla/notus-7b-v1                                          | gzip     |  13812.5 |    79.16% |         15.90 |        223.23
+argilla/notus-7b-v1                                          | zstd     |  13812.5 |    77.87% |        773.06 |       1187.94
+jondurbin/airoboros-m-7b-3.1.2                               | zlib     |  13812.5 |    79.24% |         15.94 |        262.43
+jondurbin/airoboros-m-7b-3.1.2                               | gzip     |  13812.5 |    79.24% |         15.95 |        221.30
+jondurbin/airoboros-m-7b-3.1.2                               | zstd     |  13812.5 |    77.95% |        757.91 |       1179.59
+ehartford/samantha-1.2-mistral-7b                            | zlib     |  13812.6 |    79.17% |         15.90 |        264.23
+ehartford/samantha-1.2-mistral-7b                            | gzip     |  13812.6 |    79.17% |         15.93 |        223.11
+ehartford/samantha-1.2-mistral-7b                            | zstd     |  13812.6 |    77.87% |        769.42 |       1186.15
+migtissera/SynthIA-7B-v1.3                                   | zlib     |  13812.6 |    91.70% |         35.50 |        294.45
+migtissera/SynthIA-7B-v1.3                                   | gzip     |  13812.6 |    91.70% |         35.23 |        269.93
+migtissera/SynthIA-7B-v1.3                                   | zstd     |  13812.6 |    91.43% |        686.62 |       1125.02
+TIGER-Lab/MAmmoTH-7B-Mistral                                 | zlib     |  27625.2 |    92.47% |         34.72 |        299.02
+TIGER-Lab/MAmmoTH-7B-Mistral                                 | gzip     |  27625.2 |    92.47% |         34.53 |        263.57
+TIGER-Lab/MAmmoTH-7B-Mistral                                 | zstd     |  27625.2 |    92.37% |        594.62 |       1009.72
+
+==============================
+AGGREGATED RESULTS BY METHOD
+==============================
+
+Method: zstd
+{
+    "mistralai/Mistral-7B-Instruct-v0.1": {
+        "OrigMB": 13812.54,
+        "CompRatio": 77.84,
+        "CompSpeed": 752.25,
+        "DecompSpeed": 1004.0
+    },
+    "HuggingFaceH4/zephyr-7b-beta": {
+        "OrigMB": 13812.54,
+        "CompRatio": 77.87,
+        "CompSpeed": 768.82,
+        "DecompSpeed": 1006.39
+    },
+    "HuggingFaceH4/zephyr-7b-alpha": {
+        "OrigMB": 13812.54,
+        "CompRatio": 77.87,
+        "CompSpeed": 765.3,
+        "DecompSpeed": 1007.04
+    },
+    "Intel/neural-chat-7b-v3-1": {
+        "OrigMB": 13812.54,
+        "CompRatio": 91.43,
+        "CompSpeed": 685.68,
+        "DecompSpeed": 1368.14
+    },
+    "berkeley-nest/Starling-LM-7B-alpha": {
+        "OrigMB": 13812.57,
+        "CompRatio": 77.87,
+        "CompSpeed": 773.13,
+        "DecompSpeed": 1185.84
+    },
+    "argilla/notus-7b-v1": {
+        "OrigMB": 13812.54,
+        "CompRatio": 77.87,
+        "CompSpeed": 773.06,
+        "DecompSpeed": 1187.94
+    },
+    "jondurbin/airoboros-m-7b-3.1.2": {
+        "OrigMB": 13812.54,
+        "CompRatio": 77.95,
+        "CompSpeed": 757.91,
+        "DecompSpeed": 1179.59
+    },
+    "ehartford/samantha-1.2-mistral-7b": {
+        "OrigMB": 13812.63,
+        "CompRatio": 77.87,
+        "CompSpeed": 769.42,
+        "DecompSpeed": 1186.15
+    },
+    "migtissera/SynthIA-7B-v1.3": {
+        "OrigMB": 13812.61,
+        "CompRatio": 91.43,
+        "CompSpeed": 686.62,
+        "DecompSpeed": 1125.02
+    },
+    "TIGER-Lab/MAmmoTH-7B-Mistral": {
+        "OrigMB": 27625.19,
+        "CompRatio": 92.37,
+        "CompSpeed": 594.62,
+        "DecompSpeed": 1009.72
+    }
+}
+
+Method: zlib
+{
+    "mistralai/Mistral-7B-Instruct-v0.1": {
+        "OrigMB": 13812.54,
+        "CompRatio": 79.17,
+        "CompSpeed": 15.89,
+        "DecompSpeed": 267.17
+    },
+    "HuggingFaceH4/zephyr-7b-beta": {
+        "OrigMB": 13812.54,
+        "CompRatio": 79.16,
+        "CompSpeed": 15.21,
+        "DecompSpeed": 265.82
+    },
+    "HuggingFaceH4/zephyr-7b-alpha": {
+        "OrigMB": 13812.54,
+        "CompRatio": 79.16,
+        "CompSpeed": 15.92,
+        "DecompSpeed": 266.68
+    },
+    "Intel/neural-chat-7b-v3-1": {
+        "OrigMB": 13812.54,
+        "CompRatio": 91.7,
+        "CompSpeed": 35.55,
+        "DecompSpeed": 299.12
+    },
+    "berkeley-nest/Starling-LM-7B-alpha": {
+        "OrigMB": 13812.57,
+        "CompRatio": 79.16,
+        "CompSpeed": 15.9,
+        "DecompSpeed": 264.0
+    },
+    "argilla/notus-7b-v1": {
+        "OrigMB": 13812.54,
+        "CompRatio": 79.16,
+        "CompSpeed": 15.89,
+        "DecompSpeed": 263.92
+    },
+    "jondurbin/airoboros-m-7b-3.1.2": {
+        "OrigMB": 13812.54,
+        "CompRatio": 79.24,
+        "CompSpeed": 15.94,
+        "DecompSpeed": 262.43
+    },
+    "ehartford/samantha-1.2-mistral-7b": {
+        "OrigMB": 13812.63,
+        "CompRatio": 79.17,
+        "CompSpeed": 15.9,
+        "DecompSpeed": 264.23
+    },
+    "migtissera/SynthIA-7B-v1.3": {
+        "OrigMB": 13812.61,
+        "CompRatio": 91.7,
+        "CompSpeed": 35.5,
+        "DecompSpeed": 294.45
+    },
+    "TIGER-Lab/MAmmoTH-7B-Mistral": {
+        "OrigMB": 27625.19,
+        "CompRatio": 92.47,
+        "CompSpeed": 34.72,
+        "DecompSpeed": 299.02
+    }
+}
+
+Method: gzip
+{
+    "mistralai/Mistral-7B-Instruct-v0.1": {
+        "OrigMB": 13812.54,
+        "CompRatio": 79.17,
+        "CompSpeed": 15.85,
+        "DecompSpeed": 218.37
+    },
+    "HuggingFaceH4/zephyr-7b-beta": {
+        "OrigMB": 13812.54,
+        "CompRatio": 79.16,
+        "CompSpeed": 13.25,
+        "DecompSpeed": 216.84
+    },
+    "HuggingFaceH4/zephyr-7b-alpha": {
+        "OrigMB": 13812.54,
+        "CompRatio": 79.16,
+        "CompSpeed": 15.91,
+        "DecompSpeed": 219.39
+    },
+    "Intel/neural-chat-7b-v3-1": {
+        "OrigMB": 13812.54,
+        "CompRatio": 91.7,
+        "CompSpeed": 35.36,
+        "DecompSpeed": 256.92
+    },
+    "berkeley-nest/Starling-LM-7B-alpha": {
+        "OrigMB": 13812.57,
+        "CompRatio": 79.16,
+        "CompSpeed": 15.91,
+        "DecompSpeed": 223.25
+    },
+    "argilla/notus-7b-v1": {
+        "OrigMB": 13812.54,
+        "CompRatio": 79.16,
+        "CompSpeed": 15.9,
+        "DecompSpeed": 223.23
+    },
+    "jondurbin/airoboros-m-7b-3.1.2": {
+        "OrigMB": 13812.54,
+        "CompRatio": 79.24,
+        "CompSpeed": 15.95,
+        "DecompSpeed": 221.3
+    },
+    "ehartford/samantha-1.2-mistral-7b": {
+        "OrigMB": 13812.63,
+        "CompRatio": 79.17,
+        "CompSpeed": 15.93,
+        "DecompSpeed": 223.11
+    },
+    "migtissera/SynthIA-7B-v1.3": {
+        "OrigMB": 13812.61,
+        "CompRatio": 91.7,
+        "CompSpeed": 35.23,
+        "DecompSpeed": 269.93
+    },
+    "TIGER-Lab/MAmmoTH-7B-Mistral": {
+        "OrigMB": 27625.19,
+        "CompRatio": 92.47,
+        "CompSpeed": 34.53,
+        "DecompSpeed": 263.57
+    }
+}

@@ -1,0 +1,123 @@
+开始模型压缩批处理任务...
+------------------------------------------------
+[1/10] 正在处理: --base-model gpt2 --finetuned-model lvwerra/gpt2-imdb --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='gpt2', finetuned_model='lvwerra/gpt2-imdb', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 486.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "gpt2-imdb": {
+        "comp%": "66.38%",
+        "CompThroughput": "110.80 MB/s",
+        "DecompThroughput": "104.38 MB/s"
+    }
+}
+------------------------------------------------
+[2/10] 正在处理: --base-model gpt2 --finetuned-model Gustavosta/MagicPrompt-Stable-Diffusion --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='gpt2', finetuned_model='Gustavosta/MagicPrompt-Stable-Diffusion', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 486.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "MagicPrompt-Stable-Diffusion": {
+        "comp%": "76.35%",
+        "CompThroughput": "102.95 MB/s",
+        "DecompThroughput": "100.81 MB/s"
+    }
+}
+------------------------------------------------
+[3/10] 正在处理: --base-model gpt2 --finetuned-model mrm8488/GPT-2-finetuned-common_gen --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='gpt2', finetuned_model='mrm8488/GPT-2-finetuned-common_gen', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 486.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "GPT-2-finetuned-common_gen": {
+        "comp%": "70.81%",
+        "CompThroughput": "105.80 MB/s",
+        "DecompThroughput": "102.28 MB/s"
+    }
+}
+------------------------------------------------
+[4/10] 正在处理: --base-model gpt2 --finetuned-model succinctly/text2image-prompt-generator --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='gpt2', finetuned_model='succinctly/text2image-prompt-generator', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 486.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "text2image-prompt-generator": {
+        "comp%": "72.14%",
+        "CompThroughput": "106.82 MB/s",
+        "DecompThroughput": "102.31 MB/s"
+    }
+}
+------------------------------------------------
+[5/10] 正在处理: --base-model gpt2 --finetuned-model shibing624/code-autocomplete-gpt2-base --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='gpt2', finetuned_model='shibing624/code-autocomplete-gpt2-base', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 486.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "code-autocomplete-gpt2-base": {
+        "comp%": "76.21%",
+        "CompThroughput": "103.44 MB/s",
+        "DecompThroughput": "100.66 MB/s"
+    }
+}
+------------------------------------------------
+[6/10] 正在处理: --base-model gpt2 --finetuned-model rhysjones/gpt2-124M-edu-fineweb-10B --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='gpt2', finetuned_model='rhysjones/gpt2-124M-edu-fineweb-10B', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 486.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "gpt2-124M-edu-fineweb-10B": {
+        "comp%": "90.64%",
+        "CompThroughput": "102.00 MB/s",
+        "DecompThroughput": "98.13 MB/s"
+    }
+}
+------------------------------------------------
+[7/10] 正在处理: --base-model gpt2 --finetuned-model huggingtweets/elonmusk --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='gpt2', finetuned_model='huggingtweets/elonmusk', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 486.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "elonmusk": {
+        "comp%": "63.80%",
+        "CompThroughput": "114.30 MB/s",
+        "DecompThroughput": "107.75 MB/s"
+    }
+}
+------------------------------------------------
+[8/10] 正在处理: --base-model gpt2 --finetuned-model neulab/gpt2-finetuned-wikitext103 --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='gpt2', finetuned_model='neulab/gpt2-finetuned-wikitext103', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 486.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "gpt2-finetuned-wikitext103": {
+        "comp%": "74.74%",
+        "CompThroughput": "105.34 MB/s",
+        "DecompThroughput": "101.57 MB/s"
+    }
+}
+------------------------------------------------
+[9/10] 正在处理: --base-model gpt2 --finetuned-model vicgalle/gpt2-open-instruct-v1 --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='gpt2', finetuned_model='vicgalle/gpt2-open-instruct-v1', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 486.78 MB
+Shape mismatch!
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "gpt2-open-instruct-v1": {
+        "comp%": "78.39%",
+        "CompThroughput": "160.49 MB/s",
+        "DecompThroughput": "150.95 MB/s"
+    }
+}
+------------------------------------------------
+[10/10] 正在处理: --base-model gpt2 --finetuned-model Ssarion/gpt2-multi-news --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='gpt2', finetuned_model='Ssarion/gpt2-multi-news', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 486.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "gpt2-multi-news": {
+        "comp%": "64.10%",
+        "CompThroughput": "112.17 MB/s",
+        "DecompThroughput": "107.22 MB/s"
+    }
+}
+------------------------------------------------

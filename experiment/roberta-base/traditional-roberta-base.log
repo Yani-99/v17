@@ -1,0 +1,230 @@
+
+=====================================================================================================================================
+Model Name                                                   | Method   | Orig(MB)   | Comp%      | C-Speed(MB/s)   | D-Speed(MB/s)  
+-------------------------------------------------------------------------------------------------------------------------------------
+deepset/roberta-base-squad2                                  | zlib     |    473.3 |    92.36% |         33.22 |        275.94
+deepset/roberta-base-squad2                                  | gzip     |    473.3 |    92.36% |         32.72 |        221.60
+deepset/roberta-base-squad2                                  | zstd     |    473.3 |    92.66% |        432.90 |        853.66
+cross-encoder/stsb-roberta-base                              | zlib     |    475.5 |    92.41% |         32.49 |        277.49
+cross-encoder/stsb-roberta-base                              | gzip     |    475.5 |    92.41% |         33.78 |        248.56
+cross-encoder/stsb-roberta-base                              | zstd     |    475.5 |    92.69% |        506.32 |        885.21
+cross-encoder/nli-roberta-base                               | zlib     |    475.5 |    92.38% |         34.58 |        289.39
+cross-encoder/nli-roberta-base                               | gzip     |    475.5 |    92.38% |         34.35 |        248.52
+cross-encoder/nli-roberta-base                               | zstd     |    475.5 |    92.68% |        500.99 |        885.01
+textattack/roberta-base-SST-2                                | zlib     |    477.8 |    85.86% |         19.52 |        284.65
+textattack/roberta-base-SST-2                                | gzip     |    477.8 |    85.86% |         19.47 |        235.48
+textattack/roberta-base-SST-2                                | zstd     |    477.8 |    85.35% |        327.54 |        853.07
+openai-community/roberta-base-openai-detector                | zlib     |    477.8 |    92.85% |         34.77 |        290.35
+openai-community/roberta-base-openai-detector                | gzip     |    477.8 |    92.85% |         34.29 |        249.97
+openai-community/roberta-base-openai-detector                | zstd     |    477.8 |    92.78% |        556.73 |        877.16
+textattack/roberta-base-MNLI                                 | zlib     |    477.8 |    91.54% |         30.98 |        290.27
+textattack/roberta-base-MNLI                                 | gzip     |    477.8 |    91.54% |         30.76 |        244.88
+textattack/roberta-base-MNLI                                 | zstd     |    477.8 |    91.31% |        464.94 |        875.64
+cardiffnlp/twitter-roberta-base-sentiment-latest             | zlib     |    477.8 |    92.86% |         34.57 |        291.38
+cardiffnlp/twitter-roberta-base-sentiment-latest             | gzip     |    477.8 |    92.86% |         34.08 |        251.22
+cardiffnlp/twitter-roberta-base-sentiment-latest             | zstd     |    477.8 |    92.79% |        565.63 |        901.65
+SamLowe/roberta-base-go_emotions                             | zlib     |    475.6 |    90.29% |         33.01 |        285.34
+SamLowe/roberta-base-go_emotions                             | gzip     |    475.6 |    90.29% |         32.88 |        239.83
+SamLowe/roberta-base-go_emotions                             | zstd     |    475.6 |    91.58% |        382.54 |        864.27
+textattack/roberta-base-ag-news                              | zlib     |    477.8 |    92.28% |         33.73 |        288.09
+textattack/roberta-base-ag-news                              | gzip     |    477.8 |    92.28% |         32.96 |        249.23
+textattack/roberta-base-ag-news                              | zstd     |    477.8 |    92.65% |        498.12 |        895.94
+cardiffnlp/twitter-roberta-base-hate-latest                  | zlib     |    475.6 |    92.84% |         34.34 |        291.64
+cardiffnlp/twitter-roberta-base-hate-latest                  | gzip     |    475.6 |    92.84% |         34.04 |        253.11
+cardiffnlp/twitter-roberta-base-hate-latest                  | zstd     |    475.6 |    92.77% |        564.01 |        906.65
+
+==============================
+AGGREGATED RESULTS BY METHOD
+==============================
+
+Method: zstd
+{
+    "deepset/roberta-base-squad2": {
+        "OrigMB": 473.27,
+        "CompRatio": 92.66,
+        "CompSpeed": 432.9,
+        "DecompSpeed": 853.66
+    },
+    "cross-encoder/stsb-roberta-base": {
+        "OrigMB": 475.52,
+        "CompRatio": 92.69,
+        "CompSpeed": 506.32,
+        "DecompSpeed": 885.21
+    },
+    "cross-encoder/nli-roberta-base": {
+        "OrigMB": 475.52,
+        "CompRatio": 92.68,
+        "CompSpeed": 500.99,
+        "DecompSpeed": 885.01
+    },
+    "textattack/roberta-base-SST-2": {
+        "OrigMB": 477.77,
+        "CompRatio": 85.35,
+        "CompSpeed": 327.54,
+        "DecompSpeed": 853.07
+    },
+    "openai-community/roberta-base-openai-detector": {
+        "OrigMB": 477.77,
+        "CompRatio": 92.78,
+        "CompSpeed": 556.73,
+        "DecompSpeed": 877.16
+    },
+    "textattack/roberta-base-MNLI": {
+        "OrigMB": 477.8,
+        "CompRatio": 91.31,
+        "CompSpeed": 464.94,
+        "DecompSpeed": 875.64
+    },
+    "cardiffnlp/twitter-roberta-base-sentiment-latest": {
+        "OrigMB": 477.83,
+        "CompRatio": 92.79,
+        "CompSpeed": 565.63,
+        "DecompSpeed": 901.65
+    },
+    "SamLowe/roberta-base-go_emotions": {
+        "OrigMB": 475.59,
+        "CompRatio": 91.58,
+        "CompSpeed": 382.54,
+        "DecompSpeed": 864.27
+    },
+    "textattack/roberta-base-ag-news": {
+        "OrigMB": 477.8,
+        "CompRatio": 92.65,
+        "CompSpeed": 498.12,
+        "DecompSpeed": 895.94
+    },
+    "cardiffnlp/twitter-roberta-base-hate-latest": {
+        "OrigMB": 475.56,
+        "CompRatio": 92.77,
+        "CompSpeed": 564.01,
+        "DecompSpeed": 906.65
+    }
+}
+
+Method: zlib
+{
+    "deepset/roberta-base-squad2": {
+        "OrigMB": 473.27,
+        "CompRatio": 92.36,
+        "CompSpeed": 33.22,
+        "DecompSpeed": 275.94
+    },
+    "cross-encoder/stsb-roberta-base": {
+        "OrigMB": 475.52,
+        "CompRatio": 92.41,
+        "CompSpeed": 32.49,
+        "DecompSpeed": 277.49
+    },
+    "cross-encoder/nli-roberta-base": {
+        "OrigMB": 475.52,
+        "CompRatio": 92.38,
+        "CompSpeed": 34.58,
+        "DecompSpeed": 289.39
+    },
+    "textattack/roberta-base-SST-2": {
+        "OrigMB": 477.77,
+        "CompRatio": 85.86,
+        "CompSpeed": 19.52,
+        "DecompSpeed": 284.65
+    },
+    "openai-community/roberta-base-openai-detector": {
+        "OrigMB": 477.77,
+        "CompRatio": 92.85,
+        "CompSpeed": 34.77,
+        "DecompSpeed": 290.35
+    },
+    "textattack/roberta-base-MNLI": {
+        "OrigMB": 477.8,
+        "CompRatio": 91.54,
+        "CompSpeed": 30.98,
+        "DecompSpeed": 290.27
+    },
+    "cardiffnlp/twitter-roberta-base-sentiment-latest": {
+        "OrigMB": 477.83,
+        "CompRatio": 92.86,
+        "CompSpeed": 34.57,
+        "DecompSpeed": 291.38
+    },
+    "SamLowe/roberta-base-go_emotions": {
+        "OrigMB": 475.59,
+        "CompRatio": 90.29,
+        "CompSpeed": 33.01,
+        "DecompSpeed": 285.34
+    },
+    "textattack/roberta-base-ag-news": {
+        "OrigMB": 477.8,
+        "CompRatio": 92.28,
+        "CompSpeed": 33.73,
+        "DecompSpeed": 288.09
+    },
+    "cardiffnlp/twitter-roberta-base-hate-latest": {
+        "OrigMB": 475.56,
+        "CompRatio": 92.84,
+        "CompSpeed": 34.34,
+        "DecompSpeed": 291.64
+    }
+}
+
+Method: gzip
+{
+    "deepset/roberta-base-squad2": {
+        "OrigMB": 473.27,
+        "CompRatio": 92.36,
+        "CompSpeed": 32.72,
+        "DecompSpeed": 221.6
+    },
+    "cross-encoder/stsb-roberta-base": {
+        "OrigMB": 475.52,
+        "CompRatio": 92.41,
+        "CompSpeed": 33.78,
+        "DecompSpeed": 248.56
+    },
+    "cross-encoder/nli-roberta-base": {
+        "OrigMB": 475.52,
+        "CompRatio": 92.38,
+        "CompSpeed": 34.35,
+        "DecompSpeed": 248.52
+    },
+    "textattack/roberta-base-SST-2": {
+        "OrigMB": 477.77,
+        "CompRatio": 85.86,
+        "CompSpeed": 19.47,
+        "DecompSpeed": 235.48
+    },
+    "openai-community/roberta-base-openai-detector": {
+        "OrigMB": 477.77,
+        "CompRatio": 92.85,
+        "CompSpeed": 34.29,
+        "DecompSpeed": 249.97
+    },
+    "textattack/roberta-base-MNLI": {
+        "OrigMB": 477.8,
+        "CompRatio": 91.54,
+        "CompSpeed": 30.76,
+        "DecompSpeed": 244.88
+    },
+    "cardiffnlp/twitter-roberta-base-sentiment-latest": {
+        "OrigMB": 477.83,
+        "CompRatio": 92.86,
+        "CompSpeed": 34.08,
+        "DecompSpeed": 251.22
+    },
+    "SamLowe/roberta-base-go_emotions": {
+        "OrigMB": 475.59,
+        "CompRatio": 90.29,
+        "CompSpeed": 32.88,
+        "DecompSpeed": 239.83
+    },
+    "textattack/roberta-base-ag-news": {
+        "OrigMB": 477.8,
+        "CompRatio": 92.28,
+        "CompSpeed": 32.96,
+        "DecompSpeed": 249.23
+    },
+    "cardiffnlp/twitter-roberta-base-hate-latest": {
+        "OrigMB": 475.56,
+        "CompRatio": 92.84,
+        "CompSpeed": 34.04,
+        "DecompSpeed": 253.11
+    }
+}

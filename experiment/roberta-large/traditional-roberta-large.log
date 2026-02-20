@@ -1,0 +1,230 @@
+
+=====================================================================================================================================
+Model Name                                                   | Method   | Orig(MB)   | Comp%      | C-Speed(MB/s)   | D-Speed(MB/s)  
+-------------------------------------------------------------------------------------------------------------------------------------
+roberta-large-mnli                                           | zlib     |   1359.7 |    58.70% |          7.13 |        295.09
+roberta-large-mnli                                           | gzip     |   1359.7 |    58.70% |          7.20 |        206.65
+roberta-large-mnli                                           | zstd     |   1359.7 |    59.04% |        142.99 |        780.59
+deepset/roberta-large-squad2                                 | zlib     |   1351.6 |    92.42% |         34.25 |        291.23
+deepset/roberta-large-squad2                                 | gzip     |   1351.6 |    92.42% |         33.96 |        247.45
+deepset/roberta-large-squad2                                 | zstd     |   1351.6 |    92.54% |        513.40 |        929.55
+cross-encoder/stsb-roberta-large                             | zlib     |   1355.6 |    90.20% |         31.48 |        289.44
+cross-encoder/stsb-roberta-large                             | gzip     |   1355.6 |    90.20% |         31.27 |        242.25
+cross-encoder/stsb-roberta-large                             | zstd     |   1355.6 |    91.22% |        439.60 |        917.03
+siebert/sentiment-roberta-large-english                      | zlib     |   1355.8 |    92.35% |         34.14 |        293.38
+siebert/sentiment-roberta-large-english                      | gzip     |   1355.8 |    92.35% |         34.10 |        245.05
+siebert/sentiment-roberta-large-english                      | zstd     |   1355.8 |    92.49% |        521.85 |        936.59
+sentence-transformers/all-roberta-large-v1                   | zlib     |   1355.6 |    92.78% |         34.16 |        293.82
+sentence-transformers/all-roberta-large-v1                   | gzip     |   1355.6 |    92.78% |         33.95 |        248.79
+sentence-transformers/all-roberta-large-v1                   | zstd     |   1355.6 |    92.70% |        567.82 |        938.82
+ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli         | zlib     |   1359.8 |    58.63% |          6.99 |        285.12
+ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli         | gzip     |   1359.8 |    58.63% |          6.99 |        208.47
+ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli         | zstd     |   1359.8 |    58.98% |        144.57 |        795.83
+openai-community/roberta-large-openai-detector               | zlib     |   1359.6 |    92.76% |         34.26 |        293.84
+openai-community/roberta-large-openai-detector               | gzip     |   1359.6 |    92.76% |         34.03 |        250.97
+openai-community/roberta-large-openai-detector               | zstd     |   1359.6 |    92.68% |        562.93 |        941.07
+navteca/roberta-large-squad2                                 | zlib     |   1351.8 |    92.42% |         34.19 |        291.80
+navteca/roberta-large-squad2                                 | gzip     |   1351.8 |    92.42% |         33.93 |        251.55
+navteca/roberta-large-squad2                                 | zstd     |   1351.8 |    92.52% |        539.17 |        942.94
+cross-encoder/quora-roberta-large                            | zlib     |   1355.6 |    92.46% |         34.31 |        292.45
+cross-encoder/quora-roberta-large                            | gzip     |   1355.6 |    92.46% |         34.10 |        249.89
+cross-encoder/quora-roberta-large                            | zstd     |   1355.6 |    92.56% |        529.58 |        945.45
+jean-baptiste/roberta-large-ner-english                      | zlib     |   1351.7 |    90.69% |         32.88 |        291.54
+jean-baptiste/roberta-large-ner-english                      | gzip     |   1351.7 |    90.69% |         32.71 |        247.61
+jean-baptiste/roberta-large-ner-english                      | zstd     |   1351.7 |    91.70% |        445.35 |        899.83
+
+==============================
+AGGREGATED RESULTS BY METHOD
+==============================
+
+Method: zstd
+{
+    "roberta-large-mnli": {
+        "OrigMB": 1359.65,
+        "CompRatio": 59.04,
+        "CompSpeed": 142.99,
+        "DecompSpeed": 780.59
+    },
+    "deepset/roberta-large-squad2": {
+        "OrigMB": 1351.64,
+        "CompRatio": 92.54,
+        "CompSpeed": 513.4,
+        "DecompSpeed": 929.55
+    },
+    "cross-encoder/stsb-roberta-large": {
+        "OrigMB": 1355.64,
+        "CompRatio": 91.22,
+        "CompSpeed": 439.6,
+        "DecompSpeed": 917.03
+    },
+    "siebert/sentiment-roberta-large-english": {
+        "OrigMB": 1355.76,
+        "CompRatio": 92.49,
+        "CompSpeed": 521.85,
+        "DecompSpeed": 936.59
+    },
+    "sentence-transformers/all-roberta-large-v1": {
+        "OrigMB": 1355.64,
+        "CompRatio": 92.7,
+        "CompSpeed": 567.82,
+        "DecompSpeed": 938.82
+    },
+    "ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli": {
+        "OrigMB": 1359.76,
+        "CompRatio": 58.98,
+        "CompSpeed": 144.57,
+        "DecompSpeed": 795.83
+    },
+    "openai-community/roberta-large-openai-detector": {
+        "OrigMB": 1359.65,
+        "CompRatio": 92.68,
+        "CompSpeed": 562.93,
+        "DecompSpeed": 941.07
+    },
+    "navteca/roberta-large-squad2": {
+        "OrigMB": 1351.75,
+        "CompRatio": 92.52,
+        "CompSpeed": 539.17,
+        "DecompSpeed": 942.94
+    },
+    "cross-encoder/quora-roberta-large": {
+        "OrigMB": 1355.64,
+        "CompRatio": 92.56,
+        "CompSpeed": 529.58,
+        "DecompSpeed": 945.45
+    },
+    "jean-baptiste/roberta-large-ner-english": {
+        "OrigMB": 1351.66,
+        "CompRatio": 91.7,
+        "CompSpeed": 445.35,
+        "DecompSpeed": 899.83
+    }
+}
+
+Method: zlib
+{
+    "roberta-large-mnli": {
+        "OrigMB": 1359.65,
+        "CompRatio": 58.7,
+        "CompSpeed": 7.13,
+        "DecompSpeed": 295.09
+    },
+    "deepset/roberta-large-squad2": {
+        "OrigMB": 1351.64,
+        "CompRatio": 92.42,
+        "CompSpeed": 34.25,
+        "DecompSpeed": 291.23
+    },
+    "cross-encoder/stsb-roberta-large": {
+        "OrigMB": 1355.64,
+        "CompRatio": 90.2,
+        "CompSpeed": 31.48,
+        "DecompSpeed": 289.44
+    },
+    "siebert/sentiment-roberta-large-english": {
+        "OrigMB": 1355.76,
+        "CompRatio": 92.35,
+        "CompSpeed": 34.14,
+        "DecompSpeed": 293.38
+    },
+    "sentence-transformers/all-roberta-large-v1": {
+        "OrigMB": 1355.64,
+        "CompRatio": 92.78,
+        "CompSpeed": 34.16,
+        "DecompSpeed": 293.82
+    },
+    "ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli": {
+        "OrigMB": 1359.76,
+        "CompRatio": 58.63,
+        "CompSpeed": 6.99,
+        "DecompSpeed": 285.12
+    },
+    "openai-community/roberta-large-openai-detector": {
+        "OrigMB": 1359.65,
+        "CompRatio": 92.76,
+        "CompSpeed": 34.26,
+        "DecompSpeed": 293.84
+    },
+    "navteca/roberta-large-squad2": {
+        "OrigMB": 1351.75,
+        "CompRatio": 92.42,
+        "CompSpeed": 34.19,
+        "DecompSpeed": 291.8
+    },
+    "cross-encoder/quora-roberta-large": {
+        "OrigMB": 1355.64,
+        "CompRatio": 92.46,
+        "CompSpeed": 34.31,
+        "DecompSpeed": 292.45
+    },
+    "jean-baptiste/roberta-large-ner-english": {
+        "OrigMB": 1351.66,
+        "CompRatio": 90.69,
+        "CompSpeed": 32.88,
+        "DecompSpeed": 291.54
+    }
+}
+
+Method: gzip
+{
+    "roberta-large-mnli": {
+        "OrigMB": 1359.65,
+        "CompRatio": 58.7,
+        "CompSpeed": 7.2,
+        "DecompSpeed": 206.65
+    },
+    "deepset/roberta-large-squad2": {
+        "OrigMB": 1351.64,
+        "CompRatio": 92.42,
+        "CompSpeed": 33.96,
+        "DecompSpeed": 247.45
+    },
+    "cross-encoder/stsb-roberta-large": {
+        "OrigMB": 1355.64,
+        "CompRatio": 90.2,
+        "CompSpeed": 31.27,
+        "DecompSpeed": 242.25
+    },
+    "siebert/sentiment-roberta-large-english": {
+        "OrigMB": 1355.76,
+        "CompRatio": 92.35,
+        "CompSpeed": 34.1,
+        "DecompSpeed": 245.05
+    },
+    "sentence-transformers/all-roberta-large-v1": {
+        "OrigMB": 1355.64,
+        "CompRatio": 92.78,
+        "CompSpeed": 33.95,
+        "DecompSpeed": 248.79
+    },
+    "ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli": {
+        "OrigMB": 1359.76,
+        "CompRatio": 58.63,
+        "CompSpeed": 6.99,
+        "DecompSpeed": 208.47
+    },
+    "openai-community/roberta-large-openai-detector": {
+        "OrigMB": 1359.65,
+        "CompRatio": 92.76,
+        "CompSpeed": 34.03,
+        "DecompSpeed": 250.97
+    },
+    "navteca/roberta-large-squad2": {
+        "OrigMB": 1351.75,
+        "CompRatio": 92.42,
+        "CompSpeed": 33.93,
+        "DecompSpeed": 251.55
+    },
+    "cross-encoder/quora-roberta-large": {
+        "OrigMB": 1355.64,
+        "CompRatio": 92.46,
+        "CompSpeed": 34.1,
+        "DecompSpeed": 249.89
+    },
+    "jean-baptiste/roberta-large-ner-english": {
+        "OrigMB": 1351.66,
+        "CompRatio": 90.69,
+        "CompSpeed": 32.71,
+        "DecompSpeed": 247.61
+    }
+}

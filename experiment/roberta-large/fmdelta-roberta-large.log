@@ -1,0 +1,122 @@
+开始模型压缩批处理任务...
+------------------------------------------------
+[1/10] 正在处理: --base-model roberta-large --finetuned-model roberta-large-mnli --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-large', finetuned_model='roberta-large-mnli', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1355.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-large-mnli": {
+        "comp%": "92.53%",
+        "CompThroughput": "101.32 MB/s",
+        "DecompThroughput": "92.84 MB/s"
+    }
+}
+------------------------------------------------
+[2/10] 正在处理: --base-model roberta-large --finetuned-model deepset/roberta-large-squad2 --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-large', finetuned_model='deepset/roberta-large-squad2', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1355.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-large-squad2": {
+        "comp%": "92.53%",
+        "CompThroughput": "102.34 MB/s",
+        "DecompThroughput": "90.57 MB/s"
+    }
+}
+------------------------------------------------
+[3/10] 正在处理: --base-model roberta-large --finetuned-model cross-encoder/stsb-roberta-large --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-large', finetuned_model='cross-encoder/stsb-roberta-large', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1355.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "stsb-roberta-large": {
+        "comp%": "92.53%",
+        "CompThroughput": "100.45 MB/s",
+        "DecompThroughput": "92.12 MB/s"
+    }
+}
+------------------------------------------------
+[4/10] 正在处理: --base-model roberta-large --finetuned-model siebert/sentiment-roberta-large-english --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-large', finetuned_model='siebert/sentiment-roberta-large-english', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1355.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "sentiment-roberta-large-english": {
+        "comp%": "92.53%",
+        "CompThroughput": "100.92 MB/s",
+        "DecompThroughput": "92.14 MB/s"
+    }
+}
+------------------------------------------------
+[5/10] 正在处理: --base-model roberta-large --finetuned-model sentence-transformers/all-roberta-large-v1 --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-large', finetuned_model='sentence-transformers/all-roberta-large-v1', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1355.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "all-roberta-large-v1": {
+        "comp%": "92.97%",
+        "CompThroughput": "100.62 MB/s",
+        "DecompThroughput": "91.20 MB/s"
+    }
+}
+------------------------------------------------
+[6/10] 正在处理: --base-model roberta-large --finetuned-model ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-large', finetuned_model='ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1355.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli": {
+        "comp%": "92.53%",
+        "CompThroughput": "97.38 MB/s",
+        "DecompThroughput": "92.18 MB/s"
+    }
+}
+------------------------------------------------
+[7/10] 正在处理: --base-model roberta-large --finetuned-model openai-community/roberta-large-openai-detector --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-large', finetuned_model='openai-community/roberta-large-openai-detector', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1355.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-large-openai-detector": {
+        "comp%": "92.53%",
+        "CompThroughput": "104.21 MB/s",
+        "DecompThroughput": "92.24 MB/s"
+    }
+}
+------------------------------------------------
+[8/10] 正在处理: --base-model roberta-large --finetuned-model navteca/roberta-large-squad2 --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-large', finetuned_model='navteca/roberta-large-squad2', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1355.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-large-squad2": {
+        "comp%": "92.53%",
+        "CompThroughput": "98.47 MB/s",
+        "DecompThroughput": "91.87 MB/s"
+    }
+}
+------------------------------------------------
+[9/10] 正在处理: --base-model roberta-large --finetuned-model cross-encoder/quora-roberta-large --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-large', finetuned_model='cross-encoder/quora-roberta-large', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1355.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "quora-roberta-large": {
+        "comp%": "92.53%",
+        "CompThroughput": "101.52 MB/s",
+        "DecompThroughput": "91.80 MB/s"
+    }
+}
+------------------------------------------------
+[10/10] 正在处理: --base-model roberta-large --finetuned-model jean-baptiste/roberta-large-ner-english --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-large', finetuned_model='jean-baptiste/roberta-large-ner-english', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 1355.77 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-large-ner-english": {
+        "comp%": "92.53%",
+        "CompThroughput": "99.39 MB/s",
+        "DecompThroughput": "93.02 MB/s"
+    }
+}
+------------------------------------------------

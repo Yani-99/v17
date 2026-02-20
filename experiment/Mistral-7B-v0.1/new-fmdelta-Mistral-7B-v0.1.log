@@ -1,0 +1,128 @@
+开始模型压缩批处理任务...
+------------------------------------------------
+[1/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model mistralai/Mistral-7B-Instruct-v0.1 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='mistralai/Mistral-7B-Instruct-v0.1', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 13812.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Mistral-7B-Instruct-v0.1": {
+        "comp%": "73.27%",
+        "CompThroughput": "56.83 MB/s",
+        "DecompThroughput": "62.69 MB/s"
+    }
+}
+------------------------------------------------
+[2/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model HuggingFaceH4/zephyr-7b-beta --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='HuggingFaceH4/zephyr-7b-beta', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 13812.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "zephyr-7b-beta": {
+        "comp%": "58.37%",
+        "CompThroughput": "61.09 MB/s",
+        "DecompThroughput": "62.71 MB/s"
+    }
+}
+------------------------------------------------
+[3/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model HuggingFaceH4/zephyr-7b-alpha --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='HuggingFaceH4/zephyr-7b-alpha', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 13812.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "zephyr-7b-alpha": {
+        "comp%": "58.48%",
+        "CompThroughput": "61.07 MB/s",
+        "DecompThroughput": "62.50 MB/s"
+    }
+}
+------------------------------------------------
+[4/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model Intel/neural-chat-7b-v3-1 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='Intel/neural-chat-7b-v3-1', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 13812.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "neural-chat-7b-v3-1": {
+        "comp%": "65.27%",
+        "CompThroughput": "59.63 MB/s",
+        "DecompThroughput": "62.96 MB/s"
+    }
+}
+------------------------------------------------
+[5/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model berkeley-nest/Starling-LM-7B-alpha --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='berkeley-nest/Starling-LM-7B-alpha', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 13812.68 MB
+Shape mismatch!
+Shape mismatch!
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "Starling-LM-7B-alpha": {
+        "comp%": "60.17%",
+        "CompThroughput": "63.59 MB/s",
+        "DecompThroughput": "64.93 MB/s"
+    }
+}
+------------------------------------------------
+[6/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model argilla/notus-7b-v1 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='argilla/notus-7b-v1', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 13812.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "notus-7b-v1": {
+        "comp%": "60.39%",
+        "CompThroughput": "60.48 MB/s",
+        "DecompThroughput": "62.37 MB/s"
+    }
+}
+------------------------------------------------
+[7/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model jondurbin/airoboros-m-7b-3.1.2 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='jondurbin/airoboros-m-7b-3.1.2', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 13812.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "airoboros-m-7b-3.1.2": {
+        "comp%": "66.79%",
+        "CompThroughput": "60.04 MB/s",
+        "DecompThroughput": "63.47 MB/s"
+    }
+}
+------------------------------------------------
+[8/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model ehartford/samantha-1.2-mistral-7b --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='ehartford/samantha-1.2-mistral-7b', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 13812.68 MB
+Shape mismatch!
+Shape mismatch!
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "samantha-1.2-mistral-7b": {
+        "comp%": "40.52%",
+        "CompThroughput": "71.23 MB/s",
+        "DecompThroughput": "70.42 MB/s"
+    }
+}
+------------------------------------------------
+[9/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model migtissera/SynthIA-7B-v1.3 --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='migtissera/SynthIA-7B-v1.3', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 13812.65 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "SynthIA-7B-v1.3": {
+        "comp%": "59.44%",
+        "CompThroughput": "60.82 MB/s",
+        "DecompThroughput": "63.68 MB/s"
+    }
+}
+------------------------------------------------
+[10/10] 正在处理: --base-model mistralai/Mistral-7B-v0.1 --finetuned-model TIGER-Lab/MAmmoTH-7B-Mistral --dtype fp16 --compressor fmd
+Namespace(compressor='fmd', base_model='mistralai/Mistral-7B-v0.1', finetuned_model='TIGER-Lab/MAmmoTH-7B-Mistral', dtype='fp16', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 13812.67 MB
+Shape mismatch!
+Shape mismatch!
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "MAmmoTH-7B-Mistral": {
+        "comp%": "66.60%",
+        "CompThroughput": "61.31 MB/s",
+        "DecompThroughput": "63.99 MB/s"
+    }
+}
+------------------------------------------------

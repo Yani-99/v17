@@ -41,18 +41,83 @@ from huggingface_hub import snapshot_download
 #     "Magpie-Align/Llama-3.1-8B-Magpie-Align-SFT-v0.2"
 # ]
 
+# MODELS_TO_TEST = [
+#     "meta-llama/Llama-2-7b-chat-hf",
+#     "lmsys/vicuna-7b-v1.5",
+#     "NousResearch/Nous-Hermes-llama-2-7b",
+#     "garage-bAInd/Platypus2-7B",
+#     "WizardLM/WizardMath-7B-V1.0",
+#     "georgesung/llama2_7b_chat_uncensored",
+#     "allenai/tulu-2-7b",
+#     "PygmalionAI/pygmalion-2-7b",
+#     "h2oai/h2ogpt-4096-llama2-7b-chat",
+#     "stabilityai/StableBeluga-7B"
+# ]
+
+# MODELS_TO_TEST = [
+#     "meta-llama/Llama-2-13b-chat-hf",
+#     "lmsys/vicuna-13b-v1.5",
+#     "NousResearch/Nous-Hermes-Llama2-13b",
+#     "WizardLM/WizardLM-13B-V1.2",
+#     "garage-bAInd/Platypus2-13B",
+#     "stabilityai/StableBeluga-13B",
+#     "allenai/tulu-2-dpo-13b",
+#     "Open-Orca/OpenOrca-Platypus2-13B",
+#     "Riiid/sheep-duck-llama-2-13b",
+#     "Xwin-LM/Xwin-LM-13B-V0.1"
+# ]
+
+# MODELS_TO_TEST = [
+#     "lvwerra/gpt2-imdb",
+#     "Gustavosta/MagicPrompt-Stable-Diffusion",
+#     "mrm8488/GPT-2-finetuned-common_gen",
+#     "succinctly/text2image-prompt-generator",
+#     "shibing624/code-autocomplete-gpt2-base",
+#     "rhysjones/gpt2-124M-edu-fineweb-10B",
+#     "huggingtweets/elonmusk",
+#     "neulab/gpt2-finetuned-wikitext103",
+# 	"vicgalle/gpt2-open-instruct-v1",
+# 	"Ssarion/gpt2-multi-news"
+# ]
+
 MODELS_TO_TEST = [
-    "meta-llama/Llama-2-7b-chat-hf",
-    "lmsys/vicuna-7b-v1.5",
-    "NousResearch/Nous-Hermes-llama-2-7b",
-    "garage-bAInd/Platypus2-7B",
-    "WizardLM/WizardMath-7B-V1.0",
-    "georgesung/llama2_7b_chat_uncensored",
-    "allenai/tulu-2-7b",
-    "PygmalionAI/pygmalion-2-7b",
-    "h2oai/h2ogpt-4096-llama2-7b-chat",
-    "stabilityai/StableBeluga-7B"
+    "mistralai/Mistral-7B-Instruct-v0.1",
+    "HuggingFaceH4/zephyr-7b-beta",
+    "HuggingFaceH4/zephyr-7b-alpha",
+    "Intel/neural-chat-7b-v3-1",
+    "berkeley-nest/Starling-LM-7B-alpha",
+    "argilla/notus-7b-v1",
+    "jondurbin/airoboros-m-7b-3.1.2",
+    "ehartford/samantha-1.2-mistral-7b",
+    "migtissera/SynthIA-7B-v1.3",
+    "TIGER-Lab/MAmmoTH-7B-Mistral"
 ]
+
+# MODELS_TO_TEST = [
+#     "roberta-large-mnli",
+#     "deepset/roberta-large-squad2",
+#     "cross-encoder/stsb-roberta-large",
+#     "siebert/sentiment-roberta-large-english",
+#     "sentence-transformers/all-roberta-large-v1",
+#     "ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli",
+#     "openai-community/roberta-large-openai-detector",
+#     "navteca/roberta-large-squad2",
+#     "cross-encoder/quora-roberta-large",
+#     "jean-baptiste/roberta-large-ner-english"
+# ]
+
+# MODELS_TO_TEST = [
+#     "deepset/roberta-base-squad2",
+#     "cross-encoder/stsb-roberta-base",
+#     "cross-encoder/nli-roberta-base",
+#     "textattack/roberta-base-SST-2",
+#     "openai-community/roberta-base-openai-detector",
+#     "textattack/roberta-base-MNLI",
+#     "cardiffnlp/twitter-roberta-base-sentiment-latest",
+#     "SamLowe/roberta-base-go_emotions",
+#     "textattack/roberta-base-ag-news",
+#     "cardiffnlp/twitter-roberta-base-hate-latest"
+# ]
 
 # 用于存放最终聚合结果
 aggregated_results = {

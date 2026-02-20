@@ -1,0 +1,122 @@
+开始模型压缩批处理任务...
+------------------------------------------------
+[1/10] 正在处理: --base-model roberta-base --finetuned-model deepset/roberta-base-squad2 --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-base', finetuned_model='deepset/roberta-base-squad2', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 475.58 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-base-squad2": {
+        "comp%": "92.51%",
+        "CompThroughput": "100.04 MB/s",
+        "DecompThroughput": "90.70 MB/s"
+    }
+}
+------------------------------------------------
+[2/10] 正在处理: --base-model roberta-base --finetuned-model cross-encoder/stsb-roberta-base --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-base', finetuned_model='cross-encoder/stsb-roberta-base', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 475.58 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "stsb-roberta-base": {
+        "comp%": "92.51%",
+        "CompThroughput": "95.36 MB/s",
+        "DecompThroughput": "92.97 MB/s"
+    }
+}
+------------------------------------------------
+[3/10] 正在处理: --base-model roberta-base --finetuned-model cross-encoder/nli-roberta-base --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-base', finetuned_model='cross-encoder/nli-roberta-base', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 475.58 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "nli-roberta-base": {
+        "comp%": "92.51%",
+        "CompThroughput": "96.44 MB/s",
+        "DecompThroughput": "94.42 MB/s"
+    }
+}
+------------------------------------------------
+[4/10] 正在处理: --base-model roberta-base --finetuned-model textattack/roberta-base-SST-2 --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-base', finetuned_model='textattack/roberta-base-SST-2', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 475.58 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-base-SST-2": {
+        "comp%": "92.52%",
+        "CompThroughput": "100.81 MB/s",
+        "DecompThroughput": "95.18 MB/s"
+    }
+}
+------------------------------------------------
+[5/10] 正在处理: --base-model roberta-base --finetuned-model openai-community/roberta-base-openai-detector --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-base', finetuned_model='openai-community/roberta-base-openai-detector', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 475.58 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-base-openai-detector": {
+        "comp%": "92.52%",
+        "CompThroughput": "100.92 MB/s",
+        "DecompThroughput": "94.52 MB/s"
+    }
+}
+------------------------------------------------
+[6/10] 正在处理: --base-model roberta-base --finetuned-model textattack/roberta-base-MNLI --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-base', finetuned_model='textattack/roberta-base-MNLI', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 475.58 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-base-MNLI": {
+        "comp%": "92.51%",
+        "CompThroughput": "100.80 MB/s",
+        "DecompThroughput": "94.11 MB/s"
+    }
+}
+------------------------------------------------
+[7/10] 正在处理: --base-model roberta-base --finetuned-model cardiffnlp/twitter-roberta-base-sentiment-latest --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-base', finetuned_model='cardiffnlp/twitter-roberta-base-sentiment-latest', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 475.58 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "twitter-roberta-base-sentiment-latest": {
+        "comp%": "92.52%",
+        "CompThroughput": "101.35 MB/s",
+        "DecompThroughput": "95.19 MB/s"
+    }
+}
+------------------------------------------------
+[8/10] 正在处理: --base-model roberta-base --finetuned-model SamLowe/roberta-base-go_emotions --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-base', finetuned_model='SamLowe/roberta-base-go_emotions', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 475.58 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-base-go_emotions": {
+        "comp%": "92.51%",
+        "CompThroughput": "101.21 MB/s",
+        "DecompThroughput": "95.48 MB/s"
+    }
+}
+------------------------------------------------
+[9/10] 正在处理: --base-model roberta-base --finetuned-model textattack/roberta-base-ag-news --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-base', finetuned_model='textattack/roberta-base-ag-news', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 475.58 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "roberta-base-ag-news": {
+        "comp%": "92.52%",
+        "CompThroughput": "98.98 MB/s",
+        "DecompThroughput": "94.86 MB/s"
+    }
+}
+------------------------------------------------
+[10/10] 正在处理: --base-model roberta-base --finetuned-model cardiffnlp/twitter-roberta-base-hate-latest --dtype fp32 --compressor fmd
+Namespace(compressor='fmd', base_model='roberta-base', finetuned_model='cardiffnlp/twitter-roberta-base-hate-latest', dtype='fp32', stdout='stdout', save_path=None, save_with_chunk=False)
+模型原始大小: 475.58 MB
+finish checking: finetuned_model == decompressed_finetuned_model.
+{
+    "twitter-roberta-base-hate-latest": {
+        "comp%": "92.51%",
+        "CompThroughput": "99.42 MB/s",
+        "DecompThroughput": "95.46 MB/s"
+    }
+}
+------------------------------------------------

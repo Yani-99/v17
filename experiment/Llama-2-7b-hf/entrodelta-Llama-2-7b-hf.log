@@ -1,0 +1,77 @@
+-- Found pybind11: /home/liu4441/.conda/envs/liana/lib/python3.9/site-packages/pybind11/include (found version "3.0.1")
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/newdrive/liu4441/liana/pfor/standard/v17/build
+[100%] Built target pforex_cpp
+[RUN] Running benchmarks...
+[CONFIG] 手动设定: 启动 1 个并行线程
+
+>>> Running Config: llama2-7b-1 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: llama2-7b-1==========]
+  -> Size: 50.96% | Comp: 183.5 MB/s | Decomp: 333.5 MB/s | Metrics: {}
+
+>>> Running Config: llama2-7b-2 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: llama2-7b-2==========]
+  -> Size: 68.11% | Comp: 156.7 MB/s | Decomp: 307.1 MB/s | Metrics: {}
+
+>>> Running Config: llama2-7b-3 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama2-7b-3==========]
+  -> Size: 27.33% | Comp: 274.6 MB/s | Decomp: 369.7 MB/s | Metrics: {}
+
+>>> Running Config: llama2-7b-4 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: llama2-7b-4==========]
+  -> Size: 41.89% | Comp: 274.7 MB/s | Decomp: 418.3 MB/s | Metrics: {}
+
+>>> Running Config: llama2-7b-5 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: llama2-7b-5==========]
+  -> Size: 61.96% | Comp: 297.1 MB/s | Decomp: 333.8 MB/s | Metrics: {}
+
+>>> Running Config: llama2-7b-6 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float32
+
+[========== Rate: 0.0 = Model: llama2-7b-6==========]
+  -> Size: 18.38% | Comp: 741.6 MB/s | Decomp: 478.0 MB/s | Metrics: {}
+
+>>> Running Config: llama2-7b-7 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama2-7b-7==========]
+  -> Size: 44.71% | Comp: 374.3 MB/s | Decomp: 400.0 MB/s | Metrics: {}
+
+>>> Running Config: llama2-7b-8 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama2-7b-8==========]
+  -> Size: 26.09% | Comp: 257.4 MB/s | Decomp: 403.4 MB/s | Metrics: {}
+
+>>> Running Config: llama2-7b-9 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: llama2-7b-9==========]
+  -> Size: 50.96% | Comp: 290.6 MB/s | Decomp: 313.6 MB/s | Metrics: {}
+
+>>> Running Config: llama2-7b-10 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: llama2-7b-10==========]
+  -> Size: 31.32% | Comp: 211.6 MB/s | Decomp: 371.4 MB/s | Metrics: {}
