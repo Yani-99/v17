@@ -43,6 +43,40 @@ class CompressionEngine:
         self.BaseLoader = AutoModelForCausalLM if "LLM" in cfg['task_type'] else AutoModel
         # 新增：用于记录原始模型大小，方便计算 MB/s
         self.stats_orig_bytes = 0 
+    def _safe_load_hook(self, model, parent_module, param_name):
+        """安全触发 accelerate 钩子，专门修复 tied weight (如 score.weight) 的 KeyError Bug"""
+        if not hasattr(parent_module, "_hf_hook"):
+            return
+            
+        try:
+            parent_module._hf_hook.pre_forward(parent_module)
+            t = getattr(parent_module, param_name)
+            # 如果加载成功并且数据已经不在 meta 上了，直接返回
+            if t.device.type != "meta": 
+                return
+        except KeyError:
+            pass # 触发了 accelerate tied-weight offload bug
+            
+        # Fallback: 全局扫描寻找共享该参数的本体模块（通常是 embed_tokens）并触发它的 hook
+        target_param = getattr(parent_module, param_name)
+        for _, module in model.named_modules():
+            for _, p in module.named_parameters(recurse=False):
+                if p is target_param and module is not parent_module:
+                    if hasattr(module, "_hf_hook"):
+                        try:
+                            module._hf_hook.pre_forward(module)
+                            if target_param.device.type != "meta":
+                                return
+                        except KeyError:
+                            pass
+
+    def _safe_unload_hook(self, parent_module):
+        """安全释放钩子，忽略释放时可能产生的异常"""
+        try:
+            if hasattr(parent_module, "_hf_hook"):
+                parent_module._hf_hook.post_forward(parent_module, None)
+        except Exception:
+            pass
 
     def _compress_worker(self, args):
         key, ft_model, base_model, rate, native_dtype = args
@@ -51,36 +85,45 @@ class CompressionEngine:
         p_ft, n_ft = get_parent_module_and_name(ft_model, key)
         if p_ft is None: return None
         
-        if hasattr(p_ft, "_hf_hook"): p_ft._hf_hook.pre_forward(p_ft)
+        # [修改] 使用安全的加载钩子
+        self._safe_load_hook(ft_model, p_ft, n_ft)
         t_ft = getattr(p_ft, n_ft)
         
-        # 优化：立即转移到 CPU 并获取 numpy 视图，断开与模型的联系
-        if t_ft.device.type != 'cpu':
+        # 优化：转移到 CPU，增加针对 meta 的最后一道防线
+        if t_ft.device.type == 'meta':
+            ft_cpu = torch.zeros(t_ft.shape, dtype=torch.float32)
+        elif t_ft.device.type != 'cpu':
             ft_cpu = t_ft.detach().cpu().contiguous()
         else:
             ft_cpu = t_ft.detach().contiguous()
-        
             
         is_bf16 = "bfloat16" in str(t_ft.dtype)
         ft_np = get_np_view(ft_cpu)
         orig_bytes = ft_np.nbytes
         current_shape = t_ft.shape
 
-        if hasattr(p_ft, "_hf_hook"): p_ft._hf_hook.post_forward(p_ft, None)
+        # [修改] 使用安全的释放钩子
+        self._safe_unload_hook(p_ft)
 
         # 2. 动态加载 Base 数据
         p_base, n_base = get_parent_module_and_name(base_model, key)
         if p_base is not None:
-            if hasattr(p_base, "_hf_hook"): p_base._hf_hook.pre_forward(p_base)
+            # [修改] 使用安全的加载钩子
+            self._safe_load_hook(base_model, p_base, n_base)
             t_base = getattr(p_base, n_base)
-            # 优化：Base 也立即转 CPU
-            if t_base.device.type != 'cpu':
+            
+            # 增加对 meta 设备的兜底
+            if t_base.device.type == 'meta':
+                base_cpu = torch.zeros(t_base.shape, dtype=ft_cpu.dtype)
+            elif t_base.device.type != 'cpu':
                 base_cpu = t_base.detach().cpu().contiguous()
             else:
                 base_cpu = t_base.detach().contiguous()
                 
             base_np = get_np_view(base_cpu) if base_cpu.shape == ft_cpu.shape else np.zeros_like(ft_np)
-            if hasattr(p_base, "_hf_hook"): p_base._hf_hook.post_forward(p_base, None)
+            
+            # [修改] 使用安全的释放钩子
+            self._safe_unload_hook(p_base)
         else:
             base_np = np.zeros_like(ft_np)
 
@@ -98,56 +141,32 @@ class CompressionEngine:
         key, shape, c_bytes, base_model, is_llm_task, target_dtype = args
         
         # 1. Worker 内部触发 Base 加载
-        # p_base, n_base = get_parent_module_and_name(base_model, key)
-        # if p_base is None and "." in key:
-        #     p_base, n_base = get_parent_module_and_name(base_model, key.split(".", 1)[1])
-        
-        # if p_base is not None:
-        #     if hasattr(p_base, "_hf_hook"):
-        #         p_base._hf_hook.pre_forward(p_base)
-            
-        #     t_base = getattr(p_base, n_base)
-        #     # 优化：立即转 CPU numpy 视图
-        #     if t_base.device.type != 'cpu':
-        #         base_cpu = t_base.detach().cpu().contiguous()
-        #     else:
-        #         base_cpu = t_base.detach().contiguous()
-        #     base_np = get_np_view(base_cpu)
-        # else:
-        #     is_half = (target_dtype == torch.float16 or target_dtype == torch.bfloat16)
-        #     dtype = np.uint16 if is_half else np.uint32
-        #     base_np = np.zeros(shape, dtype=dtype)
-
-        # 1. Worker 内部触发 Base 加载
         p_base, n_base = get_parent_module_and_name(base_model, key)
         if p_base is None and "." in key:
             p_base, n_base = get_parent_module_and_name(base_model, key.split(".", 1)[1])
         
-        # 定义一个 helper 变量来标记是否使用了真实的 base
         used_real_base = False
 
         if p_base is not None:
-            if hasattr(p_base, "_hf_hook"):
-                p_base._hf_hook.pre_forward(p_base)
-            
+            # [修改] 使用安全的加载钩子
+            self._safe_load_hook(base_model, p_base, n_base)
             t_base = getattr(p_base, n_base)
             
-            # [FIX] 增加形状检查！必须与压缩时的逻辑（mismatch -> zeros）保持一致
             if tuple(t_base.shape) == tuple(shape):
-                # 优化：立即转 CPU numpy 视图
-                if t_base.device.type != 'cpu':
-                    base_cpu = t_base.detach().cpu().contiguous()
+                # 遇到异常未能加载下来的张量，放弃真实 base
+                if t_base.device.type == 'meta':
+                    pass
                 else:
-                    base_cpu = t_base.detach().contiguous()
-                base_np = get_np_view(base_cpu)
-                used_real_base = True
+                    if t_base.device.type != 'cpu':
+                        base_cpu = t_base.detach().cpu().contiguous()
+                    else:
+                        base_cpu = t_base.detach().contiguous()
+                    base_np = get_np_view(base_cpu)
+                    used_real_base = True
             else:
-                # 如果形状不匹配（如 Llama3 128256 vs 128258），这里的 Base 不能用
-                # 压缩时这种情况使用了全0，所以解压也要用全0
                 pass 
         
         if not used_real_base:
-            # Fallback: 如果没有找到 Base 或者形状不匹配，使用全 0
             is_half = (target_dtype == torch.float16 or target_dtype == torch.bfloat16)
             dtype = np.uint16 if is_half else np.uint32
             base_np = np.zeros(shape, dtype=dtype)
@@ -158,17 +177,142 @@ class CompressionEngine:
         
         view_dtype = np.float32 if base_np.itemsize == 4 else np.float16
         rec_np = rec_uint.view(view_dtype)
-        tens = torch.from_numpy(rec_np).reshape(shape).clone() # clone 是必须的，因为 rec_np 即将释放
+        tens = torch.from_numpy(rec_np).reshape(shape).clone()
         duration = time.perf_counter() - t_start
         
         # 3. 释放 Base 引用
-        if p_base is not None and hasattr(p_base, "_hf_hook"):
-            p_base._hf_hook.post_forward(p_base, None)
+        # [修改] 使用安全的释放钩子
+        self._safe_unload_hook(p_base)
             
         if target_dtype == torch.bfloat16: tens = tens.view(torch.bfloat16)
         elif target_dtype == torch.float16: tens = tens.view(torch.float16)
         
         return key, tens, duration
+    # def _compress_worker(self, args):
+    #     key, ft_model, base_model, rate, native_dtype = args
+        
+    #     # 1. 动态加载 FT 数据
+    #     p_ft, n_ft = get_parent_module_and_name(ft_model, key)
+    #     if p_ft is None: return None
+        
+    #     if hasattr(p_ft, "_hf_hook"): p_ft._hf_hook.pre_forward(p_ft)
+    #     t_ft = getattr(p_ft, n_ft)
+        
+    #     # 优化：立即转移到 CPU 并获取 numpy 视图，断开与模型的联系
+    #     if t_ft.device.type != 'cpu':
+    #         ft_cpu = t_ft.detach().cpu().contiguous()
+    #     else:
+    #         ft_cpu = t_ft.detach().contiguous()
+        
+            
+    #     is_bf16 = "bfloat16" in str(t_ft.dtype)
+    #     ft_np = get_np_view(ft_cpu)
+    #     orig_bytes = ft_np.nbytes
+    #     current_shape = t_ft.shape
+
+    #     if hasattr(p_ft, "_hf_hook"): p_ft._hf_hook.post_forward(p_ft, None)
+
+    #     # 2. 动态加载 Base 数据
+    #     p_base, n_base = get_parent_module_and_name(base_model, key)
+    #     if p_base is not None:
+    #         if hasattr(p_base, "_hf_hook"): p_base._hf_hook.pre_forward(p_base)
+    #         t_base = getattr(p_base, n_base)
+    #         # 优化：Base 也立即转 CPU
+    #         if t_base.device.type != 'cpu':
+    #             base_cpu = t_base.detach().cpu().contiguous()
+    #         else:
+    #             base_cpu = t_base.detach().contiguous()
+                
+    #         base_np = get_np_view(base_cpu) if base_cpu.shape == ft_cpu.shape else np.zeros_like(ft_np)
+    #         if hasattr(p_base, "_hf_hook"): p_base._hf_hook.post_forward(p_base, None)
+    #     else:
+    #         base_np = np.zeros_like(ft_np)
+
+    #     # 3. 压缩内核
+    #     t_start = time.perf_counter()
+    #     try:
+    #         c_bytes = pforex_cpp.compress_layer(base_np, ft_np, rate, is_bf16)
+    #     except:
+    #         c_bytes = pforex_cpp.compress_layer(np.zeros_like(ft_np), ft_np, rate, is_bf16)
+    #     duration = time.perf_counter() - t_start
+
+    #     return key, c_bytes, orig_bytes, len(c_bytes), duration, current_shape
+
+    # def _decompress_worker(self, args):
+    #     key, shape, c_bytes, base_model, is_llm_task, target_dtype = args
+        
+    #     # 1. Worker 内部触发 Base 加载
+    #     # p_base, n_base = get_parent_module_and_name(base_model, key)
+    #     # if p_base is None and "." in key:
+    #     #     p_base, n_base = get_parent_module_and_name(base_model, key.split(".", 1)[1])
+        
+    #     # if p_base is not None:
+    #     #     if hasattr(p_base, "_hf_hook"):
+    #     #         p_base._hf_hook.pre_forward(p_base)
+            
+    #     #     t_base = getattr(p_base, n_base)
+    #     #     # 优化：立即转 CPU numpy 视图
+    #     #     if t_base.device.type != 'cpu':
+    #     #         base_cpu = t_base.detach().cpu().contiguous()
+    #     #     else:
+    #     #         base_cpu = t_base.detach().contiguous()
+    #     #     base_np = get_np_view(base_cpu)
+    #     # else:
+    #     #     is_half = (target_dtype == torch.float16 or target_dtype == torch.bfloat16)
+    #     #     dtype = np.uint16 if is_half else np.uint32
+    #     #     base_np = np.zeros(shape, dtype=dtype)
+
+    #     # 1. Worker 内部触发 Base 加载
+    #     p_base, n_base = get_parent_module_and_name(base_model, key)
+    #     if p_base is None and "." in key:
+    #         p_base, n_base = get_parent_module_and_name(base_model, key.split(".", 1)[1])
+        
+    #     # 定义一个 helper 变量来标记是否使用了真实的 base
+    #     used_real_base = False
+
+    #     if p_base is not None:
+    #         if hasattr(p_base, "_hf_hook"):
+    #             p_base._hf_hook.pre_forward(p_base)
+            
+    #         t_base = getattr(p_base, n_base)
+            
+    #         # [FIX] 增加形状检查！必须与压缩时的逻辑（mismatch -> zeros）保持一致
+    #         if tuple(t_base.shape) == tuple(shape):
+    #             # 优化：立即转 CPU numpy 视图
+    #             if t_base.device.type != 'cpu':
+    #                 base_cpu = t_base.detach().cpu().contiguous()
+    #             else:
+    #                 base_cpu = t_base.detach().contiguous()
+    #             base_np = get_np_view(base_cpu)
+    #             used_real_base = True
+    #         else:
+    #             # 如果形状不匹配（如 Llama3 128256 vs 128258），这里的 Base 不能用
+    #             # 压缩时这种情况使用了全0，所以解压也要用全0
+    #             pass 
+        
+    #     if not used_real_base:
+    #         # Fallback: 如果没有找到 Base 或者形状不匹配，使用全 0
+    #         is_half = (target_dtype == torch.float16 or target_dtype == torch.bfloat16)
+    #         dtype = np.uint16 if is_half else np.uint32
+    #         base_np = np.zeros(shape, dtype=dtype)
+
+    #     # 2. 核心算法计时
+    #     t_start = time.perf_counter()
+    #     rec_uint = pforex_cpp.decompress_layer(c_bytes, base_np)
+        
+    #     view_dtype = np.float32 if base_np.itemsize == 4 else np.float16
+    #     rec_np = rec_uint.view(view_dtype)
+    #     tens = torch.from_numpy(rec_np).reshape(shape).clone() # clone 是必须的，因为 rec_np 即将释放
+    #     duration = time.perf_counter() - t_start
+        
+    #     # 3. 释放 Base 引用
+    #     if p_base is not None and hasattr(p_base, "_hf_hook"):
+    #         p_base._hf_hook.post_forward(p_base, None)
+            
+    #     if target_dtype == torch.bfloat16: tens = tens.view(torch.bfloat16)
+    #     elif target_dtype == torch.float16: tens = tens.view(torch.float16)
+        
+    #     return key, tens, duration
     
     def _write_chunk(self, f, key, shape, c_bytes):
         # Format:
@@ -211,30 +355,47 @@ class CompressionEngine:
                 yield key, shape, c_bytes
 
     def run_pipeline(self, rate, ModelClass, cpu_kwargs):
-        comp_kwargs = cpu_kwargs.copy()
-        comp_kwargs["device_map"] = "cpu"
+        max_mem = {"cpu": "40GiB"} 
+        if torch.cuda.is_available():
+            for i in range(torch.cuda.device_count()):
+                max_mem[i] = "0GiB"  # 严禁使用任何 GPU，避免第一/第二模型抢占显存崩溃
+                
+        # 2. 为 Base 和 FT 模型分配【完全独立】的 offload 文件夹，防止文件覆盖冲突
+        base_kwargs = cpu_kwargs.copy()
+        base_kwargs["max_memory"] = max_mem
+        base_kwargs["offload_folder"] = "/home/newdrive2/liu4441/tmp_offload_base"
+
+        ft_kwargs = cpu_kwargs.copy()
+        ft_kwargs["max_memory"] = max_mem
+        ft_kwargs["offload_folder"] = "/home/newdrive2/liu4441/tmp_offload_ft"
+
         # --- Prepare ---
+        # 现在，accelerate 会乖乖地只用 CPU，且超过 40G 后自动平稳写入各自的硬盘目录
+        base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **base_kwargs)
+        ft_model = ModelClass.from_pretrained(self.cfg['ft_model'], **ft_kwargs)
+
+        # comp_kwargs = cpu_kwargs.copy()
+        # # comp_kwargs["device_map"] = "cpu"
+        # # --- Prepare ---
         # base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **comp_kwargs)
         # ft_model = ModelClass.from_pretrained(self.cfg['ft_model'], **comp_kwargs)
-        base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **comp_kwargs)
-        ft_model = ModelClass.from_pretrained(self.cfg['ft_model'], **comp_kwargs)
         
-        # [核心修复] 主动扫描：检查是否有静默残留的 meta tensor
-        def has_meta(m):
-            for p in m.parameters():
-                if p.device.type == "meta": return True
-            return False
+        # # [核心修复] 主动扫描：检查是否有静默残留的 meta tensor
+        # def has_meta(m):
+        #     for p in m.parameters():
+        #         if p.device.type == "meta": return True
+        #     return False
 
-        if has_meta(base_native) or has_meta(ft_model):
-            logger.warning("[WORKAROUND] 检测到残留的 meta tensor (GPT-2/BERT常见Bug)。使用安全模式重新加载...")
-            del base_native
-            del ft_model
-            force_cleanup()
+        # if has_meta(base_native) or has_meta(ft_model):
+        #     logger.warning("[WORKAROUND] 检测到残留的 meta tensor (GPT-2/BERT常见Bug)。使用安全模式重新加载...")
+        #     del base_native
+        #     del ft_model
+        #     force_cleanup()
             
-            # 剔除引发 Bug 的 accelerate 加速参数，使用原生 PyTorch 加载
-            safe_kwargs = {k: v for k, v in comp_kwargs.items() if k not in ["device_map", "low_cpu_mem_usage", "offload_folder"]}
-            base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **safe_kwargs)
-            ft_model = ModelClass.from_pretrained(self.cfg['ft_model'], **safe_kwargs)
+        #     # 剔除引发 Bug 的 accelerate 加速参数，使用原生 PyTorch 加载
+        #     safe_kwargs = {k: v for k, v in comp_kwargs.items() if k not in ["device_map", "low_cpu_mem_usage", "offload_folder"]}
+        #     base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **safe_kwargs)
+        #     ft_model = ModelClass.from_pretrained(self.cfg['ft_model'], **safe_kwargs)
         
         ft_keys = []
         for n, _ in ft_model.named_parameters(): ft_keys.append(n)
@@ -250,7 +411,7 @@ class CompressionEngine:
         stats = {"orig": 0, "comp": 0}
         total_kernel_time = 0.0
         
-        output_file = "model_compressed.bin"
+        output_file = "/home/newdrive2/liu4441/model_compressed.bin"
         with open(output_file, "wb") as f_out:
             with ThreadPoolExecutor(max_workers=self.num_workers) as executor:
                 future_to_key = {}

@@ -1,0 +1,5 @@
+开始加载Tokenizer: meta-llama/Llama-2-7b-chat-hf
+开始加载并量化模型 (比特数: 4)... 这可能需要一些时间。
+量化完成！耗时: 409.58 秒
+将量化后的模型保存至: /home/newdrive2/liu4441/Llama-2-7b-chat-hf-gptq-4bit
+保存完毕。

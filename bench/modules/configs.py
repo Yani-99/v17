@@ -514,39 +514,39 @@ TEST_CONFIGS = {
         "ft_model": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF"
     },
     "llama-3.1-70b-4": {
-        "task_type": "Uncensored-Chat",
+        "task_type": "Instruct-Clone",
         "base_model": "meta-llama/Llama-3.1-70B",
-        "ft_model": "cognitivecomputations/dolphin-2.9.4-llama3.1-70b"
+        "ft_model": "unsloth/Meta-Llama-3.1-70B-Instruct"
     },
     "llama-3.1-70b-5": {
-        "task_type": "High-Performance-SFT",
-        "base_model": "meta-llama/Llama-3.1-70B",
-        "ft_model": "akjindal53244/Llama-3.1-Storm-70B"
-    },
-    "llama-3.1-70b-6": {
-        "task_type": "Abliterated-Refusal",
-        "base_model": "meta-llama/Llama-3.1-70B",
-        "ft_model": "failspy/Llama-3.1-70B-Instruct-Abliterated"
-    },
-    "llama-3.1-70b-7": {
         "task_type": "Reflection-Tuning",
         "base_model": "meta-llama/Llama-3.1-70B",
         "ft_model": "mattshumer/Reflection-Llama-3.1-70B"
     },
-    "llama-3.1-70b-8": {
-        "task_type": "Synthetic-Data",
-        "base_model": "meta-llama/Llama-3.1-70B",
-        "ft_model": "Magpie-Align/Llama-3.1-70B-Magpie-Align-SFT-v0.2"
-    },
-    "llama-3.1-70b-9": {
-        "task_type": "Uncensored-SFT",
-        "base_model": "meta-llama/Llama-3.1-70B",
-        "ft_model": "rombodawg/Llama-3.1-70B-Instruct-Uncensored"
-    },
-    "llama-3.1-70b-10": {
+    "llama-3.1-70b-6": {
         "task_type": "Multilingual-German",
         "base_model": "meta-llama/Llama-3.1-70B",
         "ft_model": "VAGOsolutions/Llama-3.1-SauerkrautLM-70b-Instruct"
+    },
+    "llama-3.1-70b-7": {
+        "task_type": "SFT-Academic-Baseline",
+        "base_model": "meta-llama/Llama-3.1-70B",
+        "ft_model": "allenai/Llama-3.1-Tulu-3-70B-SFT"
+    },
+    "llama-3.1-70b-8": {
+        "task_type": "Math-Reasoning",
+        "base_model": "meta-llama/Llama-3.1-70B",
+        "ft_model": "nvidia/OpenMath2-Llama3.1-70B"
+    },
+    "llama-3.1-70b-9": {
+        "task_type": "Synthetic-Data",
+        "base_model": "meta-llama/Llama-3.1-70B",
+        "ft_model": "migtissera/Tess-3-Llama-3.1-70B"
+    },
+    "llama-3.1-70b-10": {
+        "task_type": "Abliterated-Refusal",
+        "base_model": "meta-llama/Llama-3.1-70B",
+        "ft_model": "mylesgoose/Llama-3.1-70B-Instruct-abliterated"
     }
 }
 

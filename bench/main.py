@@ -112,7 +112,8 @@ LOSSY_RATES = [0.0]
 # CONFIG_LIST = ["mistral-7b-1", "mistral-7b-2", "mistral-7b-3", "mistral-7b-4", "mistral-7b-5", "mistral-7b-6", "mistral-7b-7", "mistral-7b-8", "mistral-7b-9", "mistral-7b-10"]
 # meta-llama/Llama-3.1-70B
 # CONFIG_LIST = ["llama-3.1-70b-1", "llama-3.1-70b-2", "llama-3.1-70b-3", "llama-3.1-70b-4", "llama-3.1-70b-5", "llama-3.1-70b-6", "llama-3.1-70b-7", "llama-3.1-70b-8", "llama-3.1-70b-9", "llama-3.1-70b-10"]
-CONFIG_LIST = ["llama3_70b"]
+# CONFIG_LIST = ["llama3_70b"]
+CONFIG_LIST = ["llama3.1-8b-1"]
 
 
 from engine import CompressionEngine
@@ -140,7 +141,7 @@ def main():
             cpu_kwargs = {
                 "low_cpu_mem_usage": True,
                 "device_map": "auto", 
-                "offload_folder": "tmp_offload"
+                "offload_folder": "/home/newdrive2/liu4441/tmp_offload"
             }
             if "LLM" in cfg['task_type']: cpu_kwargs["torch_dtype"] = native_dtype
 

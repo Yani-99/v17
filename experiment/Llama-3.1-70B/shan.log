@@ -23,7 +23,7 @@ Based on the current allocation process, no modules could be assigned to the fol
   - 2: 4202692608 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.67% | Comp: 314.2 MB/s | Decomp: 402.4 MB/s | Metrics: {}
+  -> Size: 31.67% | Comp: 316.5 MB/s | Decomp: 386.7 MB/s | Metrics: {}
 
 >>> Running Config: llama-3.1-70b-2 <<<
 Detecting FT model native dtype...
@@ -42,7 +42,7 @@ Based on the current allocation process, no modules could be assigned to the fol
   - 2: 4202692608 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 28.72% | Comp: 326.4 MB/s | Decomp: 409.9 MB/s | Metrics: {}
+  -> Size: 28.72% | Comp: 328.6 MB/s | Decomp: 397.9 MB/s | Metrics: {}
 
 >>> Running Config: llama-3.1-70b-3 <<<
 Detecting FT model native dtype...
@@ -61,11 +61,12 @@ Based on the current allocation process, no modules could be assigned to the fol
   - 2: 4202692608 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.67% | Comp: 314.6 MB/s | Decomp: 385.2 MB/s | Metrics: {}
+  -> Size: 31.67% | Comp: 315.4 MB/s | Decomp: 397.4 MB/s | Metrics: {}
 
 >>> Running Config: llama-3.1-70b-4 <<<
 Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
+Dtype detection failed: mlabonne/Meta-Llama-3.1-70B-Instruct-abliterated is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`. Defaulting to float32.
 
 [========== Rate: 0.0 = Model: llama-3.1-70b-4==========]
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
@@ -74,17 +75,14 @@ Based on the current allocation process, no modules could be assigned to the fol
   - 2: 4202692608 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 Some parameters are on the meta device because they were offloaded to the cpu and disk.
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.67% | Comp: 313.7 MB/s | Decomp: 397.5 MB/s | Metrics: {}
+!!! CRITICAL ERROR processing llama-3.1-70b-4 !!!
+mlabonne/Meta-Llama-3.1-70B-Instruct-abliterated is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
 
 >>> Running Config: llama-3.1-70b-5 <<<
 Detecting FT model native dtype...
--> Found dtype in config: torch.float32
+Dtype detection failed: arcee-ai/SuperNova-Pro is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`. Defaulting to float32.
 
 [========== Rate: 0.0 = Model: llama-3.1-70b-5==========]
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
@@ -93,13 +91,9 @@ Based on the current allocation process, no modules could be assigned to the fol
   - 2: 4202692608 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 Some parameters are on the meta device because they were offloaded to the cpu and disk.
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625506816 bytes required
-  - 1: 4202889216 bytes required
-  - 2: 4202889216 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 73.35% | Comp: 137.4 MB/s | Decomp: 408.9 MB/s | Metrics: {}
+!!! CRITICAL ERROR processing llama-3.1-70b-5 !!!
+arcee-ai/SuperNova-Pro is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
 
 >>> Running Config: llama-3.1-70b-6 <<<
 Detecting FT model native dtype...
@@ -118,11 +112,11 @@ Based on the current allocation process, no modules could be assigned to the fol
   - 2: 4202692608 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.69% | Comp: 316.2 MB/s | Decomp: 395.0 MB/s | Metrics: {}
+  -> Size: 31.67% | Comp: 316.7 MB/s | Decomp: 384.1 MB/s | Metrics: {}
 
 >>> Running Config: llama-3.1-70b-7 <<<
 Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
+-> Found dtype in config: torch.float32
 
 [========== Rate: 0.0 = Model: llama-3.1-70b-7==========]
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
@@ -132,16 +126,17 @@ Based on the current allocation process, no modules could be assigned to the fol
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 Some parameters are on the meta device because they were offloaded to the cpu and disk.
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625572352 bytes required
-  - 1: 4202954752 bytes required
-  - 2: 4202954752 bytes required
+  - 0: 7625506816 bytes required
+  - 1: 4202889216 bytes required
+  - 2: 4202889216 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 25.60% | Comp: 339.6 MB/s | Decomp: 410.1 MB/s | Metrics: {}
+  -> Size: 73.35% | Comp: 200.3 MB/s | Decomp: 411.2 MB/s | Metrics: {}
 
 >>> Running Config: llama-3.1-70b-8 <<<
 Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
+Dtype detection failed: DeepMount00/Llama-3.1-70b-Ita is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`. Defaulting to float32.
 
 [========== Rate: 0.0 = Model: llama-3.1-70b-8==========]
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
@@ -150,17 +145,14 @@ Based on the current allocation process, no modules could be assigned to the fol
   - 2: 4202692608 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 Some parameters are on the meta device because they were offloaded to the cpu and disk.
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.22% | Comp: 312.4 MB/s | Decomp: 396.1 MB/s | Metrics: {}
+!!! CRITICAL ERROR processing llama-3.1-70b-8 !!!
+DeepMount00/Llama-3.1-70b-Ita is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
 
 >>> Running Config: llama-3.1-70b-9 <<<
 Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
+Dtype detection failed: elyza/ELYZA-japanese-Llama-3.1-70B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`. Defaulting to float32.
 
 [========== Rate: 0.0 = Model: llama-3.1-70b-9==========]
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
@@ -169,13 +161,9 @@ Based on the current allocation process, no modules could be assigned to the fol
   - 2: 4202692608 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 Some parameters are on the meta device because they were offloaded to the cpu and disk.
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 13.06% | Comp: 246.8 MB/s | Decomp: 533.9 MB/s | Metrics: {}
+!!! CRITICAL ERROR processing llama-3.1-70b-9 !!!
+elyza/ELYZA-japanese-Llama-3.1-70B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
 
 >>> Running Config: llama-3.1-70b-10 <<<
 Detecting FT model native dtype...
@@ -194,4 +182,27 @@ Based on the current allocation process, no modules could be assigned to the fol
   - 2: 4202692608 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.74% | Comp: 310.0 MB/s | Decomp: 381.0 MB/s | Metrics: {}
+  -> Size: 31.69% | Comp: 316.4 MB/s | Decomp: 389.1 MB/s | Metrics: {}
+
+
+test_list = [
+    "meta-llama/Llama-3.1-70B-Instruct",
+    "NousResearch/Hermes-3-Llama-3.1-70B",
+    "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+    "unsloth/Meta-Llama-3.1-70B-Instruct",
+    "mattshumer/Reflection-Llama-3.1-70B",
+    "VAGOsolutions/Llama-3.1-SauerkrautLM-70b-Instruct"
+]
+
+    "mlabonne/Meta-Llama-3.1-70B-Instruct-abliterated",
+    "arcee-ai/SuperNova-Pro",
+    "DeepMount00/Llama-3.1-70b-Ita",
+    "elyza/ELYZA-japanese-Llama-3.1-70B-Instruct",
+    "cognitivecomputations/dolphin-2.9.4-llama3.1-70b",
+    "akjindal53244/Llama-3.1-Storm-70B",
+    "failspy/Llama-3.1-70B-Instruct-Abliterated",
+    "Magpie-Align/Llama-3.1-70B-Magpie-Align-SFT-v0.2",
+    "rombodawg/Llama-3.1-70B-Instruct-Uncensored",
+
+
+    

@@ -1,96 +1,179 @@
--- The C compiler identification is GNU 12.4.0
--- The CXX compiler identification is GNU 12.4.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /home/liu4441/.conda/envs/liana/bin/x86_64-conda-linux-gnu-cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /home/liu4441/.conda/envs/liana/bin/x86_64-conda-linux-gnu-c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Found PythonInterp: /home/liu4441/.conda/envs/liana/bin/python (found suitable version "3.9.23", minimum required is "3.8")
--- Found PythonLibs: /home/liu4441/.conda/envs/liana/lib/libpython3.9.so
--- Performing Test HAS_FLTO_AUTO
--- Performing Test HAS_FLTO_AUTO - Success
 -- Found pybind11: /home/liu4441/.conda/envs/liana/lib/python3.9/site-packages/pybind11/include (found version "3.0.1")
--- Configuring done (0.8s)
+-- Configuring done (0.2s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/newdrive/liu4441/liana/pfor/standard/v17/build
-[ 50%] Building CXX object CMakeFiles/pforex_cpp.dir/src/bind.cpp.o
-[100%] Linking CXX shared module pforex_cpp.cpython-39-x86_64-linux-gnu.so
 [100%] Built target pforex_cpp
 [RUN] Running benchmarks...
 [CONFIG] 手动设定: 启动 1 个并行线程
 
->>> Running Config: gpt2-1 <<<
-Detecting FT model native dtype...
--> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
-
-[========== Rate: 0.0 = Model: gpt2-1==========]
-  -> Size: 68.68% | Comp: 507.3 MB/s | Decomp: 653.1 MB/s | Metrics: {}
-
->>> Running Config: gpt2-2 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.float32
-
-[========== Rate: 0.0 = Model: gpt2-2==========]
-  -> Size: 79.80% | Comp: 405.1 MB/s | Decomp: 571.2 MB/s | Metrics: {}
-
->>> Running Config: gpt2-3 <<<
-Detecting FT model native dtype...
--> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
-
-[========== Rate: 0.0 = Model: gpt2-3==========]
-  -> Size: 73.68% | Comp: 446.4 MB/s | Decomp: 539.1 MB/s | Metrics: {}
-
->>> Running Config: gpt2-4 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.float32
-
-[========== Rate: 0.0 = Model: gpt2-4==========]
-  -> Size: 75.14% | Comp: 438.9 MB/s | Decomp: 489.8 MB/s | Metrics: {}
-
->>> Running Config: gpt2-5 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.float32
-
-[========== Rate: 0.0 = Model: gpt2-5==========]
-  -> Size: 66.04% | Comp: 584.4 MB/s | Decomp: 667.6 MB/s | Metrics: {}
-
->>> Running Config: gpt2-6 <<<
+>>> Running Config: llama2-13b-1 <<<
 Detecting FT model native dtype...
 -> Found dtype in config: torch.float16
 
-[========== Rate: 0.0 = Model: gpt2-6==========]
-  -> Size: 94.46% | Comp: 134.6 MB/s | Decomp: 323.3 MB/s | Metrics: {}
+[========== Rate: 0.0 = Model: llama2-13b-1==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 50.96% | Comp: 112.9 MB/s | Decomp: 396.7 MB/s | Metrics: {}
 
->>> Running Config: gpt2-7 <<<
+>>> Running Config: llama2-13b-2 <<<
 Detecting FT model native dtype...
 -> Found dtype in config: torch.float16
 
-[========== Rate: 0.0 = Model: gpt2-7==========]
-!!! CRITICAL ERROR processing gpt2-7 !!!
-Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
+[========== Rate: 0.0 = Model: llama2-13b-2==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 68.48% | Comp: 109.0 MB/s | Decomp: 404.4 MB/s | Metrics: {}
 
->>> Running Config: gpt2-8 <<<
+>>> Running Config: llama2-13b-3 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama2-13b-3==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962416640 bytes required
+  - 1: 328007680 bytes required
+  - 2: 328007680 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 41.42% | Comp: 151.7 MB/s | Decomp: 390.5 MB/s | Metrics: {}
+
+>>> Running Config: llama2-13b-4 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: llama2-13b-4==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 69.77% | Comp: 222.1 MB/s | Decomp: 381.1 MB/s | Metrics: {}
+
+>>> Running Config: llama2-13b-5 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: llama2-13b-5==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 39.28% | Comp: 135.0 MB/s | Decomp: 414.6 MB/s | Metrics: {}
+
+>>> Running Config: llama2-13b-6 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: llama2-13b-6==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 30.90% | Comp: 115.3 MB/s | Decomp: 357.6 MB/s | Metrics: {}
+
+>>> Running Config: llama2-13b-7 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama2-13b-7==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 44.70% | Comp: 147.1 MB/s | Decomp: 374.9 MB/s | Metrics: {}
+
+>>> Running Config: llama2-13b-8 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: llama2-13b-8==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962109440 bytes required
+  - 1: 327700480 bytes required
+  - 2: 327700480 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 51.35% | Comp: 132.8 MB/s | Decomp: 367.5 MB/s | Metrics: {}
+
+>>> Running Config: llama2-13b-9 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: llama2-13b-9==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 962088960 bytes required
+  - 1: 327680000 bytes required
+  - 2: 327680000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 62.45% | Comp: 124.9 MB/s | Decomp: 360.4 MB/s | Metrics: {}
+
+>>> Running Config: llama2-13b-10 <<<
 Detecting FT model native dtype...
 -> Found dtype in config: torch.float32
 
-[========== Rate: 0.0 = Model: gpt2-8==========]
-  -> Size: 78.15% | Comp: 484.8 MB/s | Decomp: 576.9 MB/s | Metrics: {}
-
->>> Running Config: gpt2-9 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.float32
-
-[========== Rate: 0.0 = Model: gpt2-9==========]
-  -> Size: 76.10% | Comp: 545.3 MB/s | Decomp: 634.8 MB/s | Metrics: {}
-
->>> Running Config: gpt2-10 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.float32
-
-[========== Rate: 0.0 = Model: gpt2-10==========]
-  -> Size: 66.24% | Comp: 627.8 MB/s | Decomp: 665.0 MB/s | Metrics: {}
+[========== Rate: 0.0 = Model: llama2-13b-10==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1924177920 bytes required
+  - 1: 655360000 bytes required
+  - 2: 655360000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Some parameters are on the meta device because they were offloaded to the disk and cpu.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1924177920 bytes required
+  - 1: 655360000 bytes required
+  - 2: 655360000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Some parameters are on the meta device because they were offloaded to the disk and cpu.
+  -> Size: 65.98% | Comp: 159.3 MB/s | Decomp: 433.5 MB/s | Metrics: {}

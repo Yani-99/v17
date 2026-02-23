@@ -6,192 +6,172 @@
 [RUN] Running benchmarks...
 [CONFIG] 手动设定: 启动 1 个并行线程
 
->>> Running Config: llama-3.1-70b-1 <<<
+>>> Running Config: mistral-7b-1 <<<
 Detecting FT model native dtype...
 -> Found dtype in config: torch.bfloat16
 
-[========== Rate: 0.0 = Model: llama-3.1-70b-1==========]
+[========== Rate: 0.0 = Model: mistral-7b-1==========]
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.67% | Comp: 314.2 MB/s | Decomp: 402.4 MB/s | Metrics: {}
+  -> Size: 40.69% | Comp: 273.4 MB/s | Decomp: 349.9 MB/s | Metrics: {}
 
->>> Running Config: llama-3.1-70b-2 <<<
+>>> Running Config: mistral-7b-2 <<<
 Detecting FT model native dtype...
 -> Found dtype in config: torch.bfloat16
 
-[========== Rate: 0.0 = Model: llama-3.1-70b-2==========]
+[========== Rate: 0.0 = Model: mistral-7b-2==========]
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 28.72% | Comp: 326.4 MB/s | Decomp: 409.9 MB/s | Metrics: {}
+  -> Size: 31.62% | Comp: 302.1 MB/s | Decomp: 365.2 MB/s | Metrics: {}
 
->>> Running Config: llama-3.1-70b-3 <<<
+>>> Running Config: mistral-7b-3 <<<
 Detecting FT model native dtype...
 -> Found dtype in config: torch.bfloat16
 
-[========== Rate: 0.0 = Model: llama-3.1-70b-3==========]
+[========== Rate: 0.0 = Model: mistral-7b-3==========]
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.67% | Comp: 314.6 MB/s | Decomp: 385.2 MB/s | Metrics: {}
+  -> Size: 31.69% | Comp: 303.2 MB/s | Decomp: 363.3 MB/s | Metrics: {}
 
->>> Running Config: llama-3.1-70b-4 <<<
+>>> Running Config: mistral-7b-4 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: mistral-7b-4==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 41.01% | Comp: 303.7 MB/s | Decomp: 372.7 MB/s | Metrics: {}
+
+>>> Running Config: mistral-7b-5 <<<
 Detecting FT model native dtype...
 -> Found dtype in config: torch.bfloat16
 
-[========== Rate: 0.0 = Model: llama-3.1-70b-4==========]
+[========== Rate: 0.0 = Model: mistral-7b-5==========]
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
+  - 0: 1396768768 bytes required
+  - 1: 524320768 bytes required
+  - 2: 524320768 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.67% | Comp: 313.7 MB/s | Decomp: 397.5 MB/s | Metrics: {}
+  -> Size: 31.84% | Comp: 302.4 MB/s | Decomp: 367.2 MB/s | Metrics: {}
 
->>> Running Config: llama-3.1-70b-5 <<<
+>>> Running Config: mistral-7b-6 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: mistral-7b-6==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 32.50% | Comp: 300.3 MB/s | Decomp: 365.4 MB/s | Metrics: {}
+
+>>> Running Config: mistral-7b-7 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: mistral-7b-7==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 37.61% | Comp: 285.0 MB/s | Decomp: 355.4 MB/s | Metrics: {}
+
+>>> Running Config: mistral-7b-8 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: mistral-7b-8==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396768768 bytes required
+  - 1: 524320768 bytes required
+  - 2: 524320768 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 23.06% | Comp: 311.6 MB/s | Decomp: 382.8 MB/s | Metrics: {}
+
+>>> Running Config: mistral-7b-9 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.float16
+
+[========== Rate: 0.0 = Model: mistral-7b-9==========]
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 37.18% | Comp: 320.1 MB/s | Decomp: 379.7 MB/s | Metrics: {}
+
+>>> Running Config: mistral-7b-10 <<<
 Detecting FT model native dtype...
 -> Found dtype in config: torch.float32
 
-[========== Rate: 0.0 = Model: llama-3.1-70b-5==========]
+[========== Rate: 0.0 = Model: mistral-7b-10==========]
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
+  - 0: 1396736000 bytes required
+  - 1: 524288000 bytes required
+  - 2: 524288000 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625506816 bytes required
-  - 1: 4202889216 bytes required
-  - 2: 4202889216 bytes required
+  - 0: 1396752384 bytes required
+  - 1: 524304384 bytes required
+  - 2: 524304384 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 73.35% | Comp: 137.4 MB/s | Decomp: 408.9 MB/s | Metrics: {}
-
->>> Running Config: llama-3.1-70b-6 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
-
-[========== Rate: 0.0 = Model: llama-3.1-70b-6==========]
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.69% | Comp: 316.2 MB/s | Decomp: 395.0 MB/s | Metrics: {}
-
->>> Running Config: llama-3.1-70b-7 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
-
-[========== Rate: 0.0 = Model: llama-3.1-70b-7==========]
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625572352 bytes required
-  - 1: 4202954752 bytes required
-  - 2: 4202954752 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 25.60% | Comp: 339.6 MB/s | Decomp: 410.1 MB/s | Metrics: {}
-
->>> Running Config: llama-3.1-70b-8 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
-
-[========== Rate: 0.0 = Model: llama-3.1-70b-8==========]
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.22% | Comp: 312.4 MB/s | Decomp: 396.1 MB/s | Metrics: {}
-
->>> Running Config: llama-3.1-70b-9 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
-
-[========== Rate: 0.0 = Model: llama-3.1-70b-9==========]
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 13.06% | Comp: 246.8 MB/s | Decomp: 533.9 MB/s | Metrics: {}
-
->>> Running Config: llama-3.1-70b-10 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
-
-[========== Rate: 0.0 = Model: llama-3.1-70b-10==========]
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
-  - 0: 7625310208 bytes required
-  - 1: 4202692608 bytes required
-  - 2: 4202692608 bytes required
-These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
-Some parameters are on the meta device because they were offloaded to the cpu and disk.
-  -> Size: 31.74% | Comp: 310.0 MB/s | Decomp: 381.0 MB/s | Metrics: {}
+  -> Size: 75.11% | Comp: 414.5 MB/s | Decomp: 402.5 MB/s | Metrics: {}

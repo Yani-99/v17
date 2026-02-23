@@ -29,3 +29,6 @@ Open-Orca/OpenOrca-Platypus2-13B                             | zstd     |  24826
 Riiid/sheep-duck-llama-2-13b                                 | zlib     |  24825.9 |    92.27% |         28.92 |        241.27
 Riiid/sheep-duck-llama-2-13b                                 | gzip     |  24825.9 |    92.27% |         29.21 |        206.69
 Riiid/sheep-duck-llama-2-13b                                 | zstd     |  24825.9 |    91.97% |        496.58 |        861.09
+Xwin-LM/Xwin-LM-13B-V0.1                                     | zlib     |  49651.7 |    92.70% |         34.96 |        301.73
+Xwin-LM/Xwin-LM-13B-V0.1                                     | gzip     |  49651.7 |    92.70% |         34.77 |        256.29
+Xwin-LM/Xwin-LM-13B-V0.1                                     | zstd     |  49651.7 |    92.62% |        549.78 |       1015.51
