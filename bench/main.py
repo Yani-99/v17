@@ -73,9 +73,9 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 # LOSSY_RATES = [0.0, 1e-4, 5e-4, 1e-3, 5e-3, 1e-2, 2e-2, 3e-2, 4e-2, 5e-2]
 # LOSSY_RATES = [0.0,0.01,0.05,0.1,0.15]
-# LOSSY_RATES = [0.0, 1e-4, 5e-4, 1e-3, 5e-3, 1e-2, 2e-2, 3e-2, 4e-2, 5e-2,0.1,0.12,0.15]
+LOSSY_RATES = [0.0, 1e-4, 5e-4, 1e-3, 5e-3, 1e-2, 2e-2, 3e-2, 4e-2, 5e-2,0.1,0.12,0.15]
 # LOSSY_RATES = [0.18,0.2,0.25,0.3]
-LOSSY_RATES = [0.0]
+# LOSSY_RATES = [0.0]
 
 # LOSSY_RATES = [0.0,0.01,0.05,0.1,0.15]
 
@@ -145,22 +145,22 @@ def main():
             }
             if "LLM" in cfg['task_type']: cpu_kwargs["torch_dtype"] = native_dtype
 
-            # # -------------------------------------------------------
-            # # Phase -1: Source & Phase 0: Baseline (使用统一加载函数)
-            # # -------------------------------------------------------
-            # source_metrics, baseline_metrics = {}, {}
-            # if DO_EVAL:
-            #     # Phase -1
-            #     logger.info("\n[Phase -1] Source Evaluation...")
-            #     m, p = ModelManager.prepare_model_for_eval(cfg['base_model'], cfg, native_dtype, DEVICE, config_obj=ft_config_obj)
-            #     source_metrics = UniversalEvaluator(m, p, cfg, "source", DEVICE).run()
-            #     del m, p; force_cleanup()
+            # -------------------------------------------------------
+            # Phase -1: Source & Phase 0: Baseline (使用统一加载函数)
+            # -------------------------------------------------------
+            source_metrics, baseline_metrics = {}, {}
+            if DO_EVAL:
+                # Phase -1
+                logger.info("\n[Phase -1] Source Evaluation...")
+                m, p = ModelManager.prepare_model_for_eval(cfg['base_model'], cfg, native_dtype, DEVICE, config_obj=ft_config_obj)
+                source_metrics = UniversalEvaluator(m, p, cfg, "source", DEVICE).run()
+                del m, p; force_cleanup()
 
-            #     # Phase 0
-            #     logger.info("\n[Phase 0] Baseline Evaluation...")
-            #     m, p = ModelManager.prepare_model_for_eval(cfg['ft_model'], cfg, native_dtype, DEVICE)
-            #     baseline_metrics = UniversalEvaluator(m, p, cfg, "baseline", DEVICE).run()
-            #     del m, p; force_cleanup()
+                # Phase 0
+                logger.info("\n[Phase 0] Baseline Evaluation...")
+                m, p = ModelManager.prepare_model_for_eval(cfg['ft_model'], cfg, native_dtype, DEVICE)
+                baseline_metrics = UniversalEvaluator(m, p, cfg, "baseline", DEVICE).run()
+                del m, p; force_cleanup()
 
             # -------------------------------------------------------
             # Loop over Lossy Rates

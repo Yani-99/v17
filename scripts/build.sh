@@ -13,5 +13,4 @@ make -j$(nproc)
 # 回到根目录并运行测试
 cd ..
 echo "[RUN] Running benchmarks..."
-# CUDA_VISIBLE_DEVICES=1 
-python bench/main.py 
+CUDA_VISIBLE_DEVICES=0,2 python bench/main.py  --eval

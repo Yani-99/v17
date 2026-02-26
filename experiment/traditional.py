@@ -440,9 +440,9 @@ MODELS_TO_TEST = [
 
 # 用于存放最终聚合结果
 aggregated_results = {
-    "zstd": {},
-    # "zlib": {},
-    "gzip": {}
+    # "zstd": {},
+    "zlib": {}
+    # "gzip": {}
 }
 
 # 每次读取的块大小设为 256 MB，最大化 CPU 吞吐量并对齐 v17 的系统级内存表现
@@ -556,7 +556,7 @@ def run_benchmark():
         
         orig_mb = orig_size / (1024 * 1024)
         # methods = ["zlib", "gzip", "zstd"]
-        methods = ["gzip", "zstd"]
+        methods = ["zlib"]
         
         for meth_name in methods:
             comp_size, comp_time, decomp_time = stream_test_method(files, meth_name)

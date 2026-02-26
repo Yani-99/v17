@@ -14,6 +14,7 @@ from datasets import load_dataset, logging as ds_logging
 import evaluate 
 import logging
 import time
+import json
 from utils import smart_column_filter
 logger = logging.getLogger(__name__)
 
@@ -62,30 +63,76 @@ class UniversalEvaluator:
             
         return metrics
 
+
     # def _run_lm_harness(self):
     #     logger.info(f"Preparing LM-Eval Harness: {self.cfg['llm_tasks']}...")
         
     #     import lm_eval
     #     from lm_eval.models.huggingface import HFLM
-
         
-        
-    #     # Initialize Wrapper
-    #     lm_obj = HFLM(pretrained=self.model, tokenizer=self.processor, batch_size=1) 
-    #     limit = self.limit if self.limit else None
-
+    #     # 1. Detect Multi-GPU Sharding
     #     eval_device = self.device
+    #     is_multi_gpu = False
     #     if hasattr(self.model, "hf_device_map") and len(self.model.hf_device_map) > 1:
-    #         logger.info("Detected multi-GPU model sharding. Disabling explicit device placement for lm-eval.")
-    #         eval_device = None
+    #         logger.info("Detected multi-GPU model sharding (Accelerate).")
+    #         eval_device = None # Let Accelerate handle placement
+    #         is_multi_gpu = True
 
-    #     max_retries = 5
-    #     raw_results = {}
+    #     # 2. Initialize HFLM Wrapper
+    #     # We explicitly pass the model instance we already loaded
+    #     lm_obj = HFLM(
+    #         pretrained=self.model, 
+    #         tokenizer=self.processor, 
+    #         batch_size=1, 
+    #         device=eval_device 
+    #     )
+
+    #     # 3. [CRITICAL FIX] Multi-GPU Patch for "generate_until" (GSM8K etc)
+    #     # The previous patch on model.generate was not enough. 
+    #     # We need to ensure inputs match the device of the first layer.
+    #     if is_multi_gpu:
+    #         logger.info("Applying robust multi-GPU generation patch...")
+            
+    #         # Find the device of the input embeddings (first layer)
+    #         first_device = self.model.device 
+    #         if hasattr(self.model, "model") and hasattr(self.model.model, "embed_tokens"):
+    #              first_device = self.model.model.embed_tokens.weight.device
+            
+    #         # Hook into HFLM's internal tokenization/generation flow is hard.
+    #         # Instead, we monkey-patch the HFLM._model_generate method which lm_eval uses.
+            
+    #         original_model_generate = lm_obj._model_generate
+
+    #         def patched_model_generate(context, max_length, stop, **generation_kwargs):
+    #             # Ensure context (input_ids) is on the correct start device
+    #             if isinstance(context, torch.Tensor):
+    #                 context = context.to(first_device)
+                
+    #             # Call original generation
+    #             # Accelerate will handle the movement across layers (cuda:0 -> cuda:1)
+    #             res = original_model_generate(context, max_length, stop, **generation_kwargs)
+                
+    #             # Accelerate leaves the output on the last device (e.g., cuda:1).
+    #             # lm_eval expects it on the same device as input (cuda:0) or CPU.
+    #             # We move it back to the input device to prevent "Expected all tensors..." error.
+    #             if isinstance(res, torch.Tensor):
+    #                 return res.to(first_device)
+    #             return res
+
+    #         # Apply the patch to the wrapper, not the model itself
+    #         lm_obj._model_generate = patched_model_generate
+
+    #     limit = self.limit if self.limit else None
+    #     max_retries = 3
         
-    #     # Retry loop for HF connection issues
+    #     # Retry loop
+    #     raw_results = {}
     #     for attempt in range(max_retries):
     #         try:
     #             logger.info(f"Running LM-Eval (Attempt {attempt+1}/{max_retries})...")
+    #             # Force empty cache before start
+    #             if is_multi_gpu: torch.cuda.empty_cache()
+                
     #             raw_results = lm_eval.simple_evaluate(
     #                 model=lm_obj, 
     #                 tasks=self.cfg['llm_tasks'], 
@@ -96,6 +143,9 @@ class UniversalEvaluator:
     #             break 
     #         except Exception as e:
     #             logger.warning(f"LM-Eval Error: {e}")
+    #             import traceback
+    #             traceback.print_exc() # Print full stack trace for debugging
+                
     #             if attempt < max_retries - 1:
     #                 wait = (attempt + 1) * 10
     #                 logger.info(f"Retry in {wait}s...")
@@ -105,9 +155,9 @@ class UniversalEvaluator:
     #                 return {}
         
     #     # --- ROBUST METRIC EXTRACTION ---
+    #     # (This part remains exactly the same as your previous code)
     #     metrics = {}
         
-    #     # Case 1: Handle Newer lm_eval structure (Groups)
     #     if "groups" in raw_results:
     #         for group_name, res in raw_results["groups"].items():
     #             if "acc" in res:
@@ -115,20 +165,16 @@ class UniversalEvaluator:
     #             if "acc,none" in res:
     #                 metrics[f"{group_name}/acc"] = res["acc,none"]
 
-    #     # Case 2: Handle Results Dictionary
     #     if "results" in raw_results:
-    #         # 2.1 MMLU Aggregation (Manual)
     #         mmlu_scores = []
     #         gsm8k_candidates = []
 
     #         for task, res in raw_results["results"].items():
-    #             # --- MMLU Collection ---
     #             if task.startswith("mmlu"):
     #                 val = res.get("acc") or res.get("acc,none")
     #                 if val is not None:
     #                     mmlu_scores.append(val)
                 
-    #             # --- GSM8K Extraction (Aggressive) ---
     #             if "gsm8k" in task.lower():
     #                 val = None
     #                 priorities = ["strict_match,none", "exact_match,none", "acc,none", 
@@ -169,10 +215,19 @@ class UniversalEvaluator:
 
         # 2. Initialize HFLM Wrapper
         # We explicitly pass the model instance we already loaded
+        # lm_obj = HFLM(
+        #     pretrained=self.model, 
+        #     tokenizer=self.processor, 
+        #     batch_size=1, 
+        #     device=eval_device 
+        # )
+
+        eval_batch_size = self.cfg.get("batch_size", 1)
+        
         lm_obj = HFLM(
             pretrained=self.model, 
             tokenizer=self.processor, 
-            batch_size=1, 
+            batch_size=eval_batch_size, 
             device=eval_device 
         )
 
@@ -244,7 +299,6 @@ class UniversalEvaluator:
                     return {}
         
         # --- ROBUST METRIC EXTRACTION ---
-        # (This part remains exactly the same as your previous code)
         metrics = {}
         
         if "groups" in raw_results:
@@ -279,6 +333,19 @@ class UniversalEvaluator:
                                 break
                     if val is not None:
                         gsm8k_candidates.append(val)
+                
+                # --- 新增 IFEval 指标提取逻辑 ---
+                if "ifeval" in task.lower():
+                    for k, v in res.items():
+                        if isinstance(v, (int, float)):
+                            if k in ["prompt_level_strict_acc,none", "prompt_level_strict_acc"]:
+                                metrics["ifeval/prompt_strict_acc"] = v
+                            elif k in ["inst_level_strict_acc,none", "inst_level_strict_acc"]:
+                                metrics["ifeval/inst_strict_acc"] = v
+                            elif k in ["prompt_level_loose_acc,none", "prompt_level_loose_acc"]:
+                                metrics["ifeval/prompt_loose_acc"] = v
+                            elif k in ["inst_level_loose_acc,none", "inst_level_loose_acc"]:
+                                metrics["ifeval/inst_loose_acc"] = v
 
             if mmlu_scores and "mmlu/acc" not in metrics:
                 metrics["mmlu/acc"] = sum(mmlu_scores) / len(mmlu_scores)

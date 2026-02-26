@@ -71,5 +71,5 @@ def process_log(file_path):
         print(f"  D-Speed: ({dspeed_str_10}) / 10 = {avg_dspeed_10:.2f} MB/s\n")
 
 if __name__ == "__main__":
-    process_log("Llama-2-13b-hf/traditional-Llama-2-13b-hf.log")
+    process_log("Llama-3.1-70B/fake-tra.log")
     # process_log("Llama-3.1-8B/traditional-llama3.1-8b.log")

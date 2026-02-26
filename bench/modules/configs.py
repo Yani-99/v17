@@ -200,7 +200,10 @@ TEST_CONFIGS = {
     "llama3.1-8b-1": {
         "task_type": "LLM_HARNESS",
         "base_model": "meta-llama/Llama-3.1-8B",
-        "ft_model": "meta-llama/Llama-3.1-8B-Instruct"
+        "ft_model": "meta-llama/Llama-3.1-8B-Instruct",
+        "llm_tasks": ["mmlu", "gsm8k","ifeval"],
+        "run_mt_bench": False,
+        "eval_limit": None,
     },
     "llama3.1-8b-2": {
         "task_type": "LLM_HARNESS",

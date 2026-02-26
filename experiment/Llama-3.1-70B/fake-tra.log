@@ -2,24 +2,34 @@
 =====================================================================================================================================
 Model Name                                                   | Method   | Orig(MB)   | Comp%      | C-Speed(MB/s)   | D-Speed(MB/s)  
 -------------------------------------------------------------------------------------------------------------------------------------
+meta-llama/Llama-3.1-70B-Instruct                            | zlib     | 134570.6 |    78.56% |         14.65 |        247.66
 meta-llama/Llama-3.1-70B-Instruct                            | gzip     | 134570.6 |    78.56% |         14.65 |        247.66
 meta-llama/Llama-3.1-70B-Instruct                            | zstd     | 134570.6 |    76.99% |        477.96 |        987.79
+NousResearch/Hermes-3-Llama-3.1-70B                          | zlib     | 134570.6 |    79.08% |         16.47 |        271.97
 NousResearch/Hermes-3-Llama-3.1-70B                          | gzip     | 134570.6 |    79.08% |         16.47 |        271.97
 NousResearch/Hermes-3-Llama-3.1-70B                          | zstd     | 134570.6 |    77.78% |        531.31 |        756.49
+nvidia/Llama-3.1-Nemotron-70B-Instruct-HF                    | zlib     | 134570.6 |    78.85% |         15.27 |        259.28
 nvidia/Llama-3.1-Nemotron-70B-Instruct-HF                    | gzip     | 134570.6 |    78.85% |         15.27 |        259.28
 nvidia/Llama-3.1-Nemotron-70B-Instruct-HF                    | zstd     | 134570.6 |    77.46% |        417.20 |        580.66
+unsloth/Meta-Llama-3.1-70B-Instruct                          | zlib     | 134570.6 |    78.56% |         14.66 |        246.34
 unsloth/Meta-Llama-3.1-70B-Instruct                          | gzip     | 134570.6 |    78.56% |         14.66 |        246.34
 unsloth/Meta-Llama-3.1-70B-Instruct                          | zstd     | 134570.6 |    76.99% |        385.80 |        623.97
+mattshumer/Reflection-Llama-3.1-70B                          | zlib     | 269141.5 |    91.30% |         31.95 |        309.09
 mattshumer/Reflection-Llama-3.1-70B                          | gzip     | 269141.5 |    91.30% |         31.95 |        309.09
 mattshumer/Reflection-Llama-3.1-70B                          | zstd     | 269141.5 |    91.11% |        430.49 |        616.83
+VAGOsolutions/Llama-3.1-SauerkrautLM-70b-Instruct            | zlib     | 134570.6 |    78.64% |         14.92 |        249.90
 VAGOsolutions/Llama-3.1-SauerkrautLM-70b-Instruct            | gzip     | 134570.6 |    78.64% |         14.92 |        249.90
 VAGOsolutions/Llama-3.1-SauerkrautLM-70b-Instruct            | zstd     | 134570.6 |    77.12% |        395.97 |        601.30
+allenai/Llama-3.1-Tulu-3-70B-SFT                             | zlib     | 134570.8 |    79.08% |         16.50 |        271.15
 allenai/Llama-3.1-Tulu-3-70B-SFT                             | gzip     | 134570.8 |    79.08% |         16.50 |        271.15
 allenai/Llama-3.1-Tulu-3-70B-SFT                             | zstd     | 134570.8 |    77.78% |        424.95 |        513.52
+nvidia/OpenMath2-Llama3.1-70B                                | zlib     | 134570.6 |    78.28% |         14.35 |        242.04
 nvidia/OpenMath2-Llama3.1-70B                                | gzip     | 134570.6 |    78.28% |         14.35 |        242.04
 nvidia/OpenMath2-Llama3.1-70B                                | zstd     | 134570.6 |    76.66% |        373.21 |        659.92
+migtissera/Tess-3-Llama-3.1-70B                              | zlib     | 134570.8 |    79.08% |         16.32 |        266.71
 migtissera/Tess-3-Llama-3.1-70B                              | gzip     | 134570.8 |    79.08% |         16.32 |        266.71
 migtissera/Tess-3-Llama-3.1-70B                              | zstd     | 134570.8 |    77.79% |        516.33 |        686.29
+mylesgoose/Llama-3.1-70B-Instruct-abliterated                | zlib     | 134570.6 |    78.72% |         15.18 |        252.28
 mylesgoose/Llama-3.1-70B-Instruct-abliterated                | gzip     | 134570.6 |    78.72% |         15.18 |        252.28
 mylesgoose/Llama-3.1-70B-Instruct-abliterated                | zstd     | 134570.6 |    77.25% |        413.84 |        680.96
 

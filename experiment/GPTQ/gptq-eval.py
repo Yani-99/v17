@@ -10,16 +10,27 @@ from evaluator import UniversalEvaluator
 
 def evaluate_gptq_model():
     # 你的 GPTQ 模型绝对路径
-    model_path = "/home/newdrive2/liu4441/Llama-2-7b-chat-hf-gptq-4bit"
+    model_path = "/home/newdrive2/liu4441/Llama-3.1-8B-Instruct-gptq-4bit"
     
     print(f"[*] 开始加载 Tokenizer: {model_path}...")
     tokenizer = AutoTokenizer.from_pretrained(model_path)
+
+    tokenizer.padding_side = "left"  # 批量生成必须左填充
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token  # 强制绑定刹车符
+
+    terminators = [
+        tokenizer.eos_token_id,
+        tokenizer.convert_tokens_to_ids("<|eot_id|>")
+    ]
+    model.generation_config.eos_token_id = terminators
     
     print(f"[*] 开始加载 GPTQ 模型 (自动分配显存)...")
     # GPTQ 模型的加载只需要 device_map="auto" 即可，无需传 torch_dtype
     model = AutoModelForCausalLM.from_pretrained(
         model_path,
-        device_map="auto"
+        device_map={"": 0},
+        torch_dtype=torch.float16
     )
     
     # ==========================================
@@ -27,12 +38,14 @@ def evaluate_gptq_model():
     # ==========================================
     cfg = {
         "task_type": "LLM_HARNESS",
-        "ft_model": "meta-llama/Llama-2-7b-chat-hf", # 保持你的原模型名称，以便可能存在的模板匹配
-        "llm_tasks": ["mmlu", "gsm8k"],  # 这里写上你需要对比的任务，比如 ["mmlu"] 或 ["wikitext"]
+        "base_model": "meta-llama/Llama-3.1-8B",
+        "ft_model": "meta-llama/Llama-3.1-8B-Instruct", # 保持你的原模型名称，以便可能存在的模板匹配
+        "llm_tasks": ["mmlu", "gsm8k","ifeval"],  # 这里写上你需要对比的任务，比如 ["mmlu"] 或 ["wikitext"]
         "run_mt_bench": True,           # 是否顺带跑你代码里的 MT-Bench
-        "eval_limit": None               # 设为具体数字(如100)可用于快速 debug 测试，跑全量设为 None
+        "eval_limit": None,               # 设为具体数字(如100)可用于快速 debug 测试，跑全量设为 None
+        "batch_size": "32"
     }
-    
+
     print(f"[*] 开始使用项目的 UniversalEvaluator 进行对齐评测...")
     print(f"[*] 评测任务: {cfg['llm_tasks']}")
     

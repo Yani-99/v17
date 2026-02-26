@@ -4,7 +4,7 @@
 # compile CXX with /home/liu4441/.conda/envs/liana/bin/x86_64-conda-linux-gnu-c++
 CXX_DEFINES = -Dpforex_cpp_EXPORTS
 
-CXX_INCLUDES = -I/home/newdrive/liu4441/liana/pfor/standard/v17/include -I/home/newdrive/liu4441/liana/pfor/standard/v17/src -isystem /home/liu4441/.conda/envs/liana/lib/python3.9/site-packages/pybind11/include -isystem /home/liu4441/.conda/envs/liana/include/python3.9
+CXX_INCLUDES = -I/home/newdrive/liu4441/liana/pfor/standard/v17/include -I/home/newdrive/liu4441/liana/pfor/standard/v17/src -isystem /home/liu4441/.local/lib/python3.9/site-packages/pybind11/include -isystem /home/liu4441/.conda/envs/liana/include/python3.9
 
 CXX_FLAGS = -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/liu4441/.conda/envs/liana/include -O3 -march=native -fPIC -O3 -DNDEBUG -std=gnu++20 -fPIC -fvisibility=hidden -flto=auto -fno-fat-lto-objects
 

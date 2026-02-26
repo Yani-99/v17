@@ -420,5 +420,5 @@ _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 _PYBIND11_CROSSCOMPILING:INTERNAL=OFF
 _Python:INTERNAL=PYTHON
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=/home/liu4441/.conda/envs/liana/lib/python3.9/site-packages/pybind11/include;/home/liu4441/.conda/envs/liana/include/python3.9
+pybind11_INCLUDE_DIRS:INTERNAL=/home/liu4441/.local/lib/python3.9/site-packages/pybind11/include;/home/liu4441/.conda/envs/liana/include/python3.9
 
