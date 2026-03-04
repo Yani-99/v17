@@ -1,0 +1,139 @@
+-- Found pybind11: /home/liu4441/.local/lib/python3.9/site-packages/pybind11/include (found version "3.0.2")
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/newdrive/liu4441/liana/pfor/standard/v17/build
+[100%] Built target pforex_cpp
+[RUN] Running benchmarks...
+[CONFIG] 手动设定: 启动 16 个并行线程
+
+>>> Running Config: bert_ner1 <<<
+Detecting FT model native dtype...
+-> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
+
+[========== Rate: 0.0 = Model: bert_ner1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 63.48% | Comp: 948.4 MB/s | Decomp: 9301.3 MB/s | Metrics: {}
+
+[========== Rate: 0.001 = Model: bert_ner1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 63.59% | Comp: 1951.9 MB/s | Decomp: 10879.4 MB/s | Metrics: {}
+
+[========== Rate: 0.005 = Model: bert_ner1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 58.28% | Comp: 2040.1 MB/s | Decomp: 8687.7 MB/s | Metrics: {}
+
+[========== Rate: 0.01 = Model: bert_ner1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 49.99% | Comp: 1759.8 MB/s | Decomp: 10304.0 MB/s | Metrics: {}
+
+[========== Rate: 0.02 = Model: bert_ner1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 34.11% | Comp: 712.7 MB/s | Decomp: 14014.5 MB/s | Metrics: {}
+
+[========== Rate: 0.03 = Model: bert_ner1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 16.45% | Comp: 816.4 MB/s | Decomp: 16302.7 MB/s | Metrics: {}
+
+[========== Rate: 0.04 = Model: bert_ner1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 6.83% | Comp: 1030.7 MB/s | Decomp: 17645.1 MB/s | Metrics: {}
+
+[========== Rate: 0.05 = Model: bert_ner1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 2.58% | Comp: 1318.5 MB/s | Decomp: 19586.8 MB/s | Metrics: {}
+
+[========== Rate: 0.1 = Model: bert_ner1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 0.01% | Comp: 5483.5 MB/s | Decomp: 19429.9 MB/s | Metrics: {}
+
+[========== Rate: 0.12 = Model: bert_ner1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 0.00% | Comp: 5568.1 MB/s | Decomp: 20870.2 MB/s | Metrics: {}
+
+[========== Rate: 0.15 = Model: bert_ner1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 177524736 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 0.00% | Comp: 5648.3 MB/s | Decomp: 20073.7 MB/s | Metrics: {}
+
+====================================================================================================
+ FINAL SUMMARY: bert_ner1 () 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+0.0      | 63.48%     | 948.4 MB/s   | 9301.3 MB/s  | N/A (No Eval)
+0.001    | 63.59%     | 1951.9 MB/s  | 10879.4 MB/s | N/A (No Eval)
+0.005    | 58.28%     | 2040.1 MB/s  | 8687.7 MB/s  | N/A (No Eval)
+0.01     | 49.99%     | 1759.8 MB/s  | 10304.0 MB/s | N/A (No Eval)
+0.02     | 34.11%     | 712.7 MB/s   | 14014.5 MB/s | N/A (No Eval)
+0.03     | 16.45%     | 816.4 MB/s   | 16302.7 MB/s | N/A (No Eval)
+0.04     | 6.83%      | 1030.7 MB/s  | 17645.1 MB/s | N/A (No Eval)
+0.05     | 2.58%      | 1318.5 MB/s  | 19586.8 MB/s | N/A (No Eval)
+0.1      | 0.01%      | 5483.5 MB/s  | 19429.9 MB/s | N/A (No Eval)
+0.12     | 0.00%      | 5568.1 MB/s  | 20870.2 MB/s | N/A (No Eval)
+0.15     | 0.00%      | 5648.3 MB/s  | 20073.7 MB/s | N/A (No Eval)
+====================================================================================================

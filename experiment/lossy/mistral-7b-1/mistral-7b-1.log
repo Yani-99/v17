@@ -1,0 +1,139 @@
+-- Found pybind11: /home/liu4441/.local/lib/python3.9/site-packages/pybind11/include (found version "3.0.2")
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/newdrive/liu4441/liana/pfor/standard/v17/build
+[100%] Built target pforex_cpp
+[RUN] Running benchmarks...
+[CONFIG] 手动设定: 启动 16 个并行线程
+
+>>> Running Config: mistral-7b-1 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: mistral-7b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 40.69% | Comp: 986.2 MB/s | Decomp: 4499.1 MB/s | Metrics: {}
+
+[========== Rate: 0.001 = Model: mistral-7b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 40.68% | Comp: 977.1 MB/s | Decomp: 4774.1 MB/s | Metrics: {}
+
+[========== Rate: 0.005 = Model: mistral-7b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 40.65% | Comp: 987.1 MB/s | Decomp: 4686.0 MB/s | Metrics: {}
+
+[========== Rate: 0.01 = Model: mistral-7b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 40.54% | Comp: 978.6 MB/s | Decomp: 4630.3 MB/s | Metrics: {}
+
+[========== Rate: 0.02 = Model: mistral-7b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 40.16% | Comp: 1001.2 MB/s | Decomp: 4684.0 MB/s | Metrics: {}
+
+[========== Rate: 0.03 = Model: mistral-7b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 39.70% | Comp: 1006.9 MB/s | Decomp: 4721.0 MB/s | Metrics: {}
+
+[========== Rate: 0.04 = Model: mistral-7b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 39.15% | Comp: 1013.9 MB/s | Decomp: 4753.3 MB/s | Metrics: {}
+
+[========== Rate: 0.05 = Model: mistral-7b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 38.57% | Comp: 1014.5 MB/s | Decomp: 4726.6 MB/s | Metrics: {}
+
+[========== Rate: 0.1 = Model: mistral-7b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 35.05% | Comp: 1000.9 MB/s | Decomp: 4811.9 MB/s | Metrics: {}
+
+[========== Rate: 0.12 = Model: mistral-7b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 33.49% | Comp: 993.2 MB/s | Decomp: 4841.7 MB/s | Metrics: {}
+
+[========== Rate: 0.15 = Model: mistral-7b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 1396736000 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 31.14% | Comp: 925.0 MB/s | Decomp: 4826.7 MB/s | Metrics: {}
+
+====================================================================================================
+ FINAL SUMMARY: mistral-7b-1 (Official-Instruct) 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+0.0      | 40.69%     | 986.2 MB/s   | 4499.1 MB/s  | N/A (No Eval)
+0.001    | 40.68%     | 977.1 MB/s   | 4774.1 MB/s  | N/A (No Eval)
+0.005    | 40.65%     | 987.1 MB/s   | 4686.0 MB/s  | N/A (No Eval)
+0.01     | 40.54%     | 978.6 MB/s   | 4630.3 MB/s  | N/A (No Eval)
+0.02     | 40.16%     | 1001.2 MB/s  | 4684.0 MB/s  | N/A (No Eval)
+0.03     | 39.70%     | 1006.9 MB/s  | 4721.0 MB/s  | N/A (No Eval)
+0.04     | 39.15%     | 1013.9 MB/s  | 4753.3 MB/s  | N/A (No Eval)
+0.05     | 38.57%     | 1014.5 MB/s  | 4726.6 MB/s  | N/A (No Eval)
+0.1      | 35.05%     | 1000.9 MB/s  | 4811.9 MB/s  | N/A (No Eval)
+0.12     | 33.49%     | 993.2 MB/s   | 4841.7 MB/s  | N/A (No Eval)
+0.15     | 31.14%     | 925.0 MB/s   | 4826.7 MB/s  | N/A (No Eval)
+====================================================================================================

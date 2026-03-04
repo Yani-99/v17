@@ -133,6 +133,14 @@ class CompressionEngine:
             c_bytes = pforex_cpp.compress_layer(base_np, ft_np, rate, is_bf16)
         except:
             c_bytes = pforex_cpp.compress_layer(np.zeros_like(ft_np), ft_np, rate, is_bf16)
+        
+        if hasattr(c_bytes, 'tobytes'):
+            c_bytes = c_bytes.tobytes()
+        elif isinstance(c_bytes, memoryview):
+            c_bytes = c_bytes.tobytes()
+        else:
+            c_bytes = bytes(c_bytes)
+            
         duration = time.perf_counter() - t_start
 
         return key, c_bytes, orig_bytes, len(c_bytes), duration, current_shape
@@ -318,14 +326,14 @@ class CompressionEngine:
         # Format:
         # Key Len (4 bytes) | Key Bytes | N_Dim (4 bytes) | Shape (N_Dim * 4 bytes) | Data Len (8 bytes) | Data Bytes
         key_bytes = key.encode('utf-8')
-        f.write(struct.pack('I', len(key_bytes)))
+        f.write(struct.pack('<I', len(key_bytes)))
         f.write(key_bytes)
         
-        f.write(struct.pack('I', len(shape)))
+        f.write(struct.pack('<I', len(shape)))
         for dim in shape:
-            f.write(struct.pack('I', dim))
+            f.write(struct.pack('<I', dim))
             
-        f.write(struct.pack('Q', len(c_bytes))) # Use Q for unsigned long long (64bit)
+        f.write(struct.pack('<Q', len(c_bytes))) # Use Q for unsigned long long (64bit)
         f.write(c_bytes)
 
     def _read_stream(self, filename):
@@ -334,20 +342,20 @@ class CompressionEngine:
                 # Read Key Len
                 buf = f.read(4)
                 if not buf: break
-                key_len = struct.unpack('I', buf)[0]
+                key_len = struct.unpack('<I', buf)[0]
                 
                 # Read Key
                 key = f.read(key_len).decode('utf-8')
                 
                 # Read Shape
-                ndim = struct.unpack('I', f.read(4))[0]
+                ndim = struct.unpack('<I', f.read(4))[0]
                 shape = []
                 for _ in range(ndim):
-                    shape.append(struct.unpack('I', f.read(4))[0])
+                    shape.append(struct.unpack('<I', f.read(4))[0])
                 shape = tuple(shape)
                 
                 # Read Data Len
-                data_len = struct.unpack('Q', f.read(8))[0]
+                data_len = struct.unpack('<Q', f.read(8))[0]
                 
                 # Read Data
                 c_bytes = f.read(data_len)
@@ -369,33 +377,15 @@ class CompressionEngine:
         ft_kwargs["max_memory"] = max_mem
         ft_kwargs["offload_folder"] = "/home/newdrive2/liu4441/tmp_offload_ft"
 
+        # 性能修复：检测是否启用了硬盘offload，如果启用了，强制限制并发数以防磁盘I/O排队崩溃
+        io_safe_workers = self.num_workers
+        if "offload_folder" in ft_kwargs:
+            io_safe_workers = min(self.num_workers, 4) 
+            logger.info(f"Detected disk offloading. Scaling down max_workers to {io_safe_workers} to prevent disk I/O thrashing.")
+
         # --- Prepare ---
-        # 现在，accelerate 会乖乖地只用 CPU，且超过 40G 后自动平稳写入各自的硬盘目录
         base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **base_kwargs)
         ft_model = ModelClass.from_pretrained(self.cfg['ft_model'], **ft_kwargs)
-
-        # comp_kwargs = cpu_kwargs.copy()
-        # # comp_kwargs["device_map"] = "cpu"
-        # # --- Prepare ---
-        # base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **comp_kwargs)
-        # ft_model = ModelClass.from_pretrained(self.cfg['ft_model'], **comp_kwargs)
-        
-        # # [核心修复] 主动扫描：检查是否有静默残留的 meta tensor
-        # def has_meta(m):
-        #     for p in m.parameters():
-        #         if p.device.type == "meta": return True
-        #     return False
-
-        # if has_meta(base_native) or has_meta(ft_model):
-        #     logger.warning("[WORKAROUND] 检测到残留的 meta tensor (GPT-2/BERT常见Bug)。使用安全模式重新加载...")
-        #     del base_native
-        #     del ft_model
-        #     force_cleanup()
-            
-        #     # 剔除引发 Bug 的 accelerate 加速参数，使用原生 PyTorch 加载
-        #     safe_kwargs = {k: v for k, v in comp_kwargs.items() if k not in ["device_map", "low_cpu_mem_usage", "offload_folder"]}
-        #     base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **safe_kwargs)
-        #     ft_model = ModelClass.from_pretrained(self.cfg['ft_model'], **safe_kwargs)
         
         ft_keys = []
         for n, _ in ft_model.named_parameters(): ft_keys.append(n)
@@ -405,23 +395,20 @@ class CompressionEngine:
                     full_name = f"{name}.{buffer_name}" if name else buffer_name
                     ft_keys.append(full_name)
         
-        # ft_shapes = {}
-        
         # --- Compression ---
         stats = {"orig": 0, "comp": 0}
         total_kernel_time = 0.0
         
         output_file = "/home/newdrive2/liu4441/model_compressed.bin"
         with open(output_file, "wb") as f_out:
-            with ThreadPoolExecutor(max_workers=self.num_workers) as executor:
+            with ThreadPoolExecutor(max_workers=io_safe_workers) as executor:
                 future_to_key = {}
                 
                 for key in ft_keys:
-                    # 使用 comp_kwargs 加载的模型都在 CPU/Disk 上，此处安全
                     future = executor.submit(self._compress_worker, (key, ft_model, base_native, rate, self.native_dtype))
                     future_to_key[future] = key
                     
-                    if len(future_to_key) > self.num_workers * 2:
+                    if len(future_to_key) > io_safe_workers * 2:
                         for future in as_completed(list(future_to_key.keys())):
                             k, cb, ob, cmb, dur, shape = future.result()
                             stats["orig"] += ob
@@ -432,7 +419,7 @@ class CompressionEngine:
                             del cb 
                             
                             del future_to_key[future]
-                            if len(future_to_key) <= self.num_workers: break
+                            if len(future_to_key) <= io_safe_workers: break
 
                 for future in as_completed(future_to_key):
                     k, cb, ob, cmb, dur, shape = future.result()
@@ -442,7 +429,7 @@ class CompressionEngine:
                     self._write_chunk(f_out, k, shape, cb)
                     del cb
 
-        t_comp = total_kernel_time / self.num_workers
+        t_comp = total_kernel_time / io_safe_workers
         self.stats_orig_bytes = stats["orig"]
         
         del ft_model
@@ -450,41 +437,30 @@ class CompressionEngine:
         gc.collect()
 
         # --- Decompression (Generator) ---
-        # loaded_store = torch.load("model_compressed.pforex")
-        stats_tracker = {"time": 0.0} # 必须是一个引用对象，以便在生成器内修改
+        stats_tracker = {"time": 0.0}
 
         def result_generator():
-            # [Fix 1] nonlocal 必须放在第一行！
             nonlocal base_native 
             
-            with ThreadPoolExecutor(max_workers=self.num_workers) as executor:
+            with ThreadPoolExecutor(max_workers=io_safe_workers) as executor:
                 future_to_key = {}
-                # keys_list = list(ft_shapes.keys())
                 
                 stream_reader = self._read_stream(output_file)
                 
                 for key, shape, c_bytes in stream_reader:
-                    # 提交任务
                     future = executor.submit(
                         self._decompress_worker, 
                         (key, shape, c_bytes, base_native, "LLM" in self.cfg['task_type'], self.native_dtype)
                     )
                     future_to_key[future] = key
 
-                    # [关键] 流控：防止读取速度过快撑爆内存
-                    # 只有当正在处理的任务少于 2*workers 时才继续读取
-                    if len(future_to_key) >= self.num_workers * 2:
-                        # 等待至少一个任务完成
+                    if len(future_to_key) >= io_safe_workers * 2:
                         done_future = next(iter(as_completed(future_to_key)))
                         k, tens, dur = done_future.result()
                         stats_tracker["time"] += dur
                         del future_to_key[done_future]
                         yield k, tens
-                        
-                        # 额外检查：如果还有很多完成的，也一并yield出去
-                        # (简单起见，这里依赖下一次循环或最后的 drain)
 
-                # 处理剩余所有任务
                 for future in as_completed(future_to_key):
                     k, tens, dur = future.result()
                     stats_tracker["time"] += dur
@@ -494,6 +470,147 @@ class CompressionEngine:
             force_cleanup()
 
         return result_generator(), (stats["comp"]/stats["orig"]*100) if stats["orig"] > 0 else 0, (stats["orig"]/1024**2/t_comp) if t_comp > 0 else 0, stats_tracker
+
+    # def run_pipeline(self, rate, ModelClass, cpu_kwargs):
+    #     max_mem = {"cpu": "40GiB"} 
+    #     if torch.cuda.is_available():
+    #         for i in range(torch.cuda.device_count()):
+    #             max_mem[i] = "0GiB"  # 严禁使用任何 GPU，避免第一/第二模型抢占显存崩溃
+                
+    #     # 2. 为 Base 和 FT 模型分配【完全独立】的 offload 文件夹，防止文件覆盖冲突
+    #     base_kwargs = cpu_kwargs.copy()
+    #     base_kwargs["max_memory"] = max_mem
+    #     base_kwargs["offload_folder"] = "/home/newdrive2/liu4441/tmp_offload_base"
+
+    #     ft_kwargs = cpu_kwargs.copy()
+    #     ft_kwargs["max_memory"] = max_mem
+    #     ft_kwargs["offload_folder"] = "/home/newdrive2/liu4441/tmp_offload_ft"
+
+    #     # --- Prepare ---
+    #     # 现在，accelerate 会乖乖地只用 CPU，且超过 40G 后自动平稳写入各自的硬盘目录
+    #     base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **base_kwargs)
+    #     ft_model = ModelClass.from_pretrained(self.cfg['ft_model'], **ft_kwargs)
+
+    #     # comp_kwargs = cpu_kwargs.copy()
+    #     # # comp_kwargs["device_map"] = "cpu"
+    #     # # --- Prepare ---
+    #     # base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **comp_kwargs)
+    #     # ft_model = ModelClass.from_pretrained(self.cfg['ft_model'], **comp_kwargs)
+        
+    #     # # [核心修复] 主动扫描：检查是否有静默残留的 meta tensor
+    #     # def has_meta(m):
+    #     #     for p in m.parameters():
+    #     #         if p.device.type == "meta": return True
+    #     #     return False
+
+    #     # if has_meta(base_native) or has_meta(ft_model):
+    #     #     logger.warning("[WORKAROUND] 检测到残留的 meta tensor (GPT-2/BERT常见Bug)。使用安全模式重新加载...")
+    #     #     del base_native
+    #     #     del ft_model
+    #     #     force_cleanup()
+            
+    #     #     # 剔除引发 Bug 的 accelerate 加速参数，使用原生 PyTorch 加载
+    #     #     safe_kwargs = {k: v for k, v in comp_kwargs.items() if k not in ["device_map", "low_cpu_mem_usage", "offload_folder"]}
+    #     #     base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **safe_kwargs)
+    #     #     ft_model = ModelClass.from_pretrained(self.cfg['ft_model'], **safe_kwargs)
+        
+    #     ft_keys = []
+    #     for n, _ in ft_model.named_parameters(): ft_keys.append(n)
+    #     for name, module in ft_model.named_modules():
+    #         for buffer_name, buffer in module.named_buffers(recurse=False):
+    #             if buffer_name not in module._non_persistent_buffers_set:
+    #                 full_name = f"{name}.{buffer_name}" if name else buffer_name
+    #                 ft_keys.append(full_name)
+        
+    #     # ft_shapes = {}
+        
+    #     # --- Compression ---
+    #     stats = {"orig": 0, "comp": 0}
+    #     total_kernel_time = 0.0
+        
+    #     output_file = "/home/newdrive2/liu4441/model_compressed.bin"
+    #     with open(output_file, "wb") as f_out:
+    #         with ThreadPoolExecutor(max_workers=self.num_workers) as executor:
+    #             future_to_key = {}
+                
+    #             for key in ft_keys:
+    #                 # 使用 comp_kwargs 加载的模型都在 CPU/Disk 上，此处安全
+    #                 future = executor.submit(self._compress_worker, (key, ft_model, base_native, rate, self.native_dtype))
+    #                 future_to_key[future] = key
+                    
+    #                 if len(future_to_key) > self.num_workers * 2:
+    #                     for future in as_completed(list(future_to_key.keys())):
+    #                         k, cb, ob, cmb, dur, shape = future.result()
+    #                         stats["orig"] += ob
+    #                         stats["comp"] += cmb
+    #                         total_kernel_time += dur
+                            
+    #                         self._write_chunk(f_out, k, shape, cb)
+    #                         del cb 
+                            
+    #                         del future_to_key[future]
+    #                         if len(future_to_key) <= self.num_workers: break
+
+    #             for future in as_completed(future_to_key):
+    #                 k, cb, ob, cmb, dur, shape = future.result()
+    #                 stats["orig"] += ob
+    #                 stats["comp"] += cmb
+    #                 total_kernel_time += dur
+    #                 self._write_chunk(f_out, k, shape, cb)
+    #                 del cb
+
+    #     t_comp = total_kernel_time / self.num_workers
+    #     self.stats_orig_bytes = stats["orig"]
+        
+    #     del ft_model
+    #     force_cleanup()
+    #     gc.collect()
+
+    #     # --- Decompression (Generator) ---
+    #     # loaded_store = torch.load("model_compressed.pforex")
+    #     stats_tracker = {"time": 0.0} # 必须是一个引用对象，以便在生成器内修改
+
+    #     def result_generator():
+    #         # [Fix 1] nonlocal 必须放在第一行！
+    #         nonlocal base_native 
+            
+    #         with ThreadPoolExecutor(max_workers=self.num_workers) as executor:
+    #             future_to_key = {}
+    #             # keys_list = list(ft_shapes.keys())
+                
+    #             stream_reader = self._read_stream(output_file)
+                
+    #             for key, shape, c_bytes in stream_reader:
+    #                 # 提交任务
+    #                 future = executor.submit(
+    #                     self._decompress_worker, 
+    #                     (key, shape, c_bytes, base_native, "LLM" in self.cfg['task_type'], self.native_dtype)
+    #                 )
+    #                 future_to_key[future] = key
+
+    #                 # [关键] 流控：防止读取速度过快撑爆内存
+    #                 # 只有当正在处理的任务少于 2*workers 时才继续读取
+    #                 if len(future_to_key) >= self.num_workers * 2:
+    #                     # 等待至少一个任务完成
+    #                     done_future = next(iter(as_completed(future_to_key)))
+    #                     k, tens, dur = done_future.result()
+    #                     stats_tracker["time"] += dur
+    #                     del future_to_key[done_future]
+    #                     yield k, tens
+                        
+    #                     # 额外检查：如果还有很多完成的，也一并yield出去
+    #                     # (简单起见，这里依赖下一次循环或最后的 drain)
+
+    #             # 处理剩余所有任务
+    #             for future in as_completed(future_to_key):
+    #                 k, tens, dur = future.result()
+    #                 stats_tracker["time"] += dur
+    #                 yield k, tens
+            
+    #         del base_native
+    #         force_cleanup()
+
+    #     return result_generator(), (stats["comp"]/stats["orig"]*100) if stats["orig"] > 0 else 0, (stats["orig"]/1024**2/t_comp) if t_comp > 0 else 0, stats_tracker
 
 
     # def run_pipeline(self, rate, ModelClass, cpu_kwargs):

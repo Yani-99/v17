@@ -25,7 +25,7 @@ except Exception as e:
     print(f"[WARNING] 重置 Affinity 失败: {e}")
 
 
-num_workers = 1
+num_workers = 16
 print(f"[CONFIG] 手动设定: 启动 {num_workers} 个并行线程")
 
 from transformers import (
@@ -73,9 +73,10 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 # LOSSY_RATES = [0.0, 1e-4, 5e-4, 1e-3, 5e-3, 1e-2, 2e-2, 3e-2, 4e-2, 5e-2]
 # LOSSY_RATES = [0.0,0.01,0.05,0.1,0.15]
-LOSSY_RATES = [0.0, 1e-4, 5e-4, 1e-3, 5e-3, 1e-2, 2e-2, 3e-2, 4e-2, 5e-2,0.1,0.12,0.15]
+# LOSSY_RATES = [0.0, 1e-4, 5e-4, 1e-3, 5e-3, 1e-2, 2e-2, 3e-2, 4e-2, 5e-2,0.1,0.12,0.15]
 # LOSSY_RATES = [0.18,0.2,0.25,0.3]
-# LOSSY_RATES = [0.0]
+LOSSY_RATES = [0.0]
+LOSSY_RATES = [0.0, 1e-3, 5e-3, 1e-2, 2e-2, 3e-2, 4e-2, 5e-2,0.1,0.12,0.15]
 
 # LOSSY_RATES = [0.0,0.01,0.05,0.1,0.15]
 
@@ -113,7 +114,18 @@ LOSSY_RATES = [0.0, 1e-4, 5e-4, 1e-3, 5e-3, 1e-2, 2e-2, 3e-2, 4e-2, 5e-2,0.1,0.1
 # meta-llama/Llama-3.1-70B
 # CONFIG_LIST = ["llama-3.1-70b-1", "llama-3.1-70b-2", "llama-3.1-70b-3", "llama-3.1-70b-4", "llama-3.1-70b-5", "llama-3.1-70b-6", "llama-3.1-70b-7", "llama-3.1-70b-8", "llama-3.1-70b-9", "llama-3.1-70b-10"]
 # CONFIG_LIST = ["llama3_70b"]
-CONFIG_LIST = ["llama3.1-8b-1"]
+
+
+
+# CONFIG_LIST = ["gpt2-1"]
+CONFIG_LIST = ["bert_ner10"]
+# CONFIG_LIST = ["roberta-base-4"]
+CONFIG_LIST = ["roberta-large-1"]
+# CONFIG_LIST = ["llama2-7b-1"]
+# CONFIG_LIST = ["llama2-13b-1"]
+# CONFIG_LIST = ["mistral-7b-1"]
+# CONFIG_LIST = ["llama3.1-8b-1"]
+# CONFIG_LIST = ["llama-3.1-70b-1"]
 
 
 from engine import CompressionEngine
@@ -155,17 +167,26 @@ def main():
                 m, p = ModelManager.prepare_model_for_eval(cfg['base_model'], cfg, native_dtype, DEVICE, config_obj=ft_config_obj)
                 source_metrics = UniversalEvaluator(m, p, cfg, "source", DEVICE).run()
                 del m, p; force_cleanup()
-
+                print(f"  -> Size: 100.00% | Comp: 0.0 MB/s | Decomp: 0.0 MB/s | Metrics: {source_metrics}")
                 # Phase 0
                 logger.info("\n[Phase 0] Baseline Evaluation...")
                 m, p = ModelManager.prepare_model_for_eval(cfg['ft_model'], cfg, native_dtype, DEVICE)
                 baseline_metrics = UniversalEvaluator(m, p, cfg, "baseline", DEVICE).run()
                 del m, p; force_cleanup()
+                print(f"  -> Size: 100.00% | Comp: 0.0 MB/s | Decomp: 0.0 MB/s | Metrics: {baseline_metrics}")
 
             # -------------------------------------------------------
             # Loop over Lossy Rates
             # -------------------------------------------------------
             results_table = []
+            
+            # 【修复】：在此处将 Source 和 Baseline 的评测结果正式装入 results_table
+            if DO_EVAL:
+                if source_metrics:
+                    results_table.append({"Rate": "Source", "Comp%": 100.0, "CompSpeed": 0.0, "DecompSpeed": 0.0, "Metrics": source_metrics})
+                if baseline_metrics:
+                    results_table.append({"Rate": "Baseline", "Comp%": 100.0, "CompSpeed": 0.0, "DecompSpeed": 0.0, "Metrics": baseline_metrics})
+
             engine = CompressionEngine(cfg, native_dtype, num_workers=num_workers)
             ModelClass, _, _ = ModelManager.get_classes_and_kwargs(cfg)
 
@@ -215,39 +236,41 @@ def main():
                 print(f"  -> Size: {comp_pct:.2f}% | Comp: {c_speed:.1f} MB/s | Decomp: {d_speed:.1f} MB/s | Metrics: {rec_metrics}")
 
 
-            # # -------------------------------------------------------
-            # # Final Summary Table
-            # # -------------------------------------------------------
-            # print("\n" + "="*100)
-            # print(f" FINAL SUMMARY: {ACTIVE_CONFIG} ({cfg['task_type']}) ")
-            # print("="*100)
+            # -------------------------------------------------------
+            # Final Summary Table (已解除注释)
+            # -------------------------------------------------------
+            print("\n" + "="*100)
+            print(f" FINAL SUMMARY: {ACTIVE_CONFIG} ({cfg['task_type']}) ")
+            print("="*100)
             
-            # # 定义表头
-            # header = f"{'Rate':<8} | {'Comp %':<10} | {'C-Speed':<12} | {'D-Speed':<12} | {'Main Metric'}"
-            # print(header)
-            # print("-" * len(header))
+            # 定义表头
+            header = f"{'Rate':<8} | {'Comp %':<10} | {'C-Speed':<12} | {'D-Speed':<12} | {'Main Metric'}"
+            print(header)
+            print("-" * len(header))
 
-            # for res in results_table:
-            #     rate = res["Rate"]
-            #     comp_pct = f"{res['Comp%']:.2f}%"
-            #     c_speed = f"{res['CompSpeed']:.1f} MB/s"
-            #     d_speed = f"{res['DecompSpeed']:.1f} MB/s"
+            for res in results_table:
+                rate = res["Rate"]
+                comp_pct = f"{res['Comp%']:.2f}%"
+                c_speed = f"{res['CompSpeed']:.1f} MB/s"
+                d_speed = f"{res['DecompSpeed']:.1f} MB/s"
                 
-            #     # 自动提取 Metrics 里的核心指标 (例如 f1, accuracy 或 loss)
-            #     metrics = res["Metrics"]
-            #     metric_str = ""
-            #     if metrics:
-            #         # 过滤掉 runtime 相关指标，只保留业务指标
-            #         important_keys = [k for k in metrics.keys() if 'runtime' not in k and 'per_second' not in k and 'loss' not in k]
-            #         # 如果有 f1 或 accuracy 优先显示，否则显示第一个指标
-            #         display_keys = sorted(important_keys, key=lambda x: ('f1' in x or 'acc' in x), reverse=True)
-            #         metric_str = ", ".join([f"{k}: {metrics[k]:.4f}" for k in display_keys[:2]]) # 取前两个重要指标
-            #     else:
-            #         metric_str = "N/A (No Eval)"
+                # 自动提取 Metrics 里的核心指标 (例如 f1, accuracy 或 loss)
+                metrics = res["Metrics"]
+                metric_str = ""
+                if metrics:
+                    # 过滤掉 runtime 相关指标，只保留业务指标
+                    important_keys = [k for k in metrics.keys() if 'runtime' not in k and 'per_second' not in k and 'loss' not in k]
+                    # 如果有 f1 或 accuracy 优先显示，否则显示第一个指标
+                    display_keys = sorted(important_keys, key=lambda x: ('f1' in x or 'acc' in x), reverse=True)
+                    metric_str = ", ".join([f"{k}: {metrics[k]:.4f}" for k in display_keys]) # 取前两个重要指标
+                    # metric_str = ", ".join([f"{k}: {metrics[k]:.4f}" for k in display_keys])
+                else:
+                    metric_str = "N/A (No Eval)"
 
-            #     print(f"{rate:<8} | {comp_pct:<10} | {c_speed:<12} | {d_speed:<12} | {metric_str}")
+                # 由于此时 Rate 可能是浮点数也可能是字符串（"Source", "Baseline"），统一按照字符串格式化
+                print(f"{str(rate):<8} | {comp_pct:<10} | {c_speed:<12} | {d_speed:<12} | {metric_str}")
             
-            # print("="*100)
+            print("="*100)
 
             force_cleanup() 
             gc.collect()

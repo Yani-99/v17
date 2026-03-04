@@ -1,0 +1,173 @@
+-- Found pybind11: /home/liu4441/.local/lib/python3.9/site-packages/pybind11/include (found version "3.0.2")
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/newdrive/liu4441/liana/pfor/standard/v17/build
+[100%] Built target pforex_cpp
+[RUN] Running benchmarks...
+[CONFIG] 手动设定: 启动 16 个并行线程
+
+>>> Running Config: roberta-large-1 <<<
+Detecting FT model native dtype...
+-> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
+
+[Phase -1] Source Evaluation...
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 1.1612063646316528, 'eval_model_preparation_time': 0.0031, 'eval_accuracy': 0.3273560876209883, 'eval_runtime': 33.5801, 'eval_samples_per_second': 292.286, 'eval_steps_per_second': 9.142}
+  -> Size: 100.00% | Comp: 0.0 MB/s | Decomp: 0.0 MB/s | Metrics: {'eval_loss': 1.1612063646316528, 'eval_model_preparation_time': 0.0031, 'eval_accuracy': 0.3273560876209883, 'eval_runtime': 33.5801, 'eval_samples_per_second': 292.286, 'eval_steps_per_second': 9.142}
+
+[Phase 0] Baseline Evaluation...
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 4.588295936584473, 'eval_model_preparation_time': 0.0036, 'eval_accuracy': 0.9059602649006623, 'eval_runtime': 33.7462, 'eval_samples_per_second': 290.848, 'eval_steps_per_second': 9.097}
+  -> Size: 100.00% | Comp: 0.0 MB/s | Decomp: 0.0 MB/s | Metrics: {'eval_loss': 4.588295936584473, 'eval_model_preparation_time': 0.0036, 'eval_accuracy': 0.9059602649006623, 'eval_runtime': 33.7462, 'eval_samples_per_second': 290.848, 'eval_steps_per_second': 9.097}
+
+[========== Rate: 0.0 = Model: roberta-large-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 4.588295936584473, 'eval_model_preparation_time': 0.004, 'eval_accuracy': 0.9059602649006623, 'eval_runtime': 33.8085, 'eval_samples_per_second': 290.312, 'eval_steps_per_second': 9.081}
+  -> Size: 30.40% | Comp: 1655.9 MB/s | Decomp: 4943.8 MB/s | Metrics: {'eval_loss': 4.588295936584473, 'eval_model_preparation_time': 0.004, 'eval_accuracy': 0.9059602649006623, 'eval_runtime': 33.8085, 'eval_samples_per_second': 290.312, 'eval_steps_per_second': 9.081}
+
+[========== Rate: 0.001 = Model: roberta-large-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 4.588221549987793, 'eval_model_preparation_time': 0.0032, 'eval_accuracy': 0.9057564951604686, 'eval_runtime': 34.0114, 'eval_samples_per_second': 288.579, 'eval_steps_per_second': 9.026}
+  -> Size: 30.40% | Comp: 1581.5 MB/s | Decomp: 5684.9 MB/s | Metrics: {'eval_loss': 4.588221549987793, 'eval_model_preparation_time': 0.0032, 'eval_accuracy': 0.9057564951604686, 'eval_runtime': 34.0114, 'eval_samples_per_second': 288.579, 'eval_steps_per_second': 9.026}
+
+[========== Rate: 0.005 = Model: roberta-large-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 4.5873613357543945, 'eval_model_preparation_time': 0.0056, 'eval_accuracy': 0.9059602649006623, 'eval_runtime': 34.0289, 'eval_samples_per_second': 288.431, 'eval_steps_per_second': 9.022}
+  -> Size: 30.24% | Comp: 1403.6 MB/s | Decomp: 6104.6 MB/s | Metrics: {'eval_loss': 4.5873613357543945, 'eval_model_preparation_time': 0.0056, 'eval_accuracy': 0.9059602649006623, 'eval_runtime': 34.0289, 'eval_samples_per_second': 288.431, 'eval_steps_per_second': 9.022}
+
+[========== Rate: 0.01 = Model: roberta-large-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 4.581703186035156, 'eval_model_preparation_time': 0.0037, 'eval_accuracy': 0.9061640346408558, 'eval_runtime': 33.9027, 'eval_samples_per_second': 289.505, 'eval_steps_per_second': 9.055}
+  -> Size: 29.55% | Comp: 1479.3 MB/s | Decomp: 6130.1 MB/s | Metrics: {'eval_loss': 4.581703186035156, 'eval_model_preparation_time': 0.0037, 'eval_accuracy': 0.9061640346408558, 'eval_runtime': 33.9027, 'eval_samples_per_second': 289.505, 'eval_steps_per_second': 9.055}
+
+[========== Rate: 0.02 = Model: roberta-large-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 4.488388538360596, 'eval_model_preparation_time': 0.0034, 'eval_accuracy': 0.9069791136016302, 'eval_runtime': 33.8013, 'eval_samples_per_second': 290.374, 'eval_steps_per_second': 9.083}
+  -> Size: 27.40% | Comp: 1475.6 MB/s | Decomp: 8488.8 MB/s | Metrics: {'eval_loss': 4.488388538360596, 'eval_model_preparation_time': 0.0034, 'eval_accuracy': 0.9069791136016302, 'eval_runtime': 33.8013, 'eval_samples_per_second': 290.374, 'eval_steps_per_second': 9.083}
+
+[========== Rate: 0.03 = Model: roberta-large-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 4.6112565994262695, 'eval_model_preparation_time': 0.0037, 'eval_accuracy': 0.9049414161996944, 'eval_runtime': 33.7299, 'eval_samples_per_second': 290.988, 'eval_steps_per_second': 9.102}
+  -> Size: 24.91% | Comp: 1107.6 MB/s | Decomp: 5227.7 MB/s | Metrics: {'eval_loss': 4.6112565994262695, 'eval_model_preparation_time': 0.0037, 'eval_accuracy': 0.9049414161996944, 'eval_runtime': 33.7299, 'eval_samples_per_second': 290.988, 'eval_steps_per_second': 9.102}
+
+[========== Rate: 0.04 = Model: roberta-large-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 4.393473148345947, 'eval_model_preparation_time': 0.0043, 'eval_accuracy': 0.9031074885379521, 'eval_runtime': 33.7429, 'eval_samples_per_second': 290.876, 'eval_steps_per_second': 9.098}
+  -> Size: 22.36% | Comp: 1083.3 MB/s | Decomp: 7236.1 MB/s | Metrics: {'eval_loss': 4.393473148345947, 'eval_model_preparation_time': 0.0043, 'eval_accuracy': 0.9031074885379521, 'eval_runtime': 33.7429, 'eval_samples_per_second': 290.876, 'eval_steps_per_second': 9.098}
+
+[========== Rate: 0.05 = Model: roberta-large-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 4.019758701324463, 'eval_model_preparation_time': 0.0032, 'eval_accuracy': 0.8989302088639837, 'eval_runtime': 33.7356, 'eval_samples_per_second': 290.939, 'eval_steps_per_second': 9.1}
+  -> Size: 19.54% | Comp: 749.0 MB/s | Decomp: 8039.3 MB/s | Metrics: {'eval_loss': 4.019758701324463, 'eval_model_preparation_time': 0.0032, 'eval_accuracy': 0.8989302088639837, 'eval_runtime': 33.7356, 'eval_samples_per_second': 290.939, 'eval_steps_per_second': 9.1}
+
+[========== Rate: 0.1 = Model: roberta-large-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 1.3174155950546265, 'eval_model_preparation_time': 0.0033, 'eval_accuracy': 0.4785532348446256, 'eval_runtime': 33.7747, 'eval_samples_per_second': 290.602, 'eval_steps_per_second': 9.09}
+  -> Size: 3.41% | Comp: 1037.7 MB/s | Decomp: 10836.2 MB/s | Metrics: {'eval_loss': 1.3174155950546265, 'eval_model_preparation_time': 0.0033, 'eval_accuracy': 0.4785532348446256, 'eval_runtime': 33.7747, 'eval_samples_per_second': 290.602, 'eval_steps_per_second': 9.09}
+
+[========== Rate: 0.12 = Model: roberta-large-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 1.1236512660980225, 'eval_model_preparation_time': 0.0035, 'eval_accuracy': 0.32592969943963324, 'eval_runtime': 33.735, 'eval_samples_per_second': 290.944, 'eval_steps_per_second': 9.1}
+  -> Size: 1.53% | Comp: 1440.2 MB/s | Decomp: 9620.2 MB/s | Metrics: {'eval_loss': 1.1236512660980225, 'eval_model_preparation_time': 0.0035, 'eval_accuracy': 0.32592969943963324, 'eval_runtime': 33.735, 'eval_samples_per_second': 290.944, 'eval_steps_per_second': 9.1}
+
+[========== Rate: 0.15 = Model: roberta-large-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 258396192 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 1.1069313287734985, 'eval_model_preparation_time': 0.0034, 'eval_accuracy': 0.35496688741721855, 'eval_runtime': 33.7517, 'eval_samples_per_second': 290.8, 'eval_steps_per_second': 9.096}
+  -> Size: 0.48% | Comp: 2506.4 MB/s | Decomp: 9789.3 MB/s | Metrics: {'eval_loss': 1.1069313287734985, 'eval_model_preparation_time': 0.0034, 'eval_accuracy': 0.35496688741721855, 'eval_runtime': 33.7517, 'eval_samples_per_second': 290.8, 'eval_steps_per_second': 9.096}
+
+====================================================================================================
+ FINAL SUMMARY: roberta-large-1 (GLUE) 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+Source   | 100.00%    | 0.0 MB/s     | 0.0 MB/s     | eval_accuracy: 0.3274, eval_model_preparation_time: 0.0031
+Baseline | 100.00%    | 0.0 MB/s     | 0.0 MB/s     | eval_accuracy: 0.9060, eval_model_preparation_time: 0.0036
+0.0      | 30.40%     | 1655.9 MB/s  | 4943.8 MB/s  | eval_accuracy: 0.9060, eval_model_preparation_time: 0.0040
+0.001    | 30.40%     | 1581.5 MB/s  | 5684.9 MB/s  | eval_accuracy: 0.9058, eval_model_preparation_time: 0.0032
+0.005    | 30.24%     | 1403.6 MB/s  | 6104.6 MB/s  | eval_accuracy: 0.9060, eval_model_preparation_time: 0.0056
+0.01     | 29.55%     | 1479.3 MB/s  | 6130.1 MB/s  | eval_accuracy: 0.9062, eval_model_preparation_time: 0.0037
+0.02     | 27.40%     | 1475.6 MB/s  | 8488.8 MB/s  | eval_accuracy: 0.9070, eval_model_preparation_time: 0.0034
+0.03     | 24.91%     | 1107.6 MB/s  | 5227.7 MB/s  | eval_accuracy: 0.9049, eval_model_preparation_time: 0.0037
+0.04     | 22.36%     | 1083.3 MB/s  | 7236.1 MB/s  | eval_accuracy: 0.9031, eval_model_preparation_time: 0.0043
+0.05     | 19.54%     | 749.0 MB/s   | 8039.3 MB/s  | eval_accuracy: 0.8989, eval_model_preparation_time: 0.0032
+0.1      | 3.41%      | 1037.7 MB/s  | 10836.2 MB/s | eval_accuracy: 0.4786, eval_model_preparation_time: 0.0033
+0.12     | 1.53%      | 1440.2 MB/s  | 9620.2 MB/s  | eval_accuracy: 0.3559, eval_model_preparation_time: 0.0035
+0.15     | 0.48%      | 2506.4 MB/s  | 9789.3 MB/s  | eval_accuracy: 0.3550, eval_model_preparation_time: 0.0034
+====================================================================================================

@@ -1,0 +1,62 @@
+[Init] Found 1 files to judge.
+  - mt_bench_answers_awq-4bit-baseline.jsonl
+
+[Init] Loading Judge Model via vLLM: hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4
+[Init] Configuration: TP_Size=2, Quantization=awq
+
+[Init] Loading Judge Model via vLLM: hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4
+[Init] Configuration: TP_Size=2, Quantization=awq
+INFO 02-28 21:00:48 [utils.py:223] non-default args: {'trust_remote_code': True, 'max_model_len': 4096, 'tensor_parallel_size': 2, 'disable_log_stats': True, 'quantization': 'awq', 'enforce_eager': True, 'model': 'hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4'}
+INFO 02-28 21:00:49 [model.py:529] Resolved architecture: LlamaForCausalLM
+INFO 02-28 21:00:49 [model.py:1549] Using max model len 4096
+INFO 02-28 21:00:50 [awq_marlin.py:166] Detected that the model can run with awq_marlin, however you specified quantization=awq explicitly, so forcing awq. Use quantization=awq_marlin for faster inference
+INFO 02-28 21:00:50 [scheduler.py:224] Chunked prefill is enabled with max_num_batched_tokens=8192.
+INFO 02-28 21:00:51 [vllm.py:689] Asynchronous scheduling is enabled.
+WARNING 02-28 21:00:51 [vllm.py:727] Enforce eager set, overriding optimization level to -O0
+INFO 02-28 21:00:51 [vllm.py:845] Cudagraph is disabled under eager mode
+(EngineCore_DP0 pid=2951217) INFO 02-28 21:00:52 [core.py:97] Initializing a V1 LLM engine (v0.16.0) with config: model='hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4', speculative_config=None, tokenizer='hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.float16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=2, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=awq, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'level': None, 'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'splitting_ops': [], 'compile_mm_encoder': False, 'compile_sizes': [], 'compile_ranges_split_points': [8192], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'eliminate_noops': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'fuse_act_padding': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}
+(EngineCore_DP0 pid=2951217) WARNING 02-28 21:00:52 [multiproc_executor.py:921] Reducing Torch parallelism from 24 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+(EngineCore_DP0 pid=2951217) INFO 02-28 21:00:52 [parallel_state.py:1234] world_size=2 rank=0 local_rank=0 distributed_init_method=tcp://127.0.0.1:38933 backend=nccl
+(EngineCore_DP0 pid=2951217) INFO 02-28 21:00:52 [parallel_state.py:1234] world_size=2 rank=1 local_rank=1 distributed_init_method=tcp://127.0.0.1:38933 backend=nccl
+(EngineCore_DP0 pid=2951217) INFO 02-28 21:00:53 [pynccl.py:111] vLLM is using nccl==2.27.5
+(EngineCore_DP0 pid=2951217) WARNING 02-28 21:00:53 [symm_mem.py:67] SymmMemCommunicator: Device capability 8.6 not supported, communicator is not available.
+(EngineCore_DP0 pid=2951217) WARNING 02-28 21:00:53 [symm_mem.py:67] SymmMemCommunicator: Device capability 8.6 not supported, communicator is not available.
+(EngineCore_DP0 pid=2951217) WARNING 02-28 21:00:53 [custom_all_reduce.py:165] Custom allreduce is disabled because your platform lacks GPU P2P capability or P2P test failed. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(EngineCore_DP0 pid=2951217) WARNING 02-28 21:00:53 [custom_all_reduce.py:165] Custom allreduce is disabled because your platform lacks GPU P2P capability or P2P test failed. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(EngineCore_DP0 pid=2951217) INFO 02-28 21:00:53 [parallel_state.py:1445] rank 1 in world size 2 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 1, EP rank N/A
+(EngineCore_DP0 pid=2951217) INFO 02-28 21:00:53 [parallel_state.py:1445] rank 0 in world size 2 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A
+(EngineCore_DP0 pid=2951217) (Worker_TP0 pid=2951223) INFO 02-28 21:00:54 [gpu_model_runner.py:4124] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+(EngineCore_DP0 pid=2951217) (Worker_TP0 pid=2951223) INFO 02-28 21:00:54 [cuda.py:367] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore_DP0 pid=2951217) (Worker_TP0 pid=2951223) INFO 02-28 21:01:01 [default_loader.py:293] Loading weights took 6.34 seconds
+(EngineCore_DP0 pid=2951217) (Worker_TP0 pid=2951223) INFO 02-28 21:01:01 [gpu_model_runner.py:4221] Model loading took 18.58 GiB memory and 7.248127 seconds
+(EngineCore_DP0 pid=2951217) (Worker_TP0 pid=2951223) INFO 02-28 21:01:14 [gpu_worker.py:373] Available KV cache memory: 1.4 GiB
+(EngineCore_DP0 pid=2951217) INFO 02-28 21:01:15 [kv_cache_utils.py:1307] GPU KV cache size: 9,136 tokens
+(EngineCore_DP0 pid=2951217) INFO 02-28 21:01:15 [kv_cache_utils.py:1312] Maximum concurrency for 4,096 tokens per request: 2.23x
+(EngineCore_DP0 pid=2951217) (Worker_TP0 pid=2951223) INFO 02-28 21:01:15 [kernel_warmup.py:44] Skipping FlashInfer autotune because it is disabled.
+(EngineCore_DP0 pid=2951217) (Worker_TP1 pid=2951226) INFO 02-28 21:01:15 [kernel_warmup.py:44] Skipping FlashInfer autotune because it is disabled.
+(EngineCore_DP0 pid=2951217) INFO 02-28 21:01:15 [core.py:278] init engine (profile, create kv cache, warmup model) took 13.45 seconds
+(EngineCore_DP0 pid=2951217) WARNING 02-28 21:01:16 [vllm.py:734] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(EngineCore_DP0 pid=2951217) INFO 02-28 21:01:16 [vllm.py:845] Cudagraph is disabled under eager mode
+INFO 02-28 21:01:16 [llm.py:355] Supported tasks: ['generate']
+[Data] Loading MT-Bench questions...
+
+============================================================
+STARTING BATCH EVALUATION (vLLM Accelerated - AWQ 4-bit Dual GPU)
+============================================================
+
+>>> Processing: mt_bench_answers_awq-4bit-baseline.jsonl
+    -> Running Batch Inference for Turn 1 (80 prompts)...
+    -> Running Batch Inference for Turn 2 (80 prompts)...
+(EngineCore_DP0 pid=2951217) (Worker_TP0 pid=2951223) WARNING 02-28 21:08:37 [multiproc_executor.py:797] WorkerProc was terminated
+(EngineCore_DP0 pid=2951217) (Worker_TP1 pid=2951226) WARNING 02-28 21:08:37 [multiproc_executor.py:797] WorkerProc was terminated
+    Finished. Score: 8.2166
+
+
+
+================================================================================
+FINAL BATCH REPORT (Judge: hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4 via vLLM TP=2)
+================================================================================
+| Filename                            | Turn 1     | Turn 2     | Average    |
+|-------------------------------------|------------|------------|------------|
+| mt_bench_answers_awq-4bit-baseline.jsonl | 8.1582     | 8.2750     | 8.2166     |
+================================================================================

@@ -15,7 +15,8 @@ TEST_CONFIGS = {
         "dataset_name": "glue",
         "dataset_config": "mnli",
         "split": "validation_matched",
-        "eval_limit": 1000,
+        # "eval_limit": 1000,
+        "eval_limit": None,
         "label_remap": {0: 2, 2: 0} 
     },
     "gpt2_imdb": {
@@ -143,9 +144,14 @@ TEST_CONFIGS = {
         "ft_model": "StevenLimcorn/bert-large-uncased-semeval2016-restaurants"
     },
     "bert_ner10": {
-        "task_type":"",
+        "task_type": "NER",
         "base_model": "bert-large-uncased",
-        "ft_model": "Jorgeutd/bert-large-uncased-finetuned-ner"
+        "ft_model": "Jorgeutd/bert-large-uncased-finetuned-ner",
+        "dataset_name": "conll2003",
+        "dataset_config": None,
+        "split": "test"
+        # ,
+        # "eval_limit": 500,
     },
     "llama2-7b-1": {
         "task_type": "LLM_HARNESS",
@@ -352,9 +358,18 @@ TEST_CONFIGS = {
         "ft_model": "Ssarion/gpt2-multi-news"
     },
     "roberta-large-1": {
+        # "task_type": "GLUE",
+        # "base_model": "roberta-large",
+        # "ft_model": "roberta-large-mnli"
         "task_type": "GLUE",
         "base_model": "roberta-large",
-        "ft_model": "roberta-large-mnli"
+        "ft_model": "roberta-large-mnli",
+        "dataset_name": "glue",
+        "dataset_config": "mnli",
+        "split": "validation_matched",
+        # "eval_limit": 1000,
+        "eval_limit": None,
+        "label_remap": {0: 2, 2: 0} 
     },
     "roberta-large-2": {
         "task_type": "QA",
@@ -417,9 +432,13 @@ TEST_CONFIGS = {
         "ft_model": "cross-encoder/nli-roberta-base"
     },
     "roberta-base-4": {
-        "task_type": "Sentence-Embedding",
+        "task_type": "GLUE",
         "base_model": "roberta-base",
-        "ft_model": "textattack/roberta-base-SST-2"
+        "ft_model": "textattack/roberta-base-SST-2",
+        "dataset_name": "glue",
+        "dataset_config": "sst2",
+        "split": "validation",
+        "eval_limit": 1000, 
     },
     "roberta-base-5": {
         "task_type": "Classification",

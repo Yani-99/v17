@@ -1,0 +1,44 @@
+[*] 开始加载 Tokenizer: meta-llama/Llama-2-13b-chat-hf (从原模型加载以避开错误的配置)...
+[*] 开始加载 GPTQ 模型 (自动分配显存)...
+
+[33mWARN[0m  Python GIL is enabled: Multi-gpu quant acceleration for MoE models is sub-optimal and multi-core accelerated cpu packing is also disabled. We recommend Python >= 3.13.3t with Pytorch > 2.8 for mult-gpu quantization and multi-cpu packing with env `PYTHON_GIL=0`.
+[33mWARN[0m  Feature `utils/Perplexity` requires Python < 3.14 and Python GIL enabled and Python >= 3.13.3T (T for Threading-Free edition of Python) plus Torch 2.8. Feature is currently skipped/disabled.
+[32mINFO[0m  ENV: Auto setting PYTORCH_ALLOC_CONF='expandable_segments:True,max_split_size_mb:256,garbage_collection_threshold:0.7' for memory saving.
+[32mINFO[0m  ENV: Auto setting CUDA_DEVICE_ORDER=PCI_BUS_ID for correctness.          
+[36mDEBUG[0m BitBLAS import failed: No module named 'bitblas'                         
+[36mDEBUG[0m Skipping qlinear module import `bitblas_target_detector`: No module named 'thefuzz'
+[32mINFO[0m  
+
+_____/\\\\\\\\\\\\__/\\\\\\\\\\\\\____/\\\\\\\\\\\\\\\______________________/\\\________/\\\\____________/\\\\_______________________/\\\__________________/\\\\\\____
+ ___/\\\//////////__\/\\\/////////\\\_\///////\\\/////____________________/\\\\/\\\\____\/\\\\\\________/\\\\\\______________________\/\\\_________________\////\\\____
+  __/\\\_____________\/\\\_______\/\\\_______\/\\\_______________________/\\\//\////\\\__\/\\\//\\\____/\\\//\\\______________________\/\\\____________________\/\\\____
+   _\/\\\____/\\\\\\\_\/\\\\\\\\\\\\\/________\/\\\________/\\\\\\\\\\\__/\\\______\//\\\_\/\\\\///\\\/\\\/_\/\\\_____/\\\\\___________\/\\\______/\\\\\\\\_____\/\\\____
+    _\/\\\___\/////\\\_\/\\\/////////__________\/\\\_______\///////////__\//\\\______/\\\__\/\\\__\///\\\/___\/\\\___/\\\///\\\____/\\\\\\\\\____/\\\/////\\\____\/\\\____
+     _\/\\\_______\/\\\_\/\\\___________________\/\\\______________________\///\\\\/\\\\/___\/\\\____\///_____\/\\\__/\\\__\//\\\__/\\\////\\\___/\\\\\\\\\\\_____\/\\\____
+      _\/\\\_______\/\\\_\/\\\___________________\/\\\________________________\////\\\//_____\/\\\_____________\/\\\_\//\\\__/\\\__\/\\\__\/\\\__\//\\///////______\/\\\____
+       _\//\\\\\\\\\\\\/__\/\\\___________________\/\\\___________________________\///\\\\\\__\/\\\_____________\/\\\__\///\\\\\/___\//\\\\\\\/\\__\//\\\\\\\\\\__/\\\\\\\\\_
+        __\////////////____\///____________________\///______________________________\//////___\///______________\///_____\/////______\///////\//____\//////////__\/////////__
+
+[32mINFO[0m  Kernel: Auto-selection: adding candidate `TritonV2QuantLinear`           
+[32mINFO[0m  Kernel: selected -> `TritonV2QuantLinear`.                               
+[32mINFO[0m  Optimize: `TritonV2QuantLinear` compilation triggered.                   
+[32mINFO[0m  gc.collect() reclaimed 59 objects in 0.157s                              
+[*] 开始使用项目的 UniversalEvaluator 进行对齐评测...
+[*] 评测任务: ['mmlu', 'gsm8k', 'ifeval']
+
+============================================================
+ 📊 GPTQ 4-bit 模型评测结果 (对齐项目标准)
+============================================================
+ mmlu/acc            : 0.5111
+ mmlu_humanities/acc : 0.4755
+ mmlu_other/acc      : 0.5896
+ mmlu_social_sciences/acc: 0.5931
+ mmlu_stem/acc       : 0.4069
+ ifeval/prompt_strict_acc: 0.2773
+ ifeval/inst_strict_acc: 0.3969
+ ifeval/prompt_loose_acc: 0.3031
+ ifeval/inst_loose_acc: 0.4245
+ gsm8k/acc           : 0.2987
+ mt_bench/speed      : 11.5362
+ mt_bench/saved      : 1.0000
+============================================================

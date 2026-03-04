@@ -1,0 +1,139 @@
+-- Found pybind11: /home/liu4441/.local/lib/python3.9/site-packages/pybind11/include (found version "3.0.2")
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/newdrive/liu4441/liana/pfor/standard/v17/build
+[100%] Built target pforex_cpp
+[RUN] Running benchmarks...
+[CONFIG] 手动设定: 启动 16 个并行线程
+
+>>> Running Config: roberta-base-4 <<<
+Detecting FT model native dtype...
+-> Dtype not in config. Defaulting to float32 (common for GPT-2/BERT).
+
+[========== Rate: 0.0 = Model: roberta-base-4==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 50.79% | Comp: 501.3 MB/s | Decomp: 9719.2 MB/s | Metrics: {}
+
+[========== Rate: 0.001 = Model: roberta-base-4==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 30.58% | Comp: 1869.2 MB/s | Decomp: 8365.3 MB/s | Metrics: {}
+
+[========== Rate: 0.005 = Model: roberta-base-4==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 24.40% | Comp: 1670.5 MB/s | Decomp: 8854.4 MB/s | Metrics: {}
+
+[========== Rate: 0.01 = Model: roberta-base-4==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 19.75% | Comp: 1498.6 MB/s | Decomp: 10740.4 MB/s | Metrics: {}
+
+[========== Rate: 0.02 = Model: roberta-base-4==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 12.58% | Comp: 937.1 MB/s | Decomp: 14809.7 MB/s | Metrics: {}
+
+[========== Rate: 0.03 = Model: roberta-base-4==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 4.99% | Comp: 1160.2 MB/s | Decomp: 17901.8 MB/s | Metrics: {}
+
+[========== Rate: 0.04 = Model: roberta-base-4==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 1.80% | Comp: 1397.8 MB/s | Decomp: 19058.2 MB/s | Metrics: {}
+
+[========== Rate: 0.05 = Model: roberta-base-4==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 0.71% | Comp: 2343.8 MB/s | Decomp: 18669.6 MB/s | Metrics: {}
+
+[========== Rate: 0.1 = Model: roberta-base-4==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 0.17% | Comp: 5101.4 MB/s | Decomp: 18420.6 MB/s | Metrics: {}
+
+[========== Rate: 0.12 = Model: roberta-base-4==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 0.17% | Comp: 5511.8 MB/s | Decomp: 18247.0 MB/s | Metrics: {}
+
+[========== Rate: 0.15 = Model: roberta-base-4==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 184362016 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 0.15% | Comp: 5071.0 MB/s | Decomp: 19171.6 MB/s | Metrics: {}
+
+====================================================================================================
+ FINAL SUMMARY: roberta-base-4 (GLUE) 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+0.0      | 50.79%     | 501.3 MB/s   | 9719.2 MB/s  | N/A (No Eval)
+0.001    | 30.58%     | 1869.2 MB/s  | 8365.3 MB/s  | N/A (No Eval)
+0.005    | 24.40%     | 1670.5 MB/s  | 8854.4 MB/s  | N/A (No Eval)
+0.01     | 19.75%     | 1498.6 MB/s  | 10740.4 MB/s | N/A (No Eval)
+0.02     | 12.58%     | 937.1 MB/s   | 14809.7 MB/s | N/A (No Eval)
+0.03     | 4.99%      | 1160.2 MB/s  | 17901.8 MB/s | N/A (No Eval)
+0.04     | 1.80%      | 1397.8 MB/s  | 19058.2 MB/s | N/A (No Eval)
+0.05     | 0.71%      | 2343.8 MB/s  | 18669.6 MB/s | N/A (No Eval)
+0.1      | 0.17%      | 5101.4 MB/s  | 18420.6 MB/s | N/A (No Eval)
+0.12     | 0.17%      | 5511.8 MB/s  | 18247.0 MB/s | N/A (No Eval)
+0.15     | 0.15%      | 5071.0 MB/s  | 19171.6 MB/s | N/A (No Eval)
+====================================================================================================

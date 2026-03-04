@@ -4,7 +4,7 @@
 -- Build files have been written to: /home/newdrive/liu4441/liana/pfor/standard/v17/build
 [100%] Built target pforex_cpp
 [RUN] Running benchmarks...
-[CONFIG] 手动设定: 启动 1 个并行线程
+[CONFIG] 手动设定: 启动 16 个并行线程
 
 >>> Running Config: llama3.1-8b-1 <<<
 Detecting FT model native dtype...
@@ -13,6 +13,8 @@ Detecting FT model native dtype...
 [Phase -1] Source Evaluation...
 We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
 Preparing LM-Eval Harness: ['mmlu', 'gsm8k', 'ifeval']...
+Setting tokenizer padding_side to 'left' for batched generation.
+FORCING HFLM batch_size to: 8
 `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
 Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
 Running LM-Eval (Attempt 1/3)...
@@ -85,6 +87,8 @@ Running loglikelihood requests
 [Phase 0] Baseline Evaluation...
 We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
 Preparing LM-Eval Harness: ['mmlu', 'gsm8k', 'ifeval']...
+Setting tokenizer padding_side to 'left' for batched generation.
+FORCING HFLM batch_size to: 8
 `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
 Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
 Running LM-Eval (Attempt 1/3)...
@@ -155,6 +159,7 @@ Running generate_until requests
 Running loglikelihood requests
 
 [========== Rate: 0.0 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
 Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
   - 0: 2101346304 bytes required
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
@@ -163,6 +168,8 @@ Based on the current allocation process, no modules could be assigned to the fol
 These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
 We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
 Preparing LM-Eval Harness: ['mmlu', 'gsm8k', 'ifeval']...
+Setting tokenizer padding_side to 'left' for batched generation.
+FORCING HFLM batch_size to: 8
 `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
 Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
 Running LM-Eval (Attempt 1/3)...
@@ -230,3 +237,15 @@ Building contexts for mmlu_jurisprudence on rank 0...
 Building contexts for mmlu_high_school_us_history on rank 0...
 Building contexts for mmlu_high_school_world_history on rank 0...
 Running generate_until requests
+Running loglikelihood requests
+  -> Size: 45.24% | Comp: 1283.1 MB/s | Decomp: 5178.0 MB/s | Metrics: {'mmlu/acc': 0.6808146987608603, 'mmlu_humanities/acc': 0.6439957492029755, 'mmlu_other/acc': 0.7457354361120051, 'mmlu_social_sciences/acc': 0.7692557686057848, 'mmlu_stem/acc': 0.5854741516016492, 'ifeval/prompt_strict_acc': 0.42513863216266173, 'ifeval/inst_strict_acc': 0.5731414868105515, 'ifeval/prompt_loose_acc': 0.4731977818853974, 'ifeval/inst_loose_acc': 0.6091127098321343, 'gsm8k/acc': 0.7536012130401819}
+
+====================================================================================================
+ FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+Source   | 100.00%    | 0.0 MB/s     | 0.0 MB/s     | mmlu/acc: 0.6339, mmlu_humanities/acc: 0.5719
+Baseline | 100.00%    | 0.0 MB/s     | 0.0 MB/s     | mmlu/acc: 0.6812, mmlu_humanities/acc: 0.6440
+0.0      | 45.24%     | 1283.1 MB/s  | 5178.0 MB/s  | mmlu/acc: 0.6808, mmlu_humanities/acc: 0.6440
+====================================================================================================

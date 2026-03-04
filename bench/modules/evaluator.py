@@ -64,141 +64,6 @@ class UniversalEvaluator:
         return metrics
 
 
-    # def _run_lm_harness(self):
-    #     logger.info(f"Preparing LM-Eval Harness: {self.cfg['llm_tasks']}...")
-        
-    #     import lm_eval
-    #     from lm_eval.models.huggingface import HFLM
-        
-    #     # 1. Detect Multi-GPU Sharding
-    #     eval_device = self.device
-    #     is_multi_gpu = False
-    #     if hasattr(self.model, "hf_device_map") and len(self.model.hf_device_map) > 1:
-    #         logger.info("Detected multi-GPU model sharding (Accelerate).")
-    #         eval_device = None # Let Accelerate handle placement
-    #         is_multi_gpu = True
-
-    #     # 2. Initialize HFLM Wrapper
-    #     # We explicitly pass the model instance we already loaded
-    #     lm_obj = HFLM(
-    #         pretrained=self.model, 
-    #         tokenizer=self.processor, 
-    #         batch_size=1, 
-    #         device=eval_device 
-    #     )
-
-    #     # 3. [CRITICAL FIX] Multi-GPU Patch for "generate_until" (GSM8K etc)
-    #     # The previous patch on model.generate was not enough. 
-    #     # We need to ensure inputs match the device of the first layer.
-    #     if is_multi_gpu:
-    #         logger.info("Applying robust multi-GPU generation patch...")
-            
-    #         # Find the device of the input embeddings (first layer)
-    #         first_device = self.model.device 
-    #         if hasattr(self.model, "model") and hasattr(self.model.model, "embed_tokens"):
-    #              first_device = self.model.model.embed_tokens.weight.device
-            
-    #         # Hook into HFLM's internal tokenization/generation flow is hard.
-    #         # Instead, we monkey-patch the HFLM._model_generate method which lm_eval uses.
-            
-    #         original_model_generate = lm_obj._model_generate
-
-    #         def patched_model_generate(context, max_length, stop, **generation_kwargs):
-    #             # Ensure context (input_ids) is on the correct start device
-    #             if isinstance(context, torch.Tensor):
-    #                 context = context.to(first_device)
-                
-    #             # Call original generation
-    #             # Accelerate will handle the movement across layers (cuda:0 -> cuda:1)
-    #             res = original_model_generate(context, max_length, stop, **generation_kwargs)
-                
-    #             # Accelerate leaves the output on the last device (e.g., cuda:1).
-    #             # lm_eval expects it on the same device as input (cuda:0) or CPU.
-    #             # We move it back to the input device to prevent "Expected all tensors..." error.
-    #             if isinstance(res, torch.Tensor):
-    #                 return res.to(first_device)
-    #             return res
-
-    #         # Apply the patch to the wrapper, not the model itself
-    #         lm_obj._model_generate = patched_model_generate
-
-    #     limit = self.limit if self.limit else None
-    #     max_retries = 3
-        
-    #     # Retry loop
-    #     raw_results = {}
-    #     for attempt in range(max_retries):
-    #         try:
-    #             logger.info(f"Running LM-Eval (Attempt {attempt+1}/{max_retries})...")
-    #             # Force empty cache before start
-    #             if is_multi_gpu: torch.cuda.empty_cache()
-                
-    #             raw_results = lm_eval.simple_evaluate(
-    #                 model=lm_obj, 
-    #                 tasks=self.cfg['llm_tasks'], 
-    #                 device=eval_device, 
-    #                 limit=limit, 
-    #                 log_samples=False
-    #             )
-    #             break 
-    #         except Exception as e:
-    #             logger.warning(f"LM-Eval Error: {e}")
-    #             import traceback
-    #             traceback.print_exc() # Print full stack trace for debugging
-                
-    #             if attempt < max_retries - 1:
-    #                 wait = (attempt + 1) * 10
-    #                 logger.info(f"Retry in {wait}s...")
-    #                 time.sleep(wait)
-    #             else:
-    #                 logger.error("LM-Eval Failed after max retries.")
-    #                 return {}
-        
-    #     # --- ROBUST METRIC EXTRACTION ---
-    #     # (This part remains exactly the same as your previous code)
-    #     metrics = {}
-        
-    #     if "groups" in raw_results:
-    #         for group_name, res in raw_results["groups"].items():
-    #             if "acc" in res:
-    #                 metrics[f"{group_name}/acc"] = res["acc"]
-    #             if "acc,none" in res:
-    #                 metrics[f"{group_name}/acc"] = res["acc,none"]
-
-    #     if "results" in raw_results:
-    #         mmlu_scores = []
-    #         gsm8k_candidates = []
-
-    #         for task, res in raw_results["results"].items():
-    #             if task.startswith("mmlu"):
-    #                 val = res.get("acc") or res.get("acc,none")
-    #                 if val is not None:
-    #                     mmlu_scores.append(val)
-                
-    #             if "gsm8k" in task.lower():
-    #                 val = None
-    #                 priorities = ["strict_match,none", "exact_match,none", "acc,none", 
-    #                               "strict_match", "exact_match", "acc"]
-    #                 for p in priorities:
-    #                     if p in res:
-    #                         val = res[p]
-    #                         break
-    #                 if val is None:
-    #                     for k, v in res.items():
-    #                         if isinstance(v, (int, float)) and ("acc" in k or "match" in k):
-    #                             val = v
-    #                             break
-    #                 if val is not None:
-    #                     gsm8k_candidates.append(val)
-
-    #         if mmlu_scores and "mmlu/acc" not in metrics:
-    #             metrics["mmlu/acc"] = sum(mmlu_scores) / len(mmlu_scores)
-            
-    #         if gsm8k_candidates and "gsm8k/acc" not in metrics:
-    #             metrics["gsm8k/acc"] = gsm8k_candidates[0]
-
-    #     return metrics
-
     def _run_lm_harness(self):
         logger.info(f"Preparing LM-Eval Harness: {self.cfg['llm_tasks']}...")
         
@@ -213,57 +78,59 @@ class UniversalEvaluator:
             eval_device = None # Let Accelerate handle placement
             is_multi_gpu = True
 
-        # 2. Initialize HFLM Wrapper
-        # We explicitly pass the model instance we already loaded
+        # =================================================================
+        # [性能修复核心 1] 必须设置左侧填充，否则无法进行 Batch 生成
+        # =================================================================
+        if self.processor.padding_side != "left":
+            logger.info("Setting tokenizer padding_side to 'left' for batched generation.")
+            self.processor.padding_side = "left"
+            
+        if self.processor.pad_token is None:
+            self.processor.pad_token = self.processor.eos_token
+            self.processor.pad_token_id = self.processor.eos_token_id
+
+        # =================================================================
+        # [性能修复核心 2] 默认使用 'auto' 批处理，榨干 GPU 显存
+        # 默认的 batch_size=1 会导致 8B 模型跑 8 个小时，auto 会自动寻找最大可用 batch
+        # =================================================================
+        # eval_batch_size = self.cfg.get("batch_size", "auto") 
+        # logger.info(f"Initializing HFLM with batch_size: {eval_batch_size}")
+        
         # lm_obj = HFLM(
         #     pretrained=self.model, 
         #     tokenizer=self.processor, 
-        #     batch_size=1, 
+        #     batch_size=eval_batch_size, 
         #     device=eval_device 
         # )
 
-        eval_batch_size = self.cfg.get("batch_size", 1)
+        eval_batch_size = 8
+        logger.info(f"FORCING HFLM batch_size to: {eval_batch_size}")
         
         lm_obj = HFLM(
             pretrained=self.model, 
             tokenizer=self.processor, 
-            batch_size=eval_batch_size, 
+            batch_size=eval_batch_size,  # 确保这里传的是 16
             device=eval_device 
         )
 
         # 3. [CRITICAL FIX] Multi-GPU Patch for "generate_until" (GSM8K etc)
         # The previous patch on model.generate was not enough. 
-        # We need to ensure inputs match the device of the first layer.
         if is_multi_gpu:
             logger.info("Applying robust multi-GPU generation patch...")
-            
-            # Find the device of the input embeddings (first layer)
             first_device = self.model.device 
             if hasattr(self.model, "model") and hasattr(self.model.model, "embed_tokens"):
                  first_device = self.model.model.embed_tokens.weight.device
             
-            # Hook into HFLM's internal tokenization/generation flow is hard.
-            # Instead, we monkey-patch the HFLM._model_generate method which lm_eval uses.
-            
             original_model_generate = lm_obj._model_generate
 
             def patched_model_generate(context, max_length, stop, **generation_kwargs):
-                # Ensure context (input_ids) is on the correct start device
                 if isinstance(context, torch.Tensor):
                     context = context.to(first_device)
-                
-                # Call original generation
-                # Accelerate will handle the movement across layers (cuda:0 -> cuda:1)
                 res = original_model_generate(context, max_length, stop, **generation_kwargs)
-                
-                # Accelerate leaves the output on the last device (e.g., cuda:1).
-                # lm_eval expects it on the same device as input (cuda:0) or CPU.
-                # We move it back to the input device to prevent "Expected all tensors..." error.
                 if isinstance(res, torch.Tensor):
                     return res.to(first_device)
                 return res
 
-            # Apply the patch to the wrapper, not the model itself
             lm_obj._model_generate = patched_model_generate
 
         limit = self.limit if self.limit else None
@@ -282,6 +149,7 @@ class UniversalEvaluator:
                     tasks=self.cfg['llm_tasks'], 
                     device=eval_device, 
                     limit=limit, 
+                    batch_size=eval_batch_size,
                     log_samples=False
                 )
                 break 
