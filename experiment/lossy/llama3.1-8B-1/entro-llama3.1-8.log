@@ -1967,7 +1967,7 @@ Processed 80 MT-Bench items. TPS: 41.30
   -> Size: 2.73% | Comp: 1063.5 MB/s | Decomp: 7079.8 MB/s | Metrics: {'mmlu/acc': 0.6434980771969805, 'mmlu_humanities/acc': 0.5819341126461212, 'mmlu_other/acc': 0.718056002574831, 'mmlu_social_sciences/acc': 0.7500812479688008, 'mmlu_stem/acc': 0.5578813828100222, 'ifeval/prompt_strict_acc': 0.15157116451016636, 'ifeval/inst_strict_acc': 0.2865707434052758, 'ifeval/prompt_loose_acc': 0.1589648798521257, 'ifeval/inst_loose_acc': 0.2949640287769784, 'gsm8k/acc': 0.55420773313116, 'mt_bench/speed': 41.303507863030234, 'mt_bench/saved': 1.0}
 
 ====================================================================================================
- FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
+ FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) - all
 ====================================================================================================
 Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
 -----------------------------------------------------------------

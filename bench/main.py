@@ -25,8 +25,8 @@ except Exception as e:
     print(f"[WARNING] 重置 Affinity 失败: {e}")
 
 
-num_workers = 16
-print(f"[CONFIG] 手动设定: 启动 {num_workers} 个并行线程")
+# num_workers = 16
+# print(f"[CONFIG] 手动设定: 启动 {num_workers} 个并行线程")
 
 from transformers import (
     AutoConfig, AutoModel, AutoModelForCausalLM, 
@@ -118,13 +118,13 @@ LOSSY_RATES = [0.0, 1e-3, 5e-3, 1e-2, 2e-2, 3e-2, 4e-2, 5e-2,0.1,0.12,0.15]
 
 
 # CONFIG_LIST = ["gpt2-1"]
-CONFIG_LIST = ["bert_ner10"]
+# CONFIG_LIST = ["bert_ner10"]
 # CONFIG_LIST = ["roberta-base-4"]
-CONFIG_LIST = ["roberta-large-1"]
+# CONFIG_LIST = ["roberta-large-1"]
 # CONFIG_LIST = ["llama2-7b-1"]
 # CONFIG_LIST = ["llama2-13b-1"]
 # CONFIG_LIST = ["mistral-7b-1"]
-# CONFIG_LIST = ["llama3.1-8b-1"]
+CONFIG_LIST = ["llama3.1-8b-1"]
 # CONFIG_LIST = ["llama-3.1-70b-1"]
 
 
@@ -135,8 +135,12 @@ from loader import ModelManager
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--eval", action="store_true")
+    parser.add_argument("--num", type=int, default=16, help="指定启动的并行线程数 (num_workers)")
     args = parser.parse_args()
+    
     DO_EVAL = args.eval
+    num_workers = args.num
+    print(f"[CONFIG] 手动设定: 启动 {num_workers} 个并行线程")
 
     for ACTIVE_CONFIG in CONFIG_LIST:
         # print(f"\n{'#'*60}")
@@ -152,7 +156,7 @@ def main():
             native_dtype = ModelManager.detect_native_dtype(cfg)
             cpu_kwargs = {
                 "low_cpu_mem_usage": True,
-                "device_map": "auto", 
+                "device_map": "cpu",  #TODO:
                 "offload_folder": "/home/newdrive2/liu4441/tmp_offload"
             }
             if "LLM" in cfg['task_type']: cpu_kwargs["torch_dtype"] = native_dtype

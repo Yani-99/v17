@@ -1,0 +1,141 @@
+-- Found pybind11: /home/liu4441/.local/lib/python3.9/site-packages/pybind11/include (found version "3.0.2")
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/newdrive/liu4441/liana/pfor/standard/v17/build
+[ 50%] Building CXX object CMakeFiles/pforex_cpp.dir/src/bind.cpp.o
+[100%] Linking CXX shared module pforex_cpp.cpython-39-x86_64-linux-gnu.so
+[100%] Built target pforex_cpp
+[RUN] Running benchmarks...
+[CONFIG] 手动设定: 启动 16 个并行线程
+
+>>> Running Config: llama3.1-8b-1 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 64.57% | Comp: 216.2 MB/s | Decomp: 1986.1 MB/s | Metrics: {}
+
+[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 64.56% | Comp: 256.2 MB/s | Decomp: 2188.3 MB/s | Metrics: {}
+
+[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 64.45% | Comp: 242.1 MB/s | Decomp: 3273.6 MB/s | Metrics: {}
+
+[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 64.16% | Comp: 367.1 MB/s | Decomp: 4128.5 MB/s | Metrics: {}
+
+[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 63.17% | Comp: 241.5 MB/s | Decomp: 2287.4 MB/s | Metrics: {}
+
+[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 61.50% | Comp: 234.0 MB/s | Decomp: 2374.3 MB/s | Metrics: {}
+
+[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 58.98% | Comp: 217.9 MB/s | Decomp: 3609.7 MB/s | Metrics: {}
+
+[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 54.40% | Comp: 237.2 MB/s | Decomp: 2572.6 MB/s | Metrics: {}
+
+[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 17.04% | Comp: 338.9 MB/s | Decomp: 3482.8 MB/s | Metrics: {}
+
+[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 9.56% | Comp: 466.6 MB/s | Decomp: 4603.3 MB/s | Metrics: {}
+
+[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
+Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 2101346304 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+  -> Size: 4.07% | Comp: 603.3 MB/s | Decomp: 4189.9 MB/s | Metrics: {}
+
+====================================================================================================
+ FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+0.0      | 64.57%     | 216.2 MB/s   | 1986.1 MB/s  | N/A (No Eval)
+0.001    | 64.56%     | 256.2 MB/s   | 2188.3 MB/s  | N/A (No Eval)
+0.005    | 64.45%     | 242.1 MB/s   | 3273.6 MB/s  | N/A (No Eval)
+0.01     | 64.16%     | 367.1 MB/s   | 4128.5 MB/s  | N/A (No Eval)
+0.02     | 63.17%     | 241.5 MB/s   | 2287.4 MB/s  | N/A (No Eval)
+0.03     | 61.50%     | 234.0 MB/s   | 2374.3 MB/s  | N/A (No Eval)
+0.04     | 58.98%     | 217.9 MB/s   | 3609.7 MB/s  | N/A (No Eval)
+0.05     | 54.40%     | 237.2 MB/s   | 2572.6 MB/s  | N/A (No Eval)
+0.1      | 17.04%     | 338.9 MB/s   | 3482.8 MB/s  | N/A (No Eval)
+0.12     | 9.56%      | 466.6 MB/s   | 4603.3 MB/s  | N/A (No Eval)
+0.15     | 4.07%      | 603.3 MB/s   | 4189.9 MB/s  | N/A (No Eval)
+====================================================================================================
