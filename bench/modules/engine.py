@@ -379,9 +379,10 @@ class CompressionEngine:
 
         # 性能修复：检测是否启用了硬盘offload，如果启用了，强制限制并发数以防磁盘I/O排队崩溃
         io_safe_workers = self.num_workers
-        if "offload_folder" in ft_kwargs:
-            io_safe_workers = min(self.num_workers, 4) 
-            logger.info(f"Detected disk offloading. Scaling down max_workers to {io_safe_workers} to prevent disk I/O thrashing.")
+        #TODO:
+        # if "offload_folder" in ft_kwargs:
+        #     io_safe_workers = min(self.num_workers, 4) 
+        #     logger.info(f"Detected disk offloading. Scaling down max_workers to {io_safe_workers} to prevent disk I/O thrashing.")
 
         # --- Prepare ---
         base_native = self.BaseLoader.from_pretrained(self.cfg['base_model'], **base_kwargs)

@@ -1,0 +1,769 @@
+[Sat 07 Mar 2026 11:27:18 PM EST] 触发测试！当前系统负载 < 3，环境纯净。
+
+---------------------------------------------------
+[Sat 07 Mar 2026 11:27:18 PM EST] 开始测试 --> 线程数: 1
+执行命令: taskset -c 0-0 python bench/main.py --num 1
+[CONFIG] 手动设定: 启动 1 个并行线程
+
+>>> Running Config: llama3.1-8b-1 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  6.90it/s]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  6.33it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  6.35it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  8.45it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.89it/s]
+  -> Size: 45.24% | Comp: 331.4 MB/s | Decomp: 352.0 MB/s | Metrics: {}
+
+[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.36it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.84it/s]
+  -> Size: 45.22% | Comp: 341.6 MB/s | Decomp: 361.0 MB/s | Metrics: {}
+
+[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.73it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.47it/s]
+  -> Size: 45.01% | Comp: 343.8 MB/s | Decomp: 362.5 MB/s | Metrics: {}
+
+[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.95it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.11it/s]
+  -> Size: 44.04% | Comp: 343.9 MB/s | Decomp: 359.1 MB/s | Metrics: {}
+
+[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.43it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.08it/s]
+  -> Size: 40.50% | Comp: 341.1 MB/s | Decomp: 366.1 MB/s | Metrics: {}
+
+[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.30it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.29it/s]
+  -> Size: 36.53% | Comp: 317.2 MB/s | Decomp: 367.9 MB/s | Metrics: {}
+
+[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.47it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.05it/s]
+  -> Size: 32.61% | Comp: 293.6 MB/s | Decomp: 366.2 MB/s | Metrics: {}
+
+[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.23it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.57it/s]
+  -> Size: 28.96% | Comp: 283.0 MB/s | Decomp: 366.6 MB/s | Metrics: {}
+
+[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.10it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.65it/s]
+  -> Size: 12.07% | Comp: 206.9 MB/s | Decomp: 569.8 MB/s | Metrics: {}
+
+[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.22it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.81it/s]
+  -> Size: 6.79% | Comp: 241.5 MB/s | Decomp: 602.4 MB/s | Metrics: {}
+
+[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.74it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.77it/s]
+  -> Size: 2.73% | Comp: 314.8 MB/s | Decomp: 616.2 MB/s | Metrics: {}
+
+====================================================================================================
+ FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+0.0      | 45.24%     | 331.4 MB/s   | 352.0 MB/s   | N/A (No Eval)
+0.001    | 45.22%     | 341.6 MB/s   | 361.0 MB/s   | N/A (No Eval)
+0.005    | 45.01%     | 343.8 MB/s   | 362.5 MB/s   | N/A (No Eval)
+0.01     | 44.04%     | 343.9 MB/s   | 359.1 MB/s   | N/A (No Eval)
+0.02     | 40.50%     | 341.1 MB/s   | 366.1 MB/s   | N/A (No Eval)
+0.03     | 36.53%     | 317.2 MB/s   | 367.9 MB/s   | N/A (No Eval)
+0.04     | 32.61%     | 293.6 MB/s   | 366.2 MB/s   | N/A (No Eval)
+0.05     | 28.96%     | 283.0 MB/s   | 366.6 MB/s   | N/A (No Eval)
+0.1      | 12.07%     | 206.9 MB/s   | 569.8 MB/s   | N/A (No Eval)
+0.12     | 6.79%      | 241.5 MB/s   | 602.4 MB/s   | N/A (No Eval)
+0.15     | 2.73%      | 314.8 MB/s   | 616.2 MB/s   | N/A (No Eval)
+====================================================================================================
+[Sat 07 Mar 2026 11:44:29 PM EST] 线程数 1 的测试已结束。
+
+---------------------------------------------------
+[Sat 07 Mar 2026 11:44:39 PM EST] 开始测试 --> 线程数: 2
+执行命令: taskset -c 0-1 python bench/main.py --num 2
+[CONFIG] 手动设定: 启动 2 个并行线程
+
+>>> Running Config: llama3.1-8b-1 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.55it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.89it/s]
+  -> Size: 45.24% | Comp: 670.6 MB/s | Decomp: 661.6 MB/s | Metrics: {}
+
+[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 160.50it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 160.21it/s]
+  -> Size: 45.22% | Comp: 647.4 MB/s | Decomp: 666.2 MB/s | Metrics: {}
+
+[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 159.24it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 161.11it/s]
+  -> Size: 45.01% | Comp: 648.2 MB/s | Decomp: 673.7 MB/s | Metrics: {}
+
+[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 159.51it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 160.14it/s]
+  -> Size: 44.04% | Comp: 646.4 MB/s | Decomp: 679.8 MB/s | Metrics: {}
+
+[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 160.27it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 161.62it/s]
+  -> Size: 40.50% | Comp: 639.7 MB/s | Decomp: 677.8 MB/s | Metrics: {}
+
+[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 161.13it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 160.99it/s]
+  -> Size: 36.53% | Comp: 601.9 MB/s | Decomp: 687.3 MB/s | Metrics: {}
+
+[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 159.60it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 159.94it/s]
+  -> Size: 32.61% | Comp: 566.6 MB/s | Decomp: 683.3 MB/s | Metrics: {}
+
+[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 179.18it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 177.68it/s]
+  -> Size: 28.96% | Comp: 549.9 MB/s | Decomp: 688.3 MB/s | Metrics: {}
+
+[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 159.49it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 159.90it/s]
+  -> Size: 12.07% | Comp: 413.4 MB/s | Decomp: 1092.6 MB/s | Metrics: {}
+
+[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 159.21it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 160.70it/s]
+  -> Size: 6.79% | Comp: 481.6 MB/s | Decomp: 1137.4 MB/s | Metrics: {}
+
+[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 160.98it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 160.32it/s]
+  -> Size: 2.73% | Comp: 619.2 MB/s | Decomp: 1148.1 MB/s | Metrics: {}
+
+====================================================================================================
+ FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+0.0      | 45.24%     | 670.6 MB/s   | 661.6 MB/s   | N/A (No Eval)
+0.001    | 45.22%     | 647.4 MB/s   | 666.2 MB/s   | N/A (No Eval)
+0.005    | 45.01%     | 648.2 MB/s   | 673.7 MB/s   | N/A (No Eval)
+0.01     | 44.04%     | 646.4 MB/s   | 679.8 MB/s   | N/A (No Eval)
+0.02     | 40.50%     | 639.7 MB/s   | 677.8 MB/s   | N/A (No Eval)
+0.03     | 36.53%     | 601.9 MB/s   | 687.3 MB/s   | N/A (No Eval)
+0.04     | 32.61%     | 566.6 MB/s   | 683.3 MB/s   | N/A (No Eval)
+0.05     | 28.96%     | 549.9 MB/s   | 688.3 MB/s   | N/A (No Eval)
+0.1      | 12.07%     | 413.4 MB/s   | 1092.6 MB/s  | N/A (No Eval)
+0.12     | 6.79%      | 481.6 MB/s   | 1137.4 MB/s  | N/A (No Eval)
+0.15     | 2.73%      | 619.2 MB/s   | 1148.1 MB/s  | N/A (No Eval)
+====================================================================================================
+[Sat 07 Mar 2026 11:54:23 PM EST] 线程数 2 的测试已结束。
+
+---------------------------------------------------
+[Sat 07 Mar 2026 11:54:33 PM EST] 开始测试 --> 线程数: 4
+执行命令: taskset -c 0-3 python bench/main.py --num 4
+[CONFIG] 手动设定: 启动 4 个并行线程
+
+>>> Running Config: llama3.1-8b-1 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 146.78it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.85it/s]
+  -> Size: 45.24% | Comp: 1164.4 MB/s | Decomp: 1105.7 MB/s | Metrics: {}
+
+[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.13it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.95it/s]
+  -> Size: 45.22% | Comp: 1124.8 MB/s | Decomp: 1176.7 MB/s | Metrics: {}
+
+[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.93it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.26it/s]
+  -> Size: 45.01% | Comp: 1130.8 MB/s | Decomp: 1184.0 MB/s | Metrics: {}
+
+[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.05it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.75it/s]
+  -> Size: 44.04% | Comp: 1114.0 MB/s | Decomp: 1193.7 MB/s | Metrics: {}
+
+[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.03it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.40it/s]
+  -> Size: 40.50% | Comp: 1114.0 MB/s | Decomp: 1194.8 MB/s | Metrics: {}
+
+[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 151.61it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.23it/s]
+  -> Size: 36.53% | Comp: 1049.8 MB/s | Decomp: 1200.4 MB/s | Metrics: {}
+
+[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 151.35it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.03it/s]
+  -> Size: 32.61% | Comp: 1043.5 MB/s | Decomp: 1250.8 MB/s | Metrics: {}
+
+[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.62it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.96it/s]
+  -> Size: 28.96% | Comp: 1019.2 MB/s | Decomp: 1261.1 MB/s | Metrics: {}
+
+[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.02it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.82it/s]
+  -> Size: 12.07% | Comp: 814.7 MB/s | Decomp: 2038.7 MB/s | Metrics: {}
+
+[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 151.96it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 151.01it/s]
+  -> Size: 6.79% | Comp: 951.0 MB/s | Decomp: 2103.8 MB/s | Metrics: {}
+
+[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.14it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.00it/s]
+  -> Size: 2.73% | Comp: 1213.9 MB/s | Decomp: 2118.1 MB/s | Metrics: {}
+
+====================================================================================================
+ FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+0.0      | 45.24%     | 1164.4 MB/s  | 1105.7 MB/s  | N/A (No Eval)
+0.001    | 45.22%     | 1124.8 MB/s  | 1176.7 MB/s  | N/A (No Eval)
+0.005    | 45.01%     | 1130.8 MB/s  | 1184.0 MB/s  | N/A (No Eval)
+0.01     | 44.04%     | 1114.0 MB/s  | 1193.7 MB/s  | N/A (No Eval)
+0.02     | 40.50%     | 1114.0 MB/s  | 1194.8 MB/s  | N/A (No Eval)
+0.03     | 36.53%     | 1049.8 MB/s  | 1200.4 MB/s  | N/A (No Eval)
+0.04     | 32.61%     | 1043.5 MB/s  | 1250.8 MB/s  | N/A (No Eval)
+0.05     | 28.96%     | 1019.2 MB/s  | 1261.1 MB/s  | N/A (No Eval)
+0.1      | 12.07%     | 814.7 MB/s   | 2038.7 MB/s  | N/A (No Eval)
+0.12     | 6.79%      | 951.0 MB/s   | 2103.8 MB/s  | N/A (No Eval)
+0.15     | 2.73%      | 1213.9 MB/s  | 2118.1 MB/s  | N/A (No Eval)
+====================================================================================================
+[Sun 08 Mar 2026 12:00:43 AM EST] 线程数 4 的测试已结束。
+
+---------------------------------------------------
+[Sun 08 Mar 2026 12:00:53 AM EST] 开始测试 --> 线程数: 8
+执行命令: taskset -c 0-7 python bench/main.py --num 8
+[CONFIG] 手动设定: 启动 8 个并行线程
+
+>>> Running Config: llama3.1-8b-1 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.87it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.53it/s]
+  -> Size: 45.24% | Comp: 1797.3 MB/s | Decomp: 1807.2 MB/s | Metrics: {}
+
+[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.58it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.96it/s]
+  -> Size: 45.22% | Comp: 1772.1 MB/s | Decomp: 1819.6 MB/s | Metrics: {}
+
+[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.98it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.80it/s]
+  -> Size: 45.01% | Comp: 1777.9 MB/s | Decomp: 1797.8 MB/s | Metrics: {}
+
+[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.55it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.71it/s]
+  -> Size: 44.04% | Comp: 1794.8 MB/s | Decomp: 1806.6 MB/s | Metrics: {}
+
+[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.74it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.20it/s]
+  -> Size: 40.50% | Comp: 1780.4 MB/s | Decomp: 1816.4 MB/s | Metrics: {}
+
+[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.02it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.05it/s]
+  -> Size: 36.53% | Comp: 1710.7 MB/s | Decomp: 1846.5 MB/s | Metrics: {}
+
+[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.69it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.54it/s]
+  -> Size: 32.61% | Comp: 1714.2 MB/s | Decomp: 1898.1 MB/s | Metrics: {}
+
+[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.22it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.43it/s]
+  -> Size: 28.96% | Comp: 1715.9 MB/s | Decomp: 1928.2 MB/s | Metrics: {}
+
+[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.20it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.00it/s]
+  -> Size: 12.07% | Comp: 1583.4 MB/s | Decomp: 3059.0 MB/s | Metrics: {}
+
+[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.87it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.31it/s]
+  -> Size: 6.79% | Comp: 1861.3 MB/s | Decomp: 3216.3 MB/s | Metrics: {}
+
+[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.89it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.76it/s]
+  -> Size: 2.73% | Comp: 2282.9 MB/s | Decomp: 3152.3 MB/s | Metrics: {}
+
+====================================================================================================
+ FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+0.0      | 45.24%     | 1797.3 MB/s  | 1807.2 MB/s  | N/A (No Eval)
+0.001    | 45.22%     | 1772.1 MB/s  | 1819.6 MB/s  | N/A (No Eval)
+0.005    | 45.01%     | 1777.9 MB/s  | 1797.8 MB/s  | N/A (No Eval)
+0.01     | 44.04%     | 1794.8 MB/s  | 1806.6 MB/s  | N/A (No Eval)
+0.02     | 40.50%     | 1780.4 MB/s  | 1816.4 MB/s  | N/A (No Eval)
+0.03     | 36.53%     | 1710.7 MB/s  | 1846.5 MB/s  | N/A (No Eval)
+0.04     | 32.61%     | 1714.2 MB/s  | 1898.1 MB/s  | N/A (No Eval)
+0.05     | 28.96%     | 1715.9 MB/s  | 1928.2 MB/s  | N/A (No Eval)
+0.1      | 12.07%     | 1583.4 MB/s  | 3059.0 MB/s  | N/A (No Eval)
+0.12     | 6.79%      | 1861.3 MB/s  | 3216.3 MB/s  | N/A (No Eval)
+0.15     | 2.73%      | 2282.9 MB/s  | 3152.3 MB/s  | N/A (No Eval)
+====================================================================================================
+[Sun 08 Mar 2026 12:05:26 AM EST] 线程数 8 的测试已结束。
+
+---------------------------------------------------
+[Sun 08 Mar 2026 12:05:36 AM EST] 开始测试 --> 线程数: 16
+执行命令: taskset -c 0-15 python bench/main.py --num 16
+[CONFIG] 手动设定: 启动 16 个并行线程
+
+>>> Running Config: llama3.1-8b-1 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.24it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.71it/s]
+  -> Size: 45.24% | Comp: 2611.1 MB/s | Decomp: 3358.4 MB/s | Metrics: {}
+
+[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.44it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.34it/s]
+  -> Size: 45.22% | Comp: 2488.7 MB/s | Decomp: 3476.2 MB/s | Metrics: {}
+
+[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.25it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 158.05it/s]
+  -> Size: 45.01% | Comp: 2496.7 MB/s | Decomp: 3448.1 MB/s | Metrics: {}
+
+[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.74it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.98it/s]
+  -> Size: 44.04% | Comp: 2577.6 MB/s | Decomp: 3331.5 MB/s | Metrics: {}
+
+[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.96it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.25it/s]
+  -> Size: 40.50% | Comp: 2480.2 MB/s | Decomp: 3375.5 MB/s | Metrics: {}
+
+[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.19it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.87it/s]
+  -> Size: 36.53% | Comp: 2500.0 MB/s | Decomp: 3149.6 MB/s | Metrics: {}
+
+[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.14it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.18it/s]
+  -> Size: 32.61% | Comp: 2561.7 MB/s | Decomp: 3098.2 MB/s | Metrics: {}
+
+[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.05it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.73it/s]
+  -> Size: 28.96% | Comp: 2692.2 MB/s | Decomp: 2577.2 MB/s | Metrics: {}
+
+[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.23it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.83it/s]
+  -> Size: 12.07% | Comp: 2932.5 MB/s | Decomp: 4047.4 MB/s | Metrics: {}
+
+[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.24it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.86it/s]
+  -> Size: 6.79% | Comp: 3359.5 MB/s | Decomp: 4156.7 MB/s | Metrics: {}
+
+[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 158.79it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.79it/s]
+  -> Size: 2.73% | Comp: 3779.1 MB/s | Decomp: 4009.6 MB/s | Metrics: {}
+
+====================================================================================================
+ FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+0.0      | 45.24%     | 2611.1 MB/s  | 3358.4 MB/s  | N/A (No Eval)
+0.001    | 45.22%     | 2488.7 MB/s  | 3476.2 MB/s  | N/A (No Eval)
+0.005    | 45.01%     | 2496.7 MB/s  | 3448.1 MB/s  | N/A (No Eval)
+0.01     | 44.04%     | 2577.6 MB/s  | 3331.5 MB/s  | N/A (No Eval)
+0.02     | 40.50%     | 2480.2 MB/s  | 3375.5 MB/s  | N/A (No Eval)
+0.03     | 36.53%     | 2500.0 MB/s  | 3149.6 MB/s  | N/A (No Eval)
+0.04     | 32.61%     | 2561.7 MB/s  | 3098.2 MB/s  | N/A (No Eval)
+0.05     | 28.96%     | 2692.2 MB/s  | 2577.2 MB/s  | N/A (No Eval)
+0.1      | 12.07%     | 2932.5 MB/s  | 4047.4 MB/s  | N/A (No Eval)
+0.12     | 6.79%      | 3359.5 MB/s  | 4156.7 MB/s  | N/A (No Eval)
+0.15     | 2.73%      | 3779.1 MB/s  | 4009.6 MB/s  | N/A (No Eval)
+====================================================================================================
+[Sun 08 Mar 2026 12:09:40 AM EST] 线程数 16 的测试已结束。
+
+---------------------------------------------------
+[Sun 08 Mar 2026 12:09:50 AM EST] 开始测试 --> 线程数: 32
+执行命令: taskset -c 0-31 python bench/main.py --num 32
+[CONFIG] 手动设定: 启动 32 个并行线程
+
+>>> Running Config: llama3.1-8b-1 <<<
+Detecting FT model native dtype...
+-> Found dtype in config: torch.bfloat16
+
+[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.03it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.19it/s]
+  -> Size: 45.24% | Comp: 3590.8 MB/s | Decomp: 6823.5 MB/s | Metrics: {}
+
+[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.89it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.05it/s]
+  -> Size: 45.22% | Comp: 3443.9 MB/s | Decomp: 6767.2 MB/s | Metrics: {}
+
+[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.04it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.71it/s]
+  -> Size: 45.01% | Comp: 3582.7 MB/s | Decomp: 6711.9 MB/s | Metrics: {}
+
+[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.27it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.41it/s]
+  -> Size: 44.04% | Comp: 3544.3 MB/s | Decomp: 6658.5 MB/s | Metrics: {}
+
+[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.62it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.01it/s]
+  -> Size: 40.50% | Comp: 3255.2 MB/s | Decomp: 6635.8 MB/s | Metrics: {}
+
+[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.98it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.56it/s]
+  -> Size: 36.53% | Comp: 3439.1 MB/s | Decomp: 6336.1 MB/s | Metrics: {}
+
+[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.29it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.62it/s]
+  -> Size: 32.61% | Comp: 3420.8 MB/s | Decomp: 5747.8 MB/s | Metrics: {}
+
+[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.01it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.73it/s]
+  -> Size: 28.96% | Comp: 3306.1 MB/s | Decomp: 4663.8 MB/s | Metrics: {}
+
+[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.41it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.54it/s]
+  -> Size: 12.07% | Comp: 4145.6 MB/s | Decomp: 5235.5 MB/s | Metrics: {}
+
+[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.84it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.06it/s]
+  -> Size: 6.79% | Comp: 4834.3 MB/s | Decomp: 4143.8 MB/s | Metrics: {}
+
+[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.49it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.60it/s]
+  -> Size: 2.73% | Comp: 5108.1 MB/s | Decomp: 4465.3 MB/s | Metrics: {}
+
+====================================================================================================
+ FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
+====================================================================================================
+Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
+-----------------------------------------------------------------
+0.0      | 45.24%     | 3590.8 MB/s  | 6823.5 MB/s  | N/A (No Eval)
+0.001    | 45.22%     | 3443.9 MB/s  | 6767.2 MB/s  | N/A (No Eval)
+0.005    | 45.01%     | 3582.7 MB/s  | 6711.9 MB/s  | N/A (No Eval)
+0.01     | 44.04%     | 3544.3 MB/s  | 6658.5 MB/s  | N/A (No Eval)
+0.02     | 40.50%     | 3255.2 MB/s  | 6635.8 MB/s  | N/A (No Eval)
+0.03     | 36.53%     | 3439.1 MB/s  | 6336.1 MB/s  | N/A (No Eval)
+0.04     | 32.61%     | 3420.8 MB/s  | 5747.8 MB/s  | N/A (No Eval)
+0.05     | 28.96%     | 3306.1 MB/s  | 4663.8 MB/s  | N/A (No Eval)
+0.1      | 12.07%     | 4145.6 MB/s  | 5235.5 MB/s  | N/A (No Eval)
+0.12     | 6.79%      | 4834.3 MB/s  | 4143.8 MB/s  | N/A (No Eval)
+0.15     | 2.73%      | 5108.1 MB/s  | 4465.3 MB/s  | N/A (No Eval)
+====================================================================================================
+[Sun 08 Mar 2026 12:13:49 AM EST] 线程数 32 的测试已结束。
+===================================================
+
+[Sun 08 Mar 2026 12:13:59 AM EST] 所有配置已全部测试完毕，完美收工！

@@ -1,0 +1,85 @@
+
+======================================================================================================================
+Model Name                          | Method   | Threads | Orig(MB)   | Comp%      | C-Speed(MB/s)   | D-Speed(MB/s)  
+----------------------------------------------------------------------------------------------------------------------
+meta-llama/Llama-3.1-8B-Instruct    | zstd     | 1       |  15316.5 |    77.55% |        673.41 |        919.50
+meta-llama/Llama-3.1-8B-Instruct    | zstd     | 2       |  15316.5 |    77.55% |       1312.28 |        921.62
+meta-llama/Llama-3.1-8B-Instruct    | zstd     | 4       |  15316.5 |    77.55% |       2435.60 |        878.86
+meta-llama/Llama-3.1-8B-Instruct    | zstd     | 8       |  15316.5 |    77.55% |       2321.63 |        933.35
+meta-llama/Llama-3.1-8B-Instruct    | zstd     | 16      |  15316.5 |    77.55% |       2126.65 |        915.88
+meta-llama/Llama-3.1-8B-Instruct    | zstd     | 32      |  15316.5 |    77.55% |       2502.29 |        933.18
+meta-llama/Llama-3.1-8B-Instruct    | zstd     | 48      |  15316.5 |    77.55% |       2535.03 |        930.89
+
+========================================
+AGGREGATED RESULTS BY THREAD COUNT
+========================================
+
+Configuration: zstd_threads_1
+{
+    "meta-llama/Llama-3.1-8B-Instruct": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.55,
+        "CompSpeed": 673.41,
+        "DecompSpeed": 919.5
+    }
+}
+
+Configuration: zstd_threads_2
+{
+    "meta-llama/Llama-3.1-8B-Instruct": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.55,
+        "CompSpeed": 1312.28,
+        "DecompSpeed": 921.62
+    }
+}
+
+Configuration: zstd_threads_4
+{
+    "meta-llama/Llama-3.1-8B-Instruct": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.55,
+        "CompSpeed": 2435.6,
+        "DecompSpeed": 878.86
+    }
+}
+
+Configuration: zstd_threads_8
+{
+    "meta-llama/Llama-3.1-8B-Instruct": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.55,
+        "CompSpeed": 2321.63,
+        "DecompSpeed": 933.35
+    }
+}
+
+Configuration: zstd_threads_16
+{
+    "meta-llama/Llama-3.1-8B-Instruct": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.55,
+        "CompSpeed": 2126.65,
+        "DecompSpeed": 915.88
+    }
+}
+
+Configuration: zstd_threads_32
+{
+    "meta-llama/Llama-3.1-8B-Instruct": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.55,
+        "CompSpeed": 2502.29,
+        "DecompSpeed": 933.18
+    }
+}
+
+Configuration: zstd_threads_48
+{
+    "meta-llama/Llama-3.1-8B-Instruct": {
+        "OrigMB": 15316.54,
+        "CompRatio": 77.55,
+        "CompSpeed": 2535.03,
+        "DecompSpeed": 930.89
+    }
+}

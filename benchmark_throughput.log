@@ -1,491 +1,0 @@
-[Sat 07 Mar 2026 10:30:03 PM EST] 触发测试！当前系统负载 < 3，环境纯净。
-
----------------------------------------------------
-[Sat 07 Mar 2026 10:30:03 PM EST] 开始测试 --> 线程数: 1
-执行命令: taskset -c 0-0 python bench/main.py --num 1
-[CONFIG] 手动设定: 启动 1 个并行线程
-
->>> Running Config: llama3.1-8b-1 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
-
-[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 1 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 151.91it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.18it/s]
-  -> Size: 45.24% | Comp: 346.4 MB/s | Decomp: 355.7 MB/s | Metrics: {}
-
-[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 1 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 151.56it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.11it/s]
-  -> Size: 45.22% | Comp: 334.6 MB/s | Decomp: 357.6 MB/s | Metrics: {}
-
-[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 1 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.22it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.70it/s]
-  -> Size: 45.01% | Comp: 335.1 MB/s | Decomp: 358.2 MB/s | Metrics: {}
-
-[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 1 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.20it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.49it/s]
-  -> Size: 44.04% | Comp: 335.1 MB/s | Decomp: 359.6 MB/s | Metrics: {}
-
-[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 1 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.41it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.85it/s]
-  -> Size: 40.50% | Comp: 331.2 MB/s | Decomp: 361.7 MB/s | Metrics: {}
-
-[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 1 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.25it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.63it/s]
-  -> Size: 36.53% | Comp: 311.4 MB/s | Decomp: 365.3 MB/s | Metrics: {}
-
-[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 1 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 161.53it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 161.29it/s]
-  -> Size: 32.61% | Comp: 289.2 MB/s | Decomp: 362.9 MB/s | Metrics: {}
-
-[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 1 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 158.95it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 160.72it/s]
-  -> Size: 28.96% | Comp: 280.3 MB/s | Decomp: 363.6 MB/s | Metrics: {}
-
-[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 1 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.76it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.09it/s]
-  -> Size: 12.07% | Comp: 206.7 MB/s | Decomp: 566.8 MB/s | Metrics: {}
-
-[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 1 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 161.75it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 163.46it/s]
-  -> Size: 6.79% | Comp: 241.3 MB/s | Decomp: 599.6 MB/s | Metrics: {}
-
-[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 1 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.09it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.39it/s]
-  -> Size: 2.73% | Comp: 314.2 MB/s | Decomp: 621.8 MB/s | Metrics: {}
-
-====================================================================================================
- FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
-====================================================================================================
-Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
------------------------------------------------------------------
-0.0      | 45.24%     | 346.4 MB/s   | 355.7 MB/s   | N/A (No Eval)
-0.001    | 45.22%     | 334.6 MB/s   | 357.6 MB/s   | N/A (No Eval)
-0.005    | 45.01%     | 335.1 MB/s   | 358.2 MB/s   | N/A (No Eval)
-0.01     | 44.04%     | 335.1 MB/s   | 359.6 MB/s   | N/A (No Eval)
-0.02     | 40.50%     | 331.2 MB/s   | 361.7 MB/s   | N/A (No Eval)
-0.03     | 36.53%     | 311.4 MB/s   | 365.3 MB/s   | N/A (No Eval)
-0.04     | 32.61%     | 289.2 MB/s   | 362.9 MB/s   | N/A (No Eval)
-0.05     | 28.96%     | 280.3 MB/s   | 363.6 MB/s   | N/A (No Eval)
-0.1      | 12.07%     | 206.7 MB/s   | 566.8 MB/s   | N/A (No Eval)
-0.12     | 6.79%      | 241.3 MB/s   | 599.6 MB/s   | N/A (No Eval)
-0.15     | 2.73%      | 314.2 MB/s   | 621.8 MB/s   | N/A (No Eval)
-====================================================================================================
-[Sat 07 Mar 2026 10:47:21 PM EST] 线程数 1 的测试已结束。
-
----------------------------------------------------
-[Sat 07 Mar 2026 10:47:31 PM EST] 开始测试 --> 线程数: 2
-执行命令: taskset -c 0-1 python bench/main.py --num 2
-[CONFIG] 手动设定: 启动 2 个并行线程
-
->>> Running Config: llama3.1-8b-1 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
-
-[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 2 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.95it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 151.89it/s]
-  -> Size: 45.24% | Comp: 648.7 MB/s | Decomp: 664.6 MB/s | Metrics: {}
-
-[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 2 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.19it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.04it/s]
-  -> Size: 45.22% | Comp: 630.3 MB/s | Decomp: 666.1 MB/s | Metrics: {}
-
-[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 2 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.16it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.32it/s]
-  -> Size: 45.01% | Comp: 630.0 MB/s | Decomp: 667.1 MB/s | Metrics: {}
-
-[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 2 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.14it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.61it/s]
-  -> Size: 44.04% | Comp: 633.1 MB/s | Decomp: 668.1 MB/s | Metrics: {}
-
-[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 2 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.56it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.56it/s]
-  -> Size: 40.50% | Comp: 619.5 MB/s | Decomp: 684.9 MB/s | Metrics: {}
-
-[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 2 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.73it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.30it/s]
-  -> Size: 36.53% | Comp: 586.5 MB/s | Decomp: 680.7 MB/s | Metrics: {}
-
-[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 2 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.43it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.90it/s]
-  -> Size: 32.61% | Comp: 552.5 MB/s | Decomp: 679.7 MB/s | Metrics: {}
-
-[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 2 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.45it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.67it/s]
-  -> Size: 28.96% | Comp: 539.2 MB/s | Decomp: 679.9 MB/s | Metrics: {}
-
-[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 2 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.96it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.39it/s]
-  -> Size: 12.07% | Comp: 410.8 MB/s | Decomp: 1075.1 MB/s | Metrics: {}
-
-[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 2 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.21it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.35it/s]
-  -> Size: 6.79% | Comp: 480.9 MB/s | Decomp: 1144.7 MB/s | Metrics: {}
-
-[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 2 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.20it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.28it/s]
-  -> Size: 2.73% | Comp: 621.7 MB/s | Decomp: 1170.5 MB/s | Metrics: {}
-
-====================================================================================================
- FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
-====================================================================================================
-Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
------------------------------------------------------------------
-0.0      | 45.24%     | 648.7 MB/s   | 664.6 MB/s   | N/A (No Eval)
-0.001    | 45.22%     | 630.3 MB/s   | 666.1 MB/s   | N/A (No Eval)
-0.005    | 45.01%     | 630.0 MB/s   | 667.1 MB/s   | N/A (No Eval)
-0.01     | 44.04%     | 633.1 MB/s   | 668.1 MB/s   | N/A (No Eval)
-0.02     | 40.50%     | 619.5 MB/s   | 684.9 MB/s   | N/A (No Eval)
-0.03     | 36.53%     | 586.5 MB/s   | 680.7 MB/s   | N/A (No Eval)
-0.04     | 32.61%     | 552.5 MB/s   | 679.7 MB/s   | N/A (No Eval)
-0.05     | 28.96%     | 539.2 MB/s   | 679.9 MB/s   | N/A (No Eval)
-0.1      | 12.07%     | 410.8 MB/s   | 1075.1 MB/s  | N/A (No Eval)
-0.12     | 6.79%      | 480.9 MB/s   | 1144.7 MB/s  | N/A (No Eval)
-0.15     | 2.73%      | 621.7 MB/s   | 1170.5 MB/s  | N/A (No Eval)
-====================================================================================================
-[Sat 07 Mar 2026 10:57:22 PM EST] 线程数 2 的测试已结束。
-
----------------------------------------------------
-[Sat 07 Mar 2026 10:57:32 PM EST] 开始测试 --> 线程数: 4
-执行命令: taskset -c 0-3 python bench/main.py --num 4
-[CONFIG] 手动设定: 启动 4 个并行线程
-
->>> Running Config: llama3.1-8b-1 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
-
-[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 150.53it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.14it/s]
-  -> Size: 45.24% | Comp: 1140.4 MB/s | Decomp: 1168.7 MB/s | Metrics: {}
-
-[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.63it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.82it/s]
-  -> Size: 45.22% | Comp: 1104.3 MB/s | Decomp: 1165.4 MB/s | Metrics: {}
-
-[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.01it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.10it/s]
-  -> Size: 45.01% | Comp: 1102.0 MB/s | Decomp: 1172.8 MB/s | Metrics: {}
-
-[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 148.52it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.59it/s]
-  -> Size: 44.04% | Comp: 1103.1 MB/s | Decomp: 1177.0 MB/s | Metrics: {}
-
-[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.08it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.44it/s]
-  -> Size: 40.50% | Comp: 1100.0 MB/s | Decomp: 1181.9 MB/s | Metrics: {}
-
-[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.60it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.85it/s]
-  -> Size: 36.53% | Comp: 1041.5 MB/s | Decomp: 1201.2 MB/s | Metrics: {}
-
-[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.20it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.81it/s]
-  -> Size: 32.61% | Comp: 1006.4 MB/s | Decomp: 1216.4 MB/s | Metrics: {}
-
-[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 151.97it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.79it/s]
-  -> Size: 28.96% | Comp: 1007.7 MB/s | Decomp: 1227.3 MB/s | Metrics: {}
-
-[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.05it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.75it/s]
-  -> Size: 12.07% | Comp: 815.7 MB/s | Decomp: 1996.2 MB/s | Metrics: {}
-
-[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 144.08it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.67it/s]
-  -> Size: 6.79% | Comp: 950.9 MB/s | Decomp: 2043.0 MB/s | Metrics: {}
-
-[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.75it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.43it/s]
-  -> Size: 2.73% | Comp: 1212.7 MB/s | Decomp: 2103.6 MB/s | Metrics: {}
-
-====================================================================================================
- FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
-====================================================================================================
-Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
------------------------------------------------------------------
-0.0      | 45.24%     | 1140.4 MB/s  | 1168.7 MB/s  | N/A (No Eval)
-0.001    | 45.22%     | 1104.3 MB/s  | 1165.4 MB/s  | N/A (No Eval)
-0.005    | 45.01%     | 1102.0 MB/s  | 1172.8 MB/s  | N/A (No Eval)
-0.01     | 44.04%     | 1103.1 MB/s  | 1177.0 MB/s  | N/A (No Eval)
-0.02     | 40.50%     | 1100.0 MB/s  | 1181.9 MB/s  | N/A (No Eval)
-0.03     | 36.53%     | 1041.5 MB/s  | 1201.2 MB/s  | N/A (No Eval)
-0.04     | 32.61%     | 1006.4 MB/s  | 1216.4 MB/s  | N/A (No Eval)
-0.05     | 28.96%     | 1007.7 MB/s  | 1227.3 MB/s  | N/A (No Eval)
-0.1      | 12.07%     | 815.7 MB/s   | 1996.2 MB/s  | N/A (No Eval)
-0.12     | 6.79%      | 950.9 MB/s   | 2043.0 MB/s  | N/A (No Eval)
-0.15     | 2.73%      | 1212.7 MB/s  | 2103.6 MB/s  | N/A (No Eval)
-====================================================================================================
-[Sat 07 Mar 2026 11:03:48 PM EST] 线程数 4 的测试已结束。
-
----------------------------------------------------
-[Sat 07 Mar 2026 11:03:58 PM EST] 开始测试 --> 线程数: 8
-执行命令: taskset -c 0-7 python bench/main.py --num 8
-[CONFIG] 手动设定: 启动 8 个并行线程
-
->>> Running Config: llama3.1-8b-1 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
-
-[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.99it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.17it/s]
-  -> Size: 45.24% | Comp: 1126.8 MB/s | Decomp: 2356.5 MB/s | Metrics: {}
-
-[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.34it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.14it/s]
-  -> Size: 45.22% | Comp: 1106.6 MB/s | Decomp: 2375.5 MB/s | Metrics: {}
-
-[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.68it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.72it/s]
-  -> Size: 45.01% | Comp: 1101.1 MB/s | Decomp: 2366.7 MB/s | Metrics: {}
-
-[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.67it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.66it/s]
-  -> Size: 44.04% | Comp: 1101.6 MB/s | Decomp: 2398.5 MB/s | Metrics: {}
-
-[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.49it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.67it/s]
-  -> Size: 40.50% | Comp: 1108.9 MB/s | Decomp: 2398.2 MB/s | Metrics: {}
-
-[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.84it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.70it/s]
-  -> Size: 36.53% | Comp: 1035.9 MB/s | Decomp: 2424.9 MB/s | Metrics: {}
-
-[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.07it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.30it/s]
-  -> Size: 32.61% | Comp: 999.6 MB/s | Decomp: 2419.0 MB/s | Metrics: {}
-
-[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.31it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.05it/s]
-  -> Size: 28.96% | Comp: 1006.3 MB/s | Decomp: 2503.9 MB/s | Metrics: {}
-
-[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.59it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.09it/s]
-  -> Size: 12.07% | Comp: 818.4 MB/s | Decomp: 4001.7 MB/s | Metrics: {}
-
-[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.92it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.04it/s]
-  -> Size: 6.79% | Comp: 948.0 MB/s | Decomp: 4242.5 MB/s | Metrics: {}
-
-[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.70it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.93it/s]
-  -> Size: 2.73% | Comp: 1208.9 MB/s | Decomp: 4300.2 MB/s | Metrics: {}
-
-====================================================================================================
- FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
-====================================================================================================
-Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
------------------------------------------------------------------
-0.0      | 45.24%     | 1126.8 MB/s  | 2356.5 MB/s  | N/A (No Eval)
-0.001    | 45.22%     | 1106.6 MB/s  | 2375.5 MB/s  | N/A (No Eval)
-0.005    | 45.01%     | 1101.1 MB/s  | 2366.7 MB/s  | N/A (No Eval)
-0.01     | 44.04%     | 1101.6 MB/s  | 2398.5 MB/s  | N/A (No Eval)
-0.02     | 40.50%     | 1108.9 MB/s  | 2398.2 MB/s  | N/A (No Eval)
-0.03     | 36.53%     | 1035.9 MB/s  | 2424.9 MB/s  | N/A (No Eval)
-0.04     | 32.61%     | 999.6 MB/s   | 2419.0 MB/s  | N/A (No Eval)
-0.05     | 28.96%     | 1006.3 MB/s  | 2503.9 MB/s  | N/A (No Eval)
-0.1      | 12.07%     | 818.4 MB/s   | 4001.7 MB/s  | N/A (No Eval)
-0.12     | 6.79%      | 948.0 MB/s   | 4242.5 MB/s  | N/A (No Eval)
-0.15     | 2.73%      | 1208.9 MB/s  | 4300.2 MB/s  | N/A (No Eval)
-====================================================================================================
-[Sat 07 Mar 2026 11:10:13 PM EST] 线程数 8 的测试已结束。
-
----------------------------------------------------
-[Sat 07 Mar 2026 11:10:23 PM EST] 开始测试 --> 线程数: 16
-执行命令: taskset -c 0-15 python bench/main.py --num 16
-[CONFIG] 手动设定: 启动 16 个并行线程
-
->>> Running Config: llama3.1-8b-1 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
-
-[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.37it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.58it/s]
-  -> Size: 45.24% | Comp: 1126.9 MB/s | Decomp: 4744.5 MB/s | Metrics: {}
-
-[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.75it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 159.49it/s]
-  -> Size: 45.22% | Comp: 1101.5 MB/s | Decomp: 4796.2 MB/s | Metrics: {}
-
-[========== Rate: 0.005 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.75it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.05it/s]
-  -> Size: 45.01% | Comp: 1119.6 MB/s | Decomp: 4803.6 MB/s | Metrics: {}
-
-[========== Rate: 0.01 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 159.05it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 160.30it/s]
-  -> Size: 44.04% | Comp: 1145.4 MB/s | Decomp: 4924.7 MB/s | Metrics: {}
-
-[========== Rate: 0.02 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 163.92it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 162.98it/s]
-  -> Size: 40.50% | Comp: 1136.1 MB/s | Decomp: 4895.7 MB/s | Metrics: {}
-
-[========== Rate: 0.03 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.58it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.16it/s]
-  -> Size: 36.53% | Comp: 1064.3 MB/s | Decomp: 4917.4 MB/s | Metrics: {}
-
-[========== Rate: 0.04 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.91it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.31it/s]
-  -> Size: 32.61% | Comp: 1010.4 MB/s | Decomp: 4953.5 MB/s | Metrics: {}
-
-[========== Rate: 0.05 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.19it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.98it/s]
-  -> Size: 28.96% | Comp: 1037.1 MB/s | Decomp: 5093.6 MB/s | Metrics: {}
-
-[========== Rate: 0.1 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.25it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.15it/s]
-  -> Size: 12.07% | Comp: 818.4 MB/s | Decomp: 8259.5 MB/s | Metrics: {}
-
-[========== Rate: 0.12 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.86it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 157.27it/s]
-  -> Size: 6.79% | Comp: 951.2 MB/s | Decomp: 8424.2 MB/s | Metrics: {}
-
-[========== Rate: 0.15 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 155.57it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 156.77it/s]
-  -> Size: 2.73% | Comp: 1213.3 MB/s | Decomp: 8503.7 MB/s | Metrics: {}
-
-====================================================================================================
- FINAL SUMMARY: llama3.1-8b-1 (LLM_HARNESS) 
-====================================================================================================
-Rate     | Comp %     | C-Speed      | D-Speed      | Main Metric
------------------------------------------------------------------
-0.0      | 45.24%     | 1126.9 MB/s  | 4744.5 MB/s  | N/A (No Eval)
-0.001    | 45.22%     | 1101.5 MB/s  | 4796.2 MB/s  | N/A (No Eval)
-0.005    | 45.01%     | 1119.6 MB/s  | 4803.6 MB/s  | N/A (No Eval)
-0.01     | 44.04%     | 1145.4 MB/s  | 4924.7 MB/s  | N/A (No Eval)
-0.02     | 40.50%     | 1136.1 MB/s  | 4895.7 MB/s  | N/A (No Eval)
-0.03     | 36.53%     | 1064.3 MB/s  | 4917.4 MB/s  | N/A (No Eval)
-0.04     | 32.61%     | 1010.4 MB/s  | 4953.5 MB/s  | N/A (No Eval)
-0.05     | 28.96%     | 1037.1 MB/s  | 5093.6 MB/s  | N/A (No Eval)
-0.1      | 12.07%     | 818.4 MB/s   | 8259.5 MB/s  | N/A (No Eval)
-0.12     | 6.79%      | 951.2 MB/s   | 8424.2 MB/s  | N/A (No Eval)
-0.15     | 2.73%      | 1213.3 MB/s  | 8503.7 MB/s  | N/A (No Eval)
-====================================================================================================
-[Sat 07 Mar 2026 11:16:30 PM EST] 线程数 16 的测试已结束。
-
----------------------------------------------------
-[Sat 07 Mar 2026 11:16:40 PM EST] 开始测试 --> 线程数: 32
-执行命令: taskset -c 0-31 python bench/main.py --num 32
-[CONFIG] 手动设定: 启动 32 个并行线程
-
->>> Running Config: llama3.1-8b-1 <<<
-Detecting FT model native dtype...
--> Found dtype in config: torch.bfloat16
-
-[========== Rate: 0.0 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 152.84it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 153.79it/s]
-  -> Size: 45.24% | Comp: 1144.6 MB/s | Decomp: 9532.3 MB/s | Metrics: {}
-
-[========== Rate: 0.001 = Model: llama3.1-8b-1==========]
-Detected disk offloading. Scaling down max_workers to 4 to prevent disk I/O thrashing.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.43it/s]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 154.95it/s]
