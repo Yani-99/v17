@@ -1,0 +1,18 @@
+[*] 开始加载官方 Tokenizer...
+[*] 开始加载官方 Base 模型 (Llama-3.1-8B)...
+[*] 正在读取 1-bit 增量文件: /home/newdrive2/liu4441/bitdelta/diff.pt
+[*] 1-bit 权重动态注入完成！模型已蜕变为 Instruct 版本！
+[*] 开始使用 UniversalEvaluator 进行公平对齐评测...
+
+============================================================
+ 📊 BitDelta 模型客观评测结果
+============================================================
+ mmlu/acc            : 0.6818
+ mmlu_humanities/acc : 0.6431
+ mmlu_other/acc      : 0.7428
+ mmlu_social_sciences/acc: 0.7741
+ mmlu_stem/acc       : 0.5893
+ gsm8k/acc           : 0.7574
+ mt_bench/speed      : 41.1709
+ mt_bench/saved      : 1.0000
+============================================================

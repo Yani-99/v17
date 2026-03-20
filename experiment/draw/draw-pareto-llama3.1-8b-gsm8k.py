@@ -33,6 +33,9 @@ def main():
     # fm_delta_size = 60.74
     # fm_delta_gsm8k = 0.6812
 
+    bitdelta_size = 7
+    bitdelta_gsm8k = 0.73
+
     zstd_size = 77.54
     zstd_gsm8k = 0.753601213
 
@@ -71,6 +74,7 @@ def main():
     ax.scatter(awq_size, awq_gsm8k, marker='*', s=250, color="#f8a154", label='AWQ 4-bit', zorder=4)
     ax.scatter(gzip_size, gzip_gsm8k, marker='X', s=150, color='#F7CF49', label='Zlib/Gzip (Lossless)', zorder=4)
     ax.scatter(zstd_size, zstd_gsm8k, marker='P', s=150, color='#cc98fd', label='Zstd (Lossless)', zorder=4)
+    ax.scatter(bitdelta_size, bitdelta_gsm8k, marker='s', s=150, color='#e49191', label='BitDelta', zorder=4)
 
     # 6. 添加标注 
     key_rates = [0.0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.1, 0.12, 0.15]
@@ -122,6 +126,8 @@ def main():
                 fontsize=16, color='#F7CF49', fontweight='bold', ha='center')
     ax.annotate('Zstd', (zstd_size, zstd_gsm8k), xytext=(zstd_size-0.5, zstd_gsm8k - 0.02),
                 fontsize=16, color='#cc98fd', fontweight='bold', ha='center')
+    ax.annotate('BitDelta', (bitdelta_size, bitdelta_gsm8k), xytext=(bitdelta_size -6, bitdelta_gsm8k-0.017),
+                fontsize=16, color='#e49191', fontweight='bold', ha='left')
 
     # 7. 图表细节美化
     ax.set_xlabel('Compression Ratio  (%)')

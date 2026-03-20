@@ -38,6 +38,9 @@ def main():
     zstd_size = 77.54
     zstd_mtscore = 8.248
 
+    bitdelta_size = 7
+    bitdelta_mtscore = 7.5
+
     plt.rcParams.update({
         'font.size': 18,           
         'axes.labelsize': 22,      
@@ -72,6 +75,7 @@ def main():
     ax.scatter(awq_size, awq_mtscore, marker='*', s=250, color="#f8a154", label='AWQ 4-bit', zorder=4)
     ax.scatter(gzip_size, gzip_mtscore, marker='X', s=150, color='#F7CF49', label='zlib/gzip (Lossless)', zorder=4)
     ax.scatter(zstd_size, zstd_mtscore, marker='P', s=150, color='#cc98fd', label='zstd (Lossless)', zorder=4)
+    ax.scatter(bitdelta_size, bitdelta_mtscore, marker='s', s=150, color='#e49191', label='BitDelta', zorder=4)
 
     # 6. 添加标注 
     key_rates = [0.0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.1, 0.12, 0.15]
@@ -124,6 +128,8 @@ def main():
                 fontsize=16, color='#F7CF49', fontweight='bold', ha='center')
     ax.annotate('zstd', (zstd_size, zstd_mtscore), xytext=(zstd_size-0.5, zstd_mtscore - 0.25),
                 fontsize=16, color='#cc98fd', fontweight='bold', ha='center')
+    ax.annotate('BitDelta', (bitdelta_size, bitdelta_mtscore), xytext=(bitdelta_size-6 , bitdelta_mtscore-0.25),
+                fontsize=16, color='#e49191', fontweight='bold', ha='left')
 
     # 7. 图表细节美化
     ax.set_xlabel('Compression Ratio (%)')
